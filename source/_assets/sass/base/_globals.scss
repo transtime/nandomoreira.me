@@ -60,3 +60,13 @@ abbr {
     margin-left: $header-large-width;
   }
 }
+
+.error404 {
+  .page-title {
+    @include font-size(62px);
+  }
+}
+
+.cat-404 {
+  margin: $base-spacing 0;
+}
