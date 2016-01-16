@@ -12,7 +12,13 @@ body.home {
 
 .author-thumb {
   padding: 3px;
-  border: 1px solid rgba($white-color, 0.3);
+  border: 1px solid rgba($white-color, .3);
+  @include transition(all .4s $base-timing);
+
+  &:hover,
+  &:focus {
+    @include transform(scale(.9) rotate(-5deg));
+  }
 }
 
 .svg-pattern {
@@ -53,9 +59,7 @@ body.home {
   .author-thumb,
   .social,
   .button-ghost {
-    opacity: 0;
-    animation-delay: .3s;
-    animation-fill-mode: forwards;
+    animation-delay: .4s;
     position: relative;
     z-index: 10;
   }
@@ -64,7 +68,7 @@ body.home {
     position: relative;
     animation-name: bounce-right;
     font-family: $font-family-base;
-    color: rgba($white-color, 0.5);
+    color: rgba($white-color, .5);
     margin-top: $small-spacing / 2;
     margin-bottom: $small-spacing;
     padding-bottom: $small-spacing;
@@ -83,7 +87,7 @@ body.home {
       left: 50%;
       margin-left: -25px;
       height: 2px;
-      background-color: rgba($white-color, 0.6);
+      background-color: rgba($white-color, .6);
     }
 
     strong {
@@ -135,7 +139,7 @@ body.home {
   .author-thumb,
   .button-ghost {
     animation-name: bounce-rotate;
-    animation-duration: .7s;
+    animation-duration: 1s;
   }
 
   .button-ghost {

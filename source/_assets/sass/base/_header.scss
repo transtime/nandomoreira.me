@@ -135,7 +135,7 @@
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
       position: relative;
-      @include transition(color .4s ease);
+      @include transition(color .4s $base-timing);
     }
 
     &:hover,
