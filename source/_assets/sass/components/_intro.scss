@@ -35,12 +35,9 @@ body.home {
   }
 
   .polygon {
-    transition: -webkit-transform 300ms ease-in-out, opacity 300ms ease-in-out;
-    transition: transform 300ms ease-in-out, opacity 300ms ease-in-out;
-    -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: center bottom;
-    transform-origin: center bottom;
+    @include transition(transform 300ms ease-in-out, opacity 300ms ease-in-out);
+    @include transform(scale(1));
+    @include transform-origin(center bottom);
     fill: transparent;
   }
 }
@@ -59,6 +56,8 @@ body.home {
   .author-thumb,
   .social,
   .button-ghost {
+    opacity: 0;
+    animation-fill-mode: forwards;
     animation-delay: .4s;
     position: relative;
     z-index: 10;

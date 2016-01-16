@@ -2,21 +2,13 @@
 // Mixins
 //
 
-// scss-lint:disable VendorPrefix, Indentation
-@mixin all-vendors($property, $value...) {
-    -webkit-#{$property}: $value;
-       -moz-#{$property}: $value;
-        -ms-#{$property}: $value;
-         -o-#{$property}: $value;
-            #{$property}: $value;
-}
-
 //
 // mixin font-size
 @mixin font-size($px) {
   $px-value: strip-unit($px);
   $rem-value: $px-value / 16;
   font-size: $rem-value + rem;
+  // font-size: $px-value * 1px;
 }
 
 //
@@ -49,20 +41,4 @@
       @content;
     }
   }
-}
-
-@mixin box-shadow($shadow...) {
-  @include all-vendors(box-shadow, $shadow);
-}
-
-@mixin border-radius($radius) {
-  @include all-vendors(border-radius, $radius);
-  @include all-vendors(border-radius, $radius);
-}
-// scss-lint:enable VendorPrefix, Indentation
-
-@mixin opacity($opacity) {
-  opacity: $opacity;
-  $opacity-ie: $opacity * 100;
-  filter: alpha(opacity=$opacity-ie);
 }

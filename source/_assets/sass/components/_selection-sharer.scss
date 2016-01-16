@@ -44,8 +44,7 @@
     margin-left: -4px;
     width: 8px;
     height: 8px;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
+    @include transform(rotate(45deg));
     background: #262625;
     box-shadow: 0 0 2px #262625;
   }
@@ -53,14 +52,12 @@
   &.anim {
     transition: top .075s ease-out;
     animation: selectionSharerPopover-animation 180ms forwards linear;
-    -webkit-animation: selectionSharerPopover-animation 180ms forwards linear;
   }
 }
 
 #selectionSharerPopover-inner {
   position: relative;
   overflow: hidden;
-  -webkit-border-radius: 5px;
   border-radius: 5px;
   border: 1px solid;
   border-color: #262625 #1c1c1b #121211;
@@ -86,8 +83,7 @@
     display: block;
     width: 20px;
     height: 20px;
-    -webkit-transform: rotate(45deg) scale(0.5);
-    transform: rotate(45deg) scale(0.5);
+    @include transform(rotate(45deg) scale(0.5));
     background-color: #454543;
     border: 2px solid #121211;
     box-sizing: content-box;
@@ -143,7 +139,7 @@
 }
 
 #selectionSharerPopunder.fixed {
-  transition: bottom .5s ease-in-out;
+  @include transition(bottom .5s ease-in-out);
   width: 100%;
   position: fixed;
   left: 0;
@@ -151,10 +147,10 @@
 }
 
 .selectionSharer {
-  transition: -webkit-transform .6s ease-in-out;
+  @include transition(transform .6s ease-in-out);
 
   &.moveDown {
-    -webkit-transform: translate3d(0, 60px, 0);
+    @include transform(translate3d(0, 60px, 0));
   }
 }
 
