@@ -57,20 +57,22 @@ end
 Como eu falei logo acima, é bem simples, apenas com uma linha curta você inclui o iframe do youtube no HTML final do Jekyll.
 
 {% highlight liquid %}
-{ % youtube 8SbUC-UaAxE % }
+  {% raw %}
+    {% youtube 8SbUC-UaAxE %}
+  {% endraw %}
 {% endhighlight %}
 
 Você também pode especificar uma altura e largura do iframe. Se você não usar o padrão é de 560 x 420.
 
 {% highlight liquid %}
-{ % youtube 8SbUC-UaAxE 850 460 % }
+  {% raw %}
+    {% youtube 8SbUC-UaAxE 850 460 %}
+  {% endraw %}
 {% endhighlight %}
-
-> **OBS:** remova os espaços entre `%` e `{` e `}`
 
 O resultado está logo abaixo:
 
-{% youtube 8SbUC-UaAxE %}
+{% youtube 8SbUC-UaAxE 850 460 %}
 
 ## Conclusão
 
