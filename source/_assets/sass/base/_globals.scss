@@ -70,3 +70,37 @@ abbr {
 .cat-404 {
   margin: $base-spacing 0;
 }
+
+body.no-sidebar {
+
+  .wrapper,
+  .header,
+  .footer {
+    @include transition(max-width .4s $base-timing, left .4s $base-timing, margin-left .4s $base-timing);
+  }
+
+  .wrapper {
+    @include media($screen-tablet) {
+      max-width: 80%;
+    }
+
+    @include media($screen-desktop) {
+      margin-left: auto;
+    }
+
+    @include media($screen-large-desktop) {
+      max-width: 80%;
+    }
+  }
+
+  .header,
+  .footer {
+    @include media($screen-desktop) {
+      left: -($header-medium-width);
+    }
+
+    @include media($screen-large-desktop) {
+      left: -($header-large-width);
+    }
+  }
+}
