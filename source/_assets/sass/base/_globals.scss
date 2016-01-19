@@ -60,6 +60,10 @@ abbr {
   }
 }
 
+body.home .wrapper {
+  left: auto !important;
+}
+
 .error404 .page-title {
   @include font-size(62px);
 }
