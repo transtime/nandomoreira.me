@@ -1,4 +1,24 @@
 
+.hanburg {
+  top: 0;
+  padding: 15px;
+  position: fixed;
+  z-index: 100;
+
+  span {
+    width: 35px;
+    height: 4px;
+    display: block;
+    margin-bottom: 5px;
+    background-color: $white-color;
+  }
+
+  @include media(max-width $screen-desktop) {
+    display: none;
+    visibility: hidden;
+  }
+}
+
 .header {
   @extend %clearfix;
   background-color: darken($secondary-color, 2%);

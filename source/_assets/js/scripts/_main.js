@@ -4,7 +4,8 @@
   // var $header   = $('.header'),
   //     $scrollUp = $('.scroll-up');
 
-  var $form = $('#contactForm');
+  var $form = $('#contactForm'),
+      $body = $('body');
 
   $(document).ready(function () {
     // $scrollUp.scrolltoo({
@@ -30,8 +31,7 @@
 
     $('.light-off, .overlay-popup').on('click', function (e) {
       e.preventDefault();
-      var $body = $('body'),
-          $container = $(this).parent(),
+      var $container = $(this).parent(),
           $lights = $('.light-off .fa');
 
       $container.stop(true, false).toggleClass('lights');
@@ -42,10 +42,20 @@
         $lights.removeClass('fa-lightbulb-o').addClass('fa-close');
       }
 
-      if($body.hasClass('no-sidebar')) {
-        $body.removeClass('no-sidebar');
+      if($body.hasClass('full-video')) {
+        $body.removeClass('full-video');
       } else {
-        $body.addClass('no-sidebar');
+        $body.addClass('full-video');
+      }
+    });
+
+    $('.hanburg').on('click', function (e) {
+      e.preventDefault();
+
+      if($body.hasClass('close-sidebar') || $body.hasClass('no-sidebar')) {
+        $body.removeClass('close-sidebar no-sidebar');
+      } else {
+        $body.addClass('close-sidebar');
       }
     });
 

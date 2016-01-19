@@ -43,64 +43,88 @@ abbr {
 }
 
 .wrapper {
+  position: relative;
   padding: $base-spacing 0;
   margin: 0 auto;
 
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+
   @include media($screen-tablet) {
-    max-width: $screen-tablet;
+    max-width: ($screen-tablet - 100px);
   }
 
   @include media($screen-desktop) {
-    margin-left: $header-medium-width;
+    left: 10em;
     padding: ($base-spacing*2);
-  }
-
-  @include media($screen-large-desktop) {
-    max-width: $screen-tablet;
-    margin-left: $header-large-width;
   }
 }
 
-.error404 {
-  .page-title {
-    @include font-size(62px);
-  }
+.error404 .page-title {
+  @include font-size(62px);
 }
 
 .cat-404 {
   margin: $base-spacing 0;
 }
 
-body.no-sidebar {
-
-  .wrapper,
-  .header,
-  .footer {
-    @include transition(max-width .4s $base-timing, left .4s $base-timing, margin-left .4s $base-timing);
-  }
-
-  .wrapper {
-    @include media($screen-tablet) {
-      max-width: 80%;
-    }
-
-    @include media($screen-desktop) {
-      margin-left: auto;
-    }
-
-    @include media($screen-large-desktop) {
-      max-width: 80%;
+body {
+  &.full-video {
+    .wrapper {
+      @include media($screen-desktop) {
+        max-width: 80%;
+      }
     }
   }
 
-  .header,
-  .footer {
-    @include media($screen-desktop) {
-      left: -($header-medium-width);
-    }
-
-    @include media($screen-large-desktop) {
-      left: -($header-large-width);
+  &.no-sidebar,
+  &.close-sidebar {
+    .hanburg {
+      background: $secondary-color;
     }
   }
+
+  &.close-sidebar {
+    .wrapper {
+      @include media($screen-desktop) {
+        @include animation(wrapperSlide .6s forwards);
+      }
+    }
+
+    .header,
+    .footer {
+      @include media($screen-desktop) {
+        @include animation(sidebarSlide .5s forwards);
+      }
+    }
+  }
+
+  &.no-sidebar {
+    .wrapper {
+      @include media($screen-desktop) {
+        left: 0;
+      }
+    }
+
+    .header,
+    .footer {
+      @include media($screen-desktop) {
+        left: -100%;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes sidebarSlide {
+  100% { left: -100%; }
+}
+@keyframes sidebarSlide {
+  100% { left: -100%; }
+}
+
+@-webkit-keyframes wrapperSlide {
+  100% { left: 0; }
+}
+@keyframes wrapperSlide {
+  100% { left: 0; }
 }
