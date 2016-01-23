@@ -210,15 +210,16 @@ body.modal-search-open {
   padding: 0;
   margin: 0;
   visibility: hidden;
-  transition: opacity .3s;
+  transition: opacity .2s;
+
   @include opacity(0);
 }
 
 .modal-search-open .modal-search-overlay {
-  @include opacity(1);
-
   visibility: visible;
   pointer-events: auto;
+
+  @include opacity(1);
 }
 
 .modal-search-content {
@@ -249,7 +250,7 @@ body.modal-search-open {
 
 .modal-search.modal-search-open .modal-search-content,
 .modal-search.modal-search-close .modal-search-content {
-  @include animation-duration(.6s);
+  @include animation-duration(.2s);
   @include animation-fill-mode(forwards);
 }
 
@@ -271,10 +272,9 @@ body.modal-search-open {
   font-family: $font-family-base;
   text-transform: uppercase;
   color: $white-color;
+  margin-top: 26px;
 
   @include font-size(16px);
-
-  margin-top: 26px;
 
   @include media(max-width $screen-tablet) {
     display: none;
@@ -305,19 +305,18 @@ body.modal-search-open {
 
   input[type="text"] {
     border: 0;
-    border-bottom: 1px solid rgba($white-color, .65);
     outline: 0;
+    width: 100%;
+    padding: 6px 50px 6px 0;
     background-color: transparent;
     color: rgba($white-color, .8);
     font-family: $font-family-base;
-    @include border-radius(0);
-    width: 100%;
-    padding: 6px 50px 6px 0;
-
-    @include font-size(38px);
-
+    border-bottom: 1px solid rgba($white-color, .65);
     text-transform: lowercase;
     font-weight: 300;
+
+    @include border-radius(0);
+    @include font-size(38px);
 
     &:focus,
     &:active {
