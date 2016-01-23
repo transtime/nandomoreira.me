@@ -113,31 +113,33 @@ body {
       }
     }
 
-    .wrapper {
-      @include media($screen-desktop) {
+    @include media($screen-desktop) {
+      .wrapper {
         @include translateX(0);
       }
-    }
 
-    .header,
-    .footer {
-      @include media($screen-desktop) {
+      .header {
         @include translateX(-100%);
+      }
+
+      .footer {
+        @include translateY(100%);
       }
     }
   }
 
   &.open-sidebar {
-    .wrapper {
-      @include media($screen-desktop) {
+    @include media($screen-desktop) {
+      .wrapper {
         @include translateX(200px);
       }
-    }
 
-    .header,
-    .footer {
-      @include media($screen-desktop) {
+      .header {
         @include translateX(0);
+      }
+
+      .footer {
+        @include translateY(0);
       }
     }
   }
