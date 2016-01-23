@@ -46,12 +46,9 @@ abbr {
   margin: ($base-spacing*2) auto 0;
   @extend .container;
 
-  @include media($screen-tablet) {
-    max-width: ($screen-tablet - 100px);
-  }
-
   @include media($screen-desktop) {
     margin-top: 0;
+    max-width: ($screen-tablet - 100px);
     padding: ($base-spacing*2);
     transform: translateX(200px);
   }
@@ -60,7 +57,7 @@ abbr {
 .wrapper,
 .header,
 .footer {
-  @include transition(all .4s $base-timing);
+  @include transition(all .3s $base-timing);
 }
 
 body.home .wrapper {
@@ -76,14 +73,6 @@ body.home .wrapper {
 }
 
 body {
-  &.full-video {
-    .wrapper {
-      @include media($screen-desktop) {
-        max-width: 80%;
-      }
-    }
-  }
-
   &.no-sidebar,
   &.close-sidebar {
     .hanburg {
@@ -141,6 +130,13 @@ body {
       .footer {
         @include translateY(0);
       }
+    }
+  }
+
+  &.full-video .wrapper {
+    @include media($screen-desktop) {
+      max-width: 80%;
+      @include transform(none);
     }
   }
 }

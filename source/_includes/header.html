@@ -5,6 +5,13 @@
   </a>
 </div>
 
+<div class="top-search">
+  <button type="button" class="tcon tcon-search-xcross open-close-search" aria-label="toggle search">
+    <span class="tcon-search-item" aria-hidden="true"></span>
+    <span class="tcon-visuallyhidden">toggle search</span>
+  </button>
+</div>
+
 <header class="header">
   {% include svg-pattern.html %}
 
@@ -21,9 +28,6 @@
         <li role="menuitem"><a href="{{ "/about" | prepend: site.baseurl }}" class="after">Sobre</a></li>
         <li role="menuitem"><a href="{{ "/portfolio" | prepend: site.url }}" class="after">Projetos</a></li>
         <li role="menuitem"><a href="{{ "/contato" | prepend: site.baseurl }}" class="after">Contato</a></li>
-        <li role="menuitem" class="search">
-          <a href="#" class="after open-close-search"><i class="fa fa-search"></i> <span>Busca</span></a>
-        </li>
       </ul>
     </nav>
   </div>

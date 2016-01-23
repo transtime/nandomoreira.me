@@ -28,6 +28,7 @@ angular
 
       $modal.stop(true, true).toggleClass('modal-search-open');
       $body.stop(true, true).toggleClass('modal-search-open');
+      $('.tcon-search-xcross').stop(true, true).toggleClass('tcon-transform');
     });
   });
 
