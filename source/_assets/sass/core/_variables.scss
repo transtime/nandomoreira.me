@@ -91,3 +91,13 @@ $default-feature: min-width;
 
 $medium-screen-up: new-breakpoint($default-feature $screen-tablet 4);
 $large-screen-up: new-breakpoint($default-feature $screen-desktop 8);
+
+$tcon-size: 40px !default;
+$tcon-transition: .3s !default;
+$tcon-jstransform: 'tcon-transform' !default;
+
+$tcon-search-size: ($tcon-size * .75) !default;
+$tcon-search-radius: ($tcon-size / 14) !default;
+$tcon-search-handle-width: ($tcon-size / 10) !default;
+$tcon-search-glass-radius: ($tcon-size / 3.3333) !default;
+$tcon-search-glass-border-width: ($tcon-size / 20) !default;
