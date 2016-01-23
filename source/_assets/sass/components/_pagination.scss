@@ -5,6 +5,9 @@
   margin: $base-spacing auto $small-spacing;
   text-align: center;
 
+  display: none;
+  visibility: hidden;
+
   ul {
     list-style: none;
     padding: 0;
@@ -81,5 +84,12 @@
 
   @include media($screen-desktop) {
     margin: ($base-spacing*2) auto 0;
+  }
+}
+
+html.no-js {
+  .pagination {
+    display: block;
+    visibility: visible;
   }
 }

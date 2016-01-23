@@ -43,25 +43,28 @@ abbr {
 }
 
 .wrapper {
-  position: relative;
-  padding: $base-spacing 0;
-  margin: 0 auto;
-
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
+  margin: ($base-spacing*2) auto 0;
+  @extend .container;
 
   @include media($screen-tablet) {
     max-width: ($screen-tablet - 100px);
   }
 
   @include media($screen-desktop) {
-    left: 10em;
+    margin-top: 0;
     padding: ($base-spacing*2);
+    transform: translateX(200px);
   }
 }
 
+.wrapper,
+.header,
+.footer {
+  @include transition(all .4s $base-timing);
+}
+
 body.home .wrapper {
-  left: auto !important;
+  @include translateX(0);
 }
 
 .error404 .page-title {
@@ -84,51 +87,58 @@ body {
   &.no-sidebar,
   &.close-sidebar {
     .hanburg {
-      background: $secondary-color;
-    }
-  }
+      span {
+        @include rotate(180deg);
 
-  &.close-sidebar {
+        &,
+        &::before,
+        &::after {
+          background-color: $secondary-color;
+        }
+
+        &::before,
+        &::after {
+          width: 60%;
+        }
+
+        &::before {
+          top: 0;
+          @include transform(translateY(8px) rotate(35deg));
+        }
+
+        &::after {
+          bottom: 0;
+          @include transform(translateY(-8px) rotate(-35deg));
+        }
+      }
+    }
+
     .wrapper {
       @include media($screen-desktop) {
-        @include animation(wrapperSlide .6s forwards);
+        @include translateX(0);
       }
     }
 
     .header,
     .footer {
       @include media($screen-desktop) {
-        @include animation(sidebarSlide .5s forwards);
+        @include translateX(-100%);
       }
     }
   }
 
-  &.no-sidebar {
+  &.open-sidebar {
     .wrapper {
       @include media($screen-desktop) {
-        left: 0;
+        @include translateX(200px);
       }
     }
 
     .header,
     .footer {
       @include media($screen-desktop) {
-        left: -100%;
+        @include translateX(0);
       }
     }
   }
-}
-
-@-webkit-keyframes sidebarSlide {
-  100% { left: -100%; }
-}
-@keyframes sidebarSlide {
-  100% { left: -100%; }
-}
-
-@-webkit-keyframes wrapperSlide {
-  100% { left: 0; }
-}
-@keyframes wrapperSlide {
-  100% { left: 0; }
 }

@@ -1,16 +1,100 @@
 
-.hanburg {
+.menu-hanburg {
   top: 0;
   padding: 15px;
   position: fixed;
   z-index: 100;
+}
+
+.hanburg {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  @include transition(background-color .3s);
+
+  &:focus {
+    outline: none;
+  }
 
   span {
-    width: 35px;
-    height: 4px;
-    display: block;
-    margin-bottom: 5px;
-    background-color: $white-color;
+    top: 23px;
+    left: 5px;
+    right: 5px;
+
+    &,
+    &::before,
+    &::after {
+      display: block;
+      position: absolute;
+      height: 4px;
+      background-color: $white-color;
+      @include transition(background-color .3s $base-timing, transform .3s $base-timing);
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      left: 0;
+      width: 100%;
+    }
+
+    &::before {
+      top: -10px;
+      @include transform-origin(top left);
+      @include transition(transform .3s, width .3s, top .3s);
+    }
+
+    &::after {
+      bottom: -10px;
+      @include transform-origin(bottom left);
+      @include transition(transform .3s, width .3s, bottom .3s);
+    }
+  }
+
+  &:hover span {
+    &::before {
+      top: -12px;
+    }
+
+    &::after {
+      bottom: -12px;
+    }
+  }
+
+  &.is-active span {
+    @include rotate(180deg);
+
+    &,
+    &::before,
+    &::after {
+      background-color: $secondary-color;
+    }
+
+    &::before,
+    &::after {
+      width: 60%;
+    }
+
+    &::before {
+      top: 0;
+      @include transform(translateY(8px) rotate(35deg));
+    }
+
+    &::after {
+      bottom: 0;
+      @include transform(translateY(-8px) rotate(-35deg));
+    }
   }
 
   @include media(max-width $screen-desktop) {
@@ -62,10 +146,11 @@
 
   .author-thumb {
     margin: 0 0 $small-spacing 0;
-    animation-duration: .5s;
-    animation-name: bounce-rotate;
     display: inline;
     width: 6.25em;
+
+    @include animation-duration(.5s);
+    @include animation-name(bounce-rotate);
 
     @include media($screen-desktop) {
       margin: 0 0 $base-spacing 0;
@@ -73,15 +158,17 @@
   }
 
   h1 {
-    animation-name: bounce-right;
     font-family: $font-family-base;
     color: rgba($white-color, .5);
     line-height: 1.5;
     display: block;
     margin: 0 0 $small-spacing;
-    @include font-size(22px);
     font-weight: 400;
-    animation-duration: 1s;
+
+    @include font-size(22px);
+
+    @include animation-duration(1s);
+    @include animation-name(bounce-right);
 
     strong, em {
       color: rgba($white-color, .9);

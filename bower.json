@@ -11,6 +11,7 @@
     "classie": "~1.0.1",
     "jquery": "~2.1.4",
     "swipebox": "~1.4.1",
-    "angular": "~1.4.8"
+    "angular": "~1.4.8",
+    "jscroll": "~2.3.4"
   }
 }

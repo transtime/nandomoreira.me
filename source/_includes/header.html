@@ -1,7 +1,9 @@
 
-<a href="#" class="hanburg" role="button">
-  <span></span><span></span><span></span>
-</a>
+<div class="menu-hanburg">
+  <a href="#" class="hanburg" role="button">
+    <span></span>
+  </a>
+</div>
 
 <header class="header">
   {% include svg-pattern.html %}
@@ -20,7 +22,7 @@
         <li role="menuitem"><a href="{{ "/portfolio" | prepend: site.url }}" class="after">Projetos</a></li>
         <li role="menuitem"><a href="{{ "/contato" | prepend: site.baseurl }}" class="after">Contato</a></li>
         <li role="menuitem" class="search">
-          <a href="#" data-modal-search="modalSearch" class="after"><i class="fa fa-search"></i> <span>Busca</span></a>
+          <a href="#" class="after open-close-search"><i class="fa fa-search"></i> <span>Busca</span></a>
         </li>
       </ul>
     </nav>

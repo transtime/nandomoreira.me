@@ -6,18 +6,16 @@ var config = require('../config.json');
 var $ = require('gulp-load-plugins')();
 var gulp = require('gulp');
 
-var mainfile = [
-  config.js + 'main.js'
-];
+var jsfiles = [ config.js + '*.js' ];
 
 gulp.task('lint', function () {
-  return gulp.src(mainfile)
+  return gulp.src(jsfiles)
     .pipe($.jshint())
     .pipe($.jshint.reporter('default', { verbose: true }));
 })
 
 .task('js', function () {
-  gulp.src(mainfile)
+  gulp.src(jsfiles)
     .pipe($.plumber())
     .pipe($.include()).on('error', console.log)
     .pipe($.uglify())

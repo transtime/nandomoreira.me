@@ -91,9 +91,6 @@
     position: relative;
     margin-bottom: $base-spacing;
     padding-bottom: $base-spacing;
-    // animation-duration: .9s;
-    // animation-name: bounce-left;
-    // border-bottom: 1px solid $base-border-color;
     @extend %clearfix;
 
     p {

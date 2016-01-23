@@ -58,25 +58,25 @@ body.home {
   .button-ghost {
     opacity: 0;
     animation-fill-mode: forwards;
-    animation-delay: .4s;
     position: relative;
     z-index: 10;
+
+    @include animation-delay(.4s);
   }
 
   h1 {
     position: relative;
-    animation-name: bounce-right;
     font-family: $font-family-base;
     color: rgba($white-color, .5);
     margin-top: $small-spacing / 2;
     margin-bottom: $small-spacing;
     padding-bottom: $small-spacing;
-
-    @include font-size(26px);
-
     font-weight: 300;
     text-transform: none;
-    animation-duration: .6s;
+
+    @include font-size(26px);
+    @include animation-duration(.6s);
+    @include animation-name(bounce-right);
 
     &:after {
       content: '';
@@ -132,13 +132,13 @@ body.home {
   }
 
   .social {
-    animation-name: bounce-left;
+    @include animation-name(bounce-left);
   }
 
   .author-thumb,
   .button-ghost {
-    animation-name: bounce-rotate;
-    animation-duration: 1s;
+    @include animation-duration(1s);
+    @include animation-name(bounce-rotate);
   }
 
   .button-ghost {
@@ -154,7 +154,7 @@ body.home {
   }
 
   .button-ghost:first-child {
-    animation-delay: .4s;
+    @include animation-delay(.4s);
   }
 }
 

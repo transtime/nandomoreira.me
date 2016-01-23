@@ -13,8 +13,9 @@
     {% include search-modal.html %}
 
     {% javascript main %}
-    {% if page.slug == 'portfolio' %}
-      {% javascript portfolio %}
+
+    {% if page.slug == 'blog' %}
+      {% javascript infinite-scroll %}
     {% endif %}
   </body>
 </html>{% endstrip %}

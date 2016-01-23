@@ -7,8 +7,8 @@
   text-align: center;
   padding: $base-spacing $small-spacing;
 
-  animation-duration: 1s;
-  animation-name: fade-in-up;
+  @include animation-duration(1s);
+  @include animation-name(fade-in-up);
 
   p {
     font-size: 1rem;
@@ -62,8 +62,8 @@
   padding: 0;
   margin: $base-spacing 0 $small-spacing;
 
-  animation-duration: .5s;
-  animation-name: fade-in-up;
+  @include animation-duration(.5s);
+  @include animation-name(fade-in-up);
 
 
   li {

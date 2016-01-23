@@ -1,5 +1,5 @@
 .modal-search,
-.modal-search__overlay {
+.modal-search-overlay {
   width: 100%;
   height: 100%;
   top: 0;
@@ -33,7 +33,7 @@
   }
 }
 
-body.modal-search--open {
+body.modal-search-open {
   overflow: hidden !important;
 }
 
@@ -47,7 +47,7 @@ body.modal-search--open {
   width: 100%;
 }
 
-.modal-search__overlay {
+.modal-search-overlay {
   background-color: rgba($black-color, .95);
   position: absolute;
   z-index: 1;
@@ -58,14 +58,14 @@ body.modal-search--open {
   @include opacity(0);
 }
 
-.modal-search--open .modal-search__overlay {
+.modal-search-open .modal-search-overlay {
   @include opacity(1);
 
   visibility: visible;
   pointer-events: auto;
 }
 
-.modal-search__content {
+.modal-search-content {
   width: 100%;
   height: 100%;
   overflow-y: auto;
@@ -78,7 +78,7 @@ body.modal-search--open {
   opacity: 0;
 }
 
-.modal-search--open .modal-search__content {
+.modal-search-open .modal-search-content {
   pointer-events: auto;
 }
 
@@ -91,41 +91,18 @@ body.modal-search--open {
   margin: 0;
 }
 
-.modal-search.modal-search--open .modal-search__content,
-.modal-search.modal-search--close .modal-search__content {
-  animation-duration: .3s;
-  animation-fill-mode: forwards;
+.modal-search.modal-search-open .modal-search-content,
+.modal-search.modal-search-close .modal-search-content {
+  @include animation-duration(.6s);
+  @include animation-fill-mode(forwards);
 }
 
-.modal-search.modal-search--open .modal-search__content {
-  animation-name: anim-open;
+.modal-search.modal-search-open .modal-search-content {
+  @include animation-name(fade-in-up);
 }
 
-.modal-search.modal-search--close .modal-search__content {
-  animation-name: anim-close;
-}
-
-@keyframes anim-open {
-  0% {
-    opacity: 0;
-    transform: scale3d(1.1, 1.1, 1);
-  }
-
-  100% {
-    opacity: 1;
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-@keyframes anim-close {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-    transform: scale3d(.9, .9, 1);
-  }
+.modal-search.modal-search-close .modal-search-content {
+  @include animation-name(fadeOut);
 }
 
 //
@@ -233,6 +210,22 @@ body.modal-search--open {
 
   li {
     padding: 5px 0;
+  }
+
+  .fade {
+    @include transition(all 1s $base-timing);
+  }
+
+  .fade.ng-enter {
+    @include opacity(0);
+  }
+
+  .fade.ng-enter.ng-enter-active {
+    @include opacity(1);
+  }
+
+  .fade.ng-leave {
+    @include opacity(1);
   }
 
   a {
