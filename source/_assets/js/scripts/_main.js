@@ -76,7 +76,7 @@
           emailValue = email.val(),
           messageValue = message.val();
 
-      alert.html('').removeClass('alert-error alert-success fadeIn tada animated hinge').hide();
+      alert.html('').removeClass('alert-error alert-success fadeIn shake animated hinge').hide();
 
       $btn.prop('disabled', true);
 
@@ -98,7 +98,7 @@
             alertClass = 'alert-success fadeIn hinge';
             msg = '<p>Formulário enviado com sucesso.</p>';
           } else {
-            alertClass = 'alert-error tada animated hinge';
+            alertClass = 'alert-error shake animated hinge';
             msg = '<p>Ocorreu um erro no envio do formulário, tente enviar novamente para: <strong>nandomoreira.me@gmail.com</strong></p>';
           }
 
@@ -128,7 +128,7 @@
           message.removeClass('error');
         }
 
-        alertClass = 'alert-error tada animated hinge';
+        alertClass = 'alert-error shake animated hinge';
         msg = '<p>Preencha corretamente o formulário.</p>';
 
         alert.html(msg).addClass(alertClass).fadeIn('600');

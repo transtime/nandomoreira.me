@@ -91,3 +91,8 @@ img.pull-right { margin-left: 20px; }
 .fadeIn {
   @include animation-name(fadeIn);
 }
+
+.shake {
+  // @include do-shake('shake', 20, 0, 0);
+  @include do-shake('shake', 20, 0, 0, 160ms, .02, false, 1);
+}
