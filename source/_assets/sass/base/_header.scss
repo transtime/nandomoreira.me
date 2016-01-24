@@ -107,13 +107,15 @@
 }
 
 .header {
-  @extend %clearfix;
   background-color: darken($secondary-color, 2%);
   color: $white-color;
   padding: $small-spacing;
   text-align: center;
   overflow: hidden;
   position: relative;
+
+  @extend %clearfix;
+  @include transition(all .3s $base-timing);
 
   .svg-pattern {
     position: absolute;
@@ -162,24 +164,15 @@
 
   h1 {
     font-family: $font-family-base;
-    color: rgba($white-color, .5);
+    color: rgba($white-color, .8);
     line-height: 1.5;
     display: block;
     margin: 0 0 $small-spacing;
     font-weight: 400;
 
-    @include font-size(22px);
-
+    @include font-size(26px);
     @include animation-duration(1s);
     @include animation-name(bounce-right);
-
-    strong, em {
-      color: rgba($white-color, .9);
-    }
-
-    strong {
-      text-transform: uppercase;
-    }
 
     @include media($screen-desktop) {
       @include font-size(20px);

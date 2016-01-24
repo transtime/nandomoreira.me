@@ -108,3 +108,8 @@
     transform: scale3d(1, 1, 1);
   }
 }
+
+@include keyframes(slidein) {
+  from  { @include translateX(-100%); }
+  to    { @include translateX(0); }
+}

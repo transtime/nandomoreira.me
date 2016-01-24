@@ -1,7 +1,31 @@
 ---
-layout: error404
-title: "Oops.. Erro 404!"
-slug: "error404 single"
+layout: default
+title: Oops.. Erro 404!
+slug: error404
+post_class: page-template no-sidebar
 permalink: 404.html
 ---
 
+<div class="post txt-center" itemprop="mainContentOfPage">
+
+  <header class="post-header container">
+    <h1 class="page-title">{{ page.title }}</h1>
+  </header>
+
+  <div class="cat-404">
+    {% image 404.gif alt="cat 404 gif" [autosize] %}
+  </div>
+
+  <div class="container" role="alert">
+    <p>Desculpe, parece que essa URL está apontando para uma página que não existe. Tente voltar para a Home e tentar novamente. <br> <strong>Ou você pode ler os meus últimos posts listados logo abaixo :)</strong></p>
+  </div>
+
+</div>
+
+<hr>
+
+<div class="posts container">
+  {% for post in site.posts limit:6 %}
+    {% include article.html %}
+  {% endfor %}
+</div>

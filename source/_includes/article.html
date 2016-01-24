@@ -19,7 +19,7 @@
       {% endcomment %}
 
       <span> - {% if post.categories.size > 0 %}
-        {% capture categories_content %}{% endcapture %}
+        {% capture categories_content %}Categoria: {% endcapture %}
         {% for post_category in post.categories %}
           {% for data_category in site.data.categories %}
             {% if data_category.slug == post_category %}

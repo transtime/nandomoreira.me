@@ -7,6 +7,9 @@
   text-align: center;
   padding: $base-spacing $small-spacing;
 
+  @include transition(all .6s $base-timing);
+  @include translateX(0);
+
   @include animation-duration(1s);
   @include animation-name(fade-in-up);
 

@@ -44,20 +44,16 @@ abbr {
 
 .wrapper {
   margin: ($base-spacing*2) auto 0;
+
+  @include transition(all .3s $base-timing);
   @extend .container;
 
   @include media($screen-desktop) {
     margin-top: 0;
     max-width: ($screen-tablet - 100px);
     padding: ($base-spacing*2);
-    transform: translateX(200px);
+    @include translateX(200px);
   }
-}
-
-.wrapper,
-.header,
-.footer {
-  @include transition(all .3s $base-timing);
 }
 
 body.home .wrapper {
