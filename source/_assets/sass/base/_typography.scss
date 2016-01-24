@@ -23,6 +23,11 @@ textarea {
 
 p {
   margin: 0 0 $small-spacing;
+
+  &.lead {
+    font-size: 1.4rem;
+    font-weight: $light-font-weight;
+  }
 }
 
 a {

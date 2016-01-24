@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Oops.. Erro 404!
+title: Nós encontramos um bat-erro Robin!
 slug: error404
 post_class: page-template no-sidebar
 permalink: 404.html
@@ -13,19 +13,18 @@ permalink: 404.html
   </header>
 
   <div class="cat-404">
-    {% image 404.gif alt="cat 404 gif" [autosize] %}
-  </div>
-
-  <div class="container" role="alert">
-    <p>Desculpe, parece que essa URL está apontando para uma página que não existe. Tente voltar para a Home e tentar novamente. <br> <strong>Ou você pode ler os meus últimos posts listados logo abaixo :)</strong></p>
+    {% image 404.gif alt="cat 404 gif" class="dot" [autosize] %}
   </div>
 
 </div>
 
-<hr>
-
-<div class="posts container">
-  {% for post in site.posts limit:6 %}
-    {% include article.html %}
-  {% endfor %}
+<div class="container" role="alert">
+  <p class="lead">
+    <strong>Robin:</strong> Santo desenvolvedor Batman! O que é isso??<br>
+    <strong>Batman:</strong> Desculpe Robin, isso me parece um <strong>erro 404</strong> e nós falhamos em capturar o nosso inimigo. <br>
+    <strong>Robin:</strong> Mas Batman, onde está o erro??<br>
+    <strong>Batman:</strong> Acho que essa URL está apontando para uma página que não existe Robin.<br>
+    <strong>Robin:</strong> E agora o que faremos?!?<br>
+    <strong>Batman:</strong> Tente voltar para a <a href="/">Página inicial</a> ou tente fazer uma busca clicando no ícone de <strong>Lupa no topo</strong> do site.
+  </p>
 </div>

@@ -11,9 +11,9 @@
       var $btn = $('.disqus-hidden');
 
       $.ajax({
-        type: "GET",
-        url: "http://" + disqus_shortname + ".disqus.com/embed.js",
-        dataType: "script",
+        type: 'GET',
+        url: '//' + disqus_shortname + '.disqus.com/embed.js',
+        dataType: 'script',
         cache: true,
         beforeSend: function() {
           $btn.html('Carregando..');
