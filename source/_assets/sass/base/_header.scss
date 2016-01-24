@@ -164,11 +164,11 @@
 
   h1 {
     font-family: $font-family-base;
-    color: rgba($white-color, .8);
+    color: rgba($white-color, .75);
     line-height: 1.5;
     display: block;
     margin: 0 0 $small-spacing;
-    font-weight: 400;
+    font-weight: 300;
 
     @include font-size(26px);
     @include animation-duration(1s);
