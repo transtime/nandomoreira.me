@@ -37,16 +37,17 @@ Após ter copiado o código universal e adicionado suas respectivas variáveis v
 Eu criei um arquivo de include dentro do diretório `_includes/` chamado `comments.html` e colei nosso amigo, mais tarde iremos incluir ele dentro do template.
 
 O meu ficou mais ou menos assim:
-{% highlight html %}
+{% highlight liquid %}
+{% raw %}
 <aside id="comments">
   <h3>Comentários</h3>
   <div id="disqus_thread"></div>
   <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = 'fernandomoreira';
-    var disqus_identifier = '{ { page.id } }';
-    var disqus_title = '{ { page.title } }';
-    var disqus_url = '{ { site.baseurl } }{ { post.url } }';
+    var disqus_identifier = '{{ page.id }}';
+    var disqus_title = '{{ page.title }}';
+    var disqus_url = '{{ site.baseurl }}{{ post.url }}';
 
     var disqus_developer = 1;
 
@@ -59,9 +60,8 @@ O meu ficou mais ou menos assim:
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </aside>
+{% endraw %}
 {% endhighlight %}
-
-> **obs** Eu separei as chaves `{ { } }` das variáveis do Jekyll porque ele estava colocando a url do post e não era a minha intenção, se você for copiar o código com essas variáveis certifique de remover os espaços, pode não funcionar corretamente.
 
 As <a href="https://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions">instruções</a> passadas pelo próprio **Disqus** diz que você deve criar uma variável chamada `comments` com valor `true` para cada post que você queira que tenha comentários.
 

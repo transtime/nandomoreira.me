@@ -28,11 +28,13 @@ Eu tinha o seguinte código no meu head:
 
 {% highlight liquid %}
 <title>
-  { % if page.title == "Home" % }
-    { { site.name } } &bull; { { site.description } }
-  { % else % }
-    { { page.title } } &bull; { { site.name } }
-  { % endif % }
+{% raw %}
+  {% if page.title == "Home" %}
+    {{ site.name }} &bull; {{ site.description }}
+  {% else %}
+    {{ page.title }} &bull; {{ site.name }}
+  {% endif %}
+{% endraw %}
 </title>
 {% endhighlight %}
 
@@ -43,22 +45,26 @@ Aparentemente tudo certo, até eu perceber que o google não considerava a home 
 O mesmo if que eu usei para montar minha paginação eu vou usar no titulo:
 
 {% highlight liquid %}
-{ % if paginator and paginator.page != 1 % } - Página { { paginator.page } } { % endif % }
+{% raw %}
+{% if paginator and paginator.page != 1 %} - Página {{ paginator.page }} {% endif %}
+{% endraw %}
 {% endhighlight %}
 
 ..e vou inluir ele nas tags `title` e `description`, adicionando: ` - Página 1`, ` - Página 2`, ` - Página 3` sempre que estiver em uma página diferente.
 
 {% highlight liquid %}
+{% raw %}
 <title>
-  { % if page.title == "Home" % }
-    { { site.name } } &bull; { { site.description } }
-    { % if paginator and paginator.page != 1 % } - Página { { paginator.page } } { % endif % }
-  { % else % }
-    { { page.title } } &bull; { { site.name } }
-  { % endif % }
+  {% if page.title == "Home" %}
+    {{ site.name }} &bull; {{ site.description }}
+    {% if paginator and paginator.page != 1 %} - Página {{ paginator.page }} {% endif %}
+  {% else %}
+    {{ page.title }} &bull; {{ site.name }}
+  {% endif %}
 </title>
 
-<meta name="description" content="{ % if page.description % }{ { page.description | strip_html | strip_newlines | truncate: 160 } }{ % else % }{ { site.description } }{ % endif % }{ %if paginator and paginator.page != 1 % } - Página { { paginator.page } }{ % endif % }">
+<meta name="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}{%if paginator and paginator.page != 1 %} - Página {{ paginator.page }}{% endif %}">
+{% endraw %}
 {% endhighlight %}
 
 ## Use as metas rel="next" e rel="prev"
@@ -66,12 +72,14 @@ O mesmo if que eu usei para montar minha paginação eu vou usar no titulo:
 Usando a mesma lógica acima vamos incluir as metas tags `rel="next"` e `rel="prev"` no `<head>`:
 
 {% highlight liquid %}
-{ % if paginator.previous_page % }
-  <link rel="prev" href="{ { paginator.previous_page_path | prepend: site.baseurl | prepend: site.url } }">
-{ % endif % }
-{ % if paginator.next_page % }
-  <link rel="next" href="{ { paginator.next_page_path | prepend: site.baseurl | prepend: site.url } }">
-{ % endif % }
+{% raw %}
+{% if paginator.previous_page %}
+  <link rel="prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | prepend: site.url }}">
+{% endif %}
+{% if paginator.next_page %}
+  <link rel="next" href="{{ paginator.next_page_path | prepend: site.baseurl | prepend: site.url }}">
+{% endif %}
+{% endraw %}
 {% endhighlight %}
 
 ## Adicione description e keywords em cada artigo
@@ -97,12 +105,14 @@ tags:
 
 Essas informações estão armazenadas no objeto `page.VAR` e você pode usar quando e onde quiser.
 
-Por exemplo se eu quiser usar o valor que está contigo em `title` basta que eu imprima: `{ { page.title } }`.
+Por exemplo se eu quiser usar o valor que está contigo em `title` basta que eu imprima: `{% raw %}{{ page.title }}{% endraw %}`.
 
-Então para ter suas keywords diferentes de cada artigo basta que você coloque a variável `{ { page.keywords } }` dentro da meta tag keywords.
+Então para ter suas keywords diferentes de cada artigo basta que você coloque a variável `{% raw %}{{ page.keywords }}{% endraw %}` dentro da meta tag keywords.
 
 {% highlight liquid %}
-<meta name="keywords" content="{ % if page.keywords % }{ { page.keywords } }{ % else % }{ { site.keywords } }{ % endif % }">
+{% raw %}
+<meta name="keywords" content="{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}">
+{% endraw %}
 {% endhighlight %}
 
 ## Não esqueça do canonical
@@ -110,7 +120,9 @@ Então para ter suas keywords diferentes de cada artigo basta que você coloque 
 A meta tag **canonical** é extremamente importante para o SEO, esquecer dela é suicídio.
 
 {% highlight liquid %}
-<link rel="canonical" href="{ { page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url } }">
+{% raw %}
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+{% endraw %}
 {% endhighlight %}
 
 ## Monte seu sitemap.xml

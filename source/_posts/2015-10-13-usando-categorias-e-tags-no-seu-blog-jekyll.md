@@ -37,46 +37,46 @@ Aqui está um pequeno guia de como implementá-lo:
 
 #### 1. Adicione um pouco de lógica no template do seu layout _post.html_
 
-{% highlight html %}
-{ % raw % }
-{ % assign post = page % }
-{ % if post.tags.size > 0 % }
-    { % capture tags_content % }Posted with { % if post.tags.size == 1 % }<i class="fa fa-tag"></i>{ % else % }<i class="fa fa-tags"></i>{ % endif % }: { % endcapture % }
-    { % for post_tag in post.tags % }
-        { % for data_tag in site.data.tags % }
-            { % if data_tag.slug == post_tag % }
-                { % assign tag = data_tag % }
-            { % endif % }
-        { % endfor % }
-        { % if tag % }
-            { % capture tags_content_temp % }{{ tags_content }}<a href="/blog/tag/{{ tag.slug }}/">{{ tag.name }}</a>{ % if forloop.last == false % }, { % endif % }{ % endcapture % }
-            { % assign tags_content = tags_content_temp % }
-        { % endif % }
-    { % endfor % }
-{ % else % }
-    { % assign tags_content = '' % }
-{ % endif % }
-{ % endraw % }
+{% highlight liquid %}
+{% raw %}
+{% assign post = page %}
+{% if post.tags.size > 0 %}
+  {% capture tags_content %}Posted with {% if post.tags.size == 1 %}<i class="fa fa-tag"></i>{% else %}<i class="fa fa-tags"></i>{% endif %}: {% endcapture %}
+  {% for post_tag in post.tags %}
+    {% for data_tag in site.data.tags %}
+      {% if data_tag.slug == post_tag %}
+        {% assign tag = data_tag %}
+      {% endif %}
+    {% endfor %}
+    {% if tag %}
+      {% capture tags_content_temp %}{{ tags_content }}<a href="/blog/tag/{{ tag.slug }}/">{{ tag.name }}</a>{% if forloop.last == false %}, {% endif %}{% endcapture %}
+      {% assign tags_content = tags_content_temp %}
+    {% endif %}
+  {% endfor %}
+{% else %}
+  {% assign tags_content = '' %}
+{% endif %}
+{% endraw %}
 {% endhighlight %}
 
 #### 2. Coloque o conteúdo da variavel *tags_content* onde quiser dentro do seu layout _post.html_
 
 {% highlight html %}
-<p id="post-meta">{ % raw %} {{ tags_content }} { % endraw %}</p>
+<p id="post-meta">{% raw %} {{ tags_content }} {% endraw %}</p>
 {% endhighlight %}
 
 #### 3. Crie um layout chamado *blog_by_tag.html*
 
-{% highlight html %}
-<h1>Articles by tag :{ % raw %}{{ page.tag }}{ % endraw %}</h1>
+{% highlight liquid %}
+<h1>Articles by tag :{% raw %}{{ page.tag }}{% endraw %}</h1>
 <div>
-    { % raw %}{ % if site.tags[page.tag] %}
-        { % for post in site.tags[page.tag] %}{ % endraw %}
-            <a href="{ % raw %}{{ post.url }}{ % endraw %}/">{ % raw %}{{ post.title }}{ % endraw %}</a>
-        { % raw %}{ % endfor %}
-    { % else %}{ % endraw %}
-        <p>There are no posts for this tag.</p>
-    { % raw %}{ % endif %}{ % endraw %}
+  {% raw %}{% if site.tags[page.tag] %}
+    {% for post in site.tags[page.tag] %}{% endraw %}
+      <a href="{% raw %}{{ post.url }}{% endraw %}/">{% raw %}{{ post.title }}{% endraw %}</a>
+    {% raw %}{% endfor %}
+  {% else %}{% endraw %}
+    <p>There are no posts for this tag.</p>
+  {% raw %}{% endif %}{% endraw %}
 </div>
 {% endhighlight %}
 
@@ -109,8 +109,6 @@ permalink: /blog/tag/github-pages/
 {% endhighlight %}
 
 > Para uma implementação mais complexa de categorias: [Veja meu repositório](https://github.com/nandomoreirame/nandomoreirame.github.io)
-
-> **OBS.:** Se você copiou o código Jekyll e não funcionou tente juntar as chaves com os simbolos de porcetagem: `{ % % }` ou as chaves `{ { } }`.
 
 > Esse artigo foi traduzido de: [How to use tags and categories on github pages without plugins](http://www.minddust.com/post/tags-and-categories-on-github-pages/)
 

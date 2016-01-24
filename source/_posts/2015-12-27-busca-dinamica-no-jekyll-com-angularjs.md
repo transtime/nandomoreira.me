@@ -46,15 +46,17 @@ Precisamos pegar todos os artigos do blog para alimentar nosso Javascript, criar
 layout: null
 ---
 [
-  { % for post in site.posts % }
+{% raw %}
+  {% for post in site.posts %}
     {
-      "title"    : "{ { post.title | escape } }",
-      "category" : "{ { post.categories | array_to_sentence_string } }",
-      "tags"     : "{ { post.tags | array_to_sentence_string } }",
-      "url"      : "{ { site.baseurl } }{ { post.url } }",
-      "date"     : "{ { post.date | date: "%-d/%-m/%Y" } }"
-    } { % unless forloop.last % },{ % endunless % }
-  { % endfor % }
+      "title" : "{{ post.title | escape }}",
+      "category" : "{{ post.categories | array_to_sentence_string }}",
+      "tags" : "{{ post.tags | array_to_sentence_string }}",
+      "url" : "{{ site.baseurl }}{{ post.url }}",
+      "date" : "{{ post.date | date: "%-d/%-m/%Y" }}"
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+{% endraw %}
 ]
 {% endhighlight %}
 
