@@ -10,8 +10,8 @@ gems:
   - jekyll-paginate
 
 baseurl: null
-# domain_name: nandomoreira.me
-# google_analytics: UA-52446115-1
+domain_name: nandomoreira.me
+google_analytics: UA-52446115-1
 
 source:      source
 destination: _site
@@ -55,10 +55,11 @@ assets:
 
 # Compress HTML
 compress_html:
-  clippings: false
-  comments: false
-  endings: false
+  clippings: all
+  comments: all
+  endings: all
   profile: false
   ignore:
-    envs: false
+    envs: all
 
+exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]
