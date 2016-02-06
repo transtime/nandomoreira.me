@@ -5,8 +5,8 @@ source 'http://rubygems.org'
 ruby '2.2.4'
 
 group :development do
-  gem 'jekyll', '~> 3.1', '>= 3.1.1'
-  gem 'jekyll-assets', '~> 2.1', '>= 2.1.2'
+  gem 'jekyll', '~> 2.5.3'
+  gem 'jekyll-assets', '~> 1.0'
   gem 'rake', '~> 10.4.2'
   gem 'sass', '~> 3.4', '>= 3.4.21'
   gem 'compass', '~> 1.0', '>= 1.0.3'
