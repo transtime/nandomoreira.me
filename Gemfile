@@ -8,7 +8,7 @@ group :development do
   gem 'jekyll', '~> 2.5.3'
   gem 'jekyll-assets', '~> 1.0'
   gem 'rake', '~> 10.4.2'
-  gem 'sass', '~> 3.4', '>= 3.4.21'
+  gem 'sass', '~> 3.4'
   gem 'compass', '~> 1.0', '>= 1.0.3'
   gem 'html-proofer', '~> 2.6', '>= 2.6.1'
 end
