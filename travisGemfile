@@ -2,8 +2,8 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
+gem 'liquid', '~> 2.6.1'
 gem 'jekyll', '~> 2.5.3'
-gem 'liquid', '~> 3.0', '>= 3.0.6'
 gem 'jekyll-assets', '~> 2.1', '>= 2.1.2'
 gem 'sass', '~> 3.4', '>= 3.4.21'
 gem 'compass', '~> 1.0', '>= 1.0.3'
