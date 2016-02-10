@@ -41,7 +41,7 @@ Aqui está um pequeno guia de como implementá-lo:
 {% raw %}
 {% assign post = page %}
 {% if post.tags.size > 0 %}
-  {% capture tags_content %}Posted with {% if post.tags.size == 1 %}<i class="fa fa-tag"></i>{% else %}<i class="fa fa-tags"></i>{% endif %}: {% endcapture %}
+  {% capture tags_content %}Posted with {% if post.tags.size == 1 %}<i class="icon icon-tag"></i>{% else %}<i class="icon icon-tags"></i>{% endif %}: {% endcapture %}
   {% for post_tag in post.tags %}
     {% for data_tag in site.data.tags %}
       {% if data_tag.slug == post_tag %}

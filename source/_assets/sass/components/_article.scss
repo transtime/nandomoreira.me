@@ -18,6 +18,17 @@
       width: 50px;
       border: none;
     }
+
+    .external-link {
+      &::after {
+        @extend .icon;
+        display: inline-block;
+        content: $icon-external;
+        color: rgba($black-color, .6);
+        margin-left: 5px;
+        font-size: 12px;
+      }
+    }
   }
 
   .post-thumb {
@@ -75,7 +86,7 @@
     font-style: italic;
   }
 
-  .fa {
+  .icon {
     margin-right: .2em;
   }
 
@@ -240,6 +251,13 @@
 .light-off {
   font-size: 2rem;
   color: lighten($secondary-color, 10%);
+
+  &,
+  &:active,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
 
   &:hover,
   &:focus {

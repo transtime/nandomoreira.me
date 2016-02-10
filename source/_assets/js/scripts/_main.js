@@ -5,6 +5,15 @@
       $body = $('body');
 
   $(document).ready(function () {
+    var _links = $('.post-content').find('a'),
+        _link;
+    for (var i = 0, _linksLength = _links.length; i < _linksLength; i++) {
+      _link = _links[i];
+      if (_link.hostname != window.location.hostname) {
+        _link.target = '_blank';
+        _link.className += ' external-link';
+      }
+    }
 
     $('.show-disqus').on('click', function (e) {
       e.preventDefault();

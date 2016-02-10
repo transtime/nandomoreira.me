@@ -20,7 +20,7 @@ class YouTube < Liquid::Tag
   end
 
   def render(context)
-    "<div class=\"video-container\"><a href=\"#\" class=\"light-off\"><i class=\"fa fa-lightbulb-o\"></i></a><div class=\"video-responsive\"><iframe width=\"#{@width}\" height=\"#{@height}\" src=\"http://www.youtube.com/embed/#{@id}?color=white&theme=light\"></iframe></div><div class=\"overlay-popup\"></div></div>"
+    "<div class=\"video-container\"><a href=\"#\" class=\"light-off\"><i class=\"icon icon-brightness\"></i></a><div class=\"video-responsive\"><iframe width=\"#{@width}\" height=\"#{@height}\" src=\"http://www.youtube.com/embed/#{@id}?color=white&theme=light\"></iframe></div><div class=\"overlay-popup\"></div></div>"
   end
 
   Liquid::Template.register_tag "youtube", self

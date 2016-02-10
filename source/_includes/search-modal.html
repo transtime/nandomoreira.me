@@ -5,7 +5,7 @@
     <div class="modal-search-container" ng-controller="searchController">
       <div class="form-group">
         <input type="text" class="modal-search-input" ng-keyup="pesquisar(search)" ng-model="search" placeholder="sass, javascript, ruby, gulp..." autocomplete="off">
-        <i class="fa fa-search"></i>
+        <i class="icon icon-search"></i>
       </div>
       <ul class="search-results" ng-show="posts.length > 0">
         <li ng-repeat="post in posts | filter:search" class="fade">

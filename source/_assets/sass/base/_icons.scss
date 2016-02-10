@@ -1,0 +1,102 @@
+$icomoon-font-path: "/assets/fonts/icons" !default;
+$icomoon-font-name: "nandoicon" !default;
+
+$icon-home: "\e900";
+$icon-folder: "\e901";
+$icon-folder-open: "\e902";
+$icon-tag: "\e903";
+$icon-tags: "\e904";
+$icon-envelope: "\e905";
+$icon-location: "\e906";
+$icon-comment: "\e907";
+$icon-comments: "\e908";
+$icon-quotes-left: "\e909";
+$icon-quotes-right: "\e90a";
+$icon-search: "\e90b";
+$icon-enlarge: "\e90c";
+$icon-shrink: "\e90d";
+$icon-brightness: "\e923";
+$icon-brightness-contrast: "\e924";
+$icon-heart: "\e90e";
+$icon-warning: "\e90f";
+$icon-notification: "\e910";
+$icon-info: "\e911";
+$icon-cancel: "\e912";
+$icon-cross: "\e913";
+$icon-check: "\e914";
+$icon-circle-up: "\e915";
+$icon-circle-down: "\e916";
+$icon-external: "\e917";
+$icon-share: "\e918";
+$icon-facebook: "\e919";
+$icon-facebook-square: "\e91a";
+$icon-instagram: "\e91b";
+$icon-spotify: "\e91c";
+$icon-twitter: "\e91d";
+$icon-feed: "\e91e";
+$icon-github: "\e91f";
+$icon-skype: "\e920";
+$icon-linkedin-square: "\e921";
+$icon-linkedin: "\e922";
+
+@font-face {
+  font-family: "#{$icomoon-font-name}";
+  src: url("#{$icomoon-font-path}/#{$icomoon-font-name}.ttf?olng1a") format("truetype"),
+       url("#{$icomoon-font-path}/#{$icomoon-font-name}.woff?olng1a") format("woff"),
+       url("#{$icomoon-font-path}/#{$icomoon-font-name}.svg?olng1a##{$icomoon-font-name}") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "#{$icomoon-font-name}" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home::before { content: $icon-home }
+.icon-folder::before { content: $icon-folder }
+.icon-folder-open::before { content: $icon-folder-open }
+.icon-tag::before { content: $icon-tag }
+.icon-tags::before { content: $icon-tags }
+.icon-envelope::before { content: $icon-envelope }
+.icon-location::before { content: $icon-location }
+.icon-comment::before { content: $icon-comment }
+.icon-comments::before { content: $icon-comments }
+.icon-quotes-left::before { content: $icon-quotes-left }
+.icon-quotes-right::before { content: $icon-quotes-right }
+.icon-search::before { content: $icon-search }
+.icon-enlarge::before { content: $icon-enlarge }
+.icon-shrink::before { content: $icon-shrink }
+.icon-brightness::before { content: $icon-brightness }
+.icon-brightness-contrast::before { content: $icon-brightness-contrast }
+.icon-heart::before { content: $icon-heart }
+.icon-warning::before { content: $icon-warning }
+.icon-notification::before { content: $icon-notification }
+.icon-info::before { content: $icon-info }
+.icon-cancel::before { content: $icon-cancel }
+.icon-cross::before { content: $icon-cross }
+.icon-check::before { content: $icon-check }
+.icon-circle-up::before { content: $icon-circle-up }
+.icon-circle-down::before { content: $icon-circle-down }
+.icon-external::before { content: $icon-external }
+.icon-share::before { content: $icon-share }
+.icon-facebook::before { content: $icon-facebook }
+.icon-facebook-square::before { content: $icon-facebook-square }
+.icon-instagram::before { content: $icon-instagram }
+.icon-spotify::before { content: $icon-spotify }
+.icon-twitter::before { content: $icon-twitter }
+.icon-feed::before { content: $icon-feed }
+.icon-github::before { content: $icon-github }
+.icon-skype::before { content: $icon-skype }
+.icon-linkedin-square::before { content: $icon-linkedin-square }
+.icon-linkedin::before { content: $icon-linkedin }
