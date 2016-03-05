@@ -1,0 +1,46 @@
+$icomoon-font-path: "/assets/fonts" !default;
+
+$icon-github: "\e900";
+$icon-linkedin: "\e901";
+$icon-twitter: "\e902";
+
+@font-face {
+  font-family: 'nandomoreiraicon';
+  src: url('#{$icomoon-font-path}/nandomoreiraicon.ttf?rytaqi') format('truetype'),
+       url('#{$icomoon-font-path}/nandomoreiraicon.woff?rytaqi') format('woff'),
+       url('#{$icomoon-font-path}/nandomoreiraicon.svg?rytaqi#nandomoreiraicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+%font-icon,
+[class^="icon-"],
+[class*=" icon-"] {
+    font-family: 'nandomoreiraicon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github {
+  &:before {
+    content: $icon-github;
+  }
+}
+
+.icon-linkedin {
+  &:before {
+    content: $icon-linkedin;
+  }
+}
+
+.icon-twitter {
+  &:before {
+    content: $icon-twitter;
+  }
+}

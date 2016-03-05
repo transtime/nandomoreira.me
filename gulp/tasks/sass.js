@@ -1,32 +1,24 @@
 /*
  * gulp sass
  */
+'use strict';
 
-var config = require('../config.json');
-var $ = require('gulp-load-plugins')();
-var gulp = require('gulp');
+var bourbon = require('node-bourbon'),
+       gulp = require('gulp'),
+          $ = require('gulp-load-plugins')();
+
+var dest = 'source/jekyll/assets/css';
 
 gulp.task('sass', function () {
-  return gulp.src(config.sass + 'main.scss')
-    .pipe($.compass({
-      config_file: config.compass,
-      css: config.dest.css,
-      sass: config.sass
-    }))
+  return $.rubySass('source/scss/*.scss', {
+      sourcemap: true,
+      loadPath: bourbon.includePaths
+    })
+    .on('error', $.rubySass.logError)
     .pipe($.plumber())
-    .pipe($.autoprefixer({
-      browsers: config.autoprefixer_browsers
-    }))
-    .pipe($.mergeMediaQueries({
-      log: false
-    }))
-    .pipe($.size({ title: 'Styles', gzip: false, showFiles: true }))
-    // .pipe(gulp.dest(config.dest.css))
-    .pipe($.minifyCss({
-      processImport: true
-    }))
-    // .pipe($.rename({suffix: '.min'}))
-    .pipe($.size({ title: 'Styles', gzip: false, showFiles: true }))
-    .pipe(gulp.dest(config.dest.css))
+    .pipe($.sourcemaps.init())
+    .pipe($.cssnano({ processImport: true }))
+    .pipe($.sourcemaps.write('.'))
+    .pipe(gulp.dest(dest))
     .pipe($.plumber.stop());
 });

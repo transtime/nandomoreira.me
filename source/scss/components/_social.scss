@@ -1,0 +1,8 @@
+
+.social {
+  li {
+    @include font-size(28);
+    display: inline-block;
+    padding: get-spacing(small);
+  }
+}

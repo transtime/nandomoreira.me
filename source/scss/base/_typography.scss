@@ -1,0 +1,73 @@
+
+@import url("//fonts.googleapis.com/css?family=Roboto:400,300,700");
+// @import url("//fonts.googleapis.com/css?family=Raleway:300,700");
+@import url("//fonts.googleapis.com/css?family=Exo+2:200,300,500,600");
+
+html {
+  font-size: $inuit-font-size;
+}
+
+body {
+  color: get-color(gray, light);
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+  font-weight: $font-weight-light;
+  text-rendering: optimizeLegibility;
+  @include font-size();
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font-weight-bold;
+  font-family: $heading-font-family;
+  line-height: $heading-line-height;
+  margin: get-spacing(small) 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h1 { @include font-size(48); }
+h2 { @include font-size(38); }
+h3 { @include font-size(32); }
+h4 { @include font-size(28); }
+h5 { @include font-size(22); }
+h6 { @include font-size(18); }
+
+p {
+  margin: 0 0 get-spacing(small);
+}
+
+a {
+  color: get-color(primary, base);
+  text-decoration: none;
+  @extend %after;
+  transition: color $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: get-color(primary, light);
+  }
+
+  &::after {
+    background: get-color(primary, light);
+  }
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: $font-weight-bold;
+}

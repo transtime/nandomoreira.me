@@ -1,0 +1,65 @@
+// Typography
+$base-font-family: "Roboto", Helvetica, Arial, sans-serif;
+// $base-font-family: "Exo 2", Helvetica, Arial, sans-serif;
+// $heading-font-family: "Raleway", $base-font-family;
+// $heading-font-family: "Roboto", $base-font-family;
+$heading-font-family: "Exo 2", $base-font-family;
+
+// Font Sizes
+$inuit-font-size: 16px;
+
+$palette: (
+  white: #fff,
+  black: #000,
+  silver: #f1f2f3,
+  background: #f8f9f0,
+  border: #eaeaea,
+  primary: (
+    base: #4682b4,
+    light: lighten(#4682b4, 15%),
+    dark: darken(#4682b4, 15%),
+    transp: transparentize(#4682b4, .5)
+  ),
+  gray: (
+    base: #222,
+    light: lighten(#222, 15%),
+    dark: darken(#222, 15%),
+    transp: transparentize(#222, .5)
+  )
+);
+
+$font-weight-light: 300;
+$font-weight-medium: 400;
+$font-weight-bold: 700;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$spacings: (
+  large: 60px,
+  base: 40px,
+  medium: 30px,
+  small: 20px,
+  mini: 10px,
+);
+
+$base-border-radius: 3px;
+$base-z-index: 0;
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease-in-out;
+
+// responsive
+$screen-phone: 320px;
+$screen-large-phone: 375px;
+$screen-tablet: 768px;
+$screen-large-tablet: 1024px;
+$screen-desktop: 1280px;
+$screen-large-desktop: 1440px;
+
+$max-width: $screen-desktop;
+$default-feature: min-width;
+

@@ -1,0 +1,165 @@
+
+body.home-hero {
+  border: none;
+  background-color: get-color(white);
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: get-color(primary, base);
+  @include clearfix;
+
+  @include media($screen-large-tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-inner {
+    max-width: 1200px;
+    min-height: 600px;
+    padding: get-spacing(small) 0;
+
+    @include media(max-width $screen-large-tablet) {
+      padding: get-spacing(small);
+    }
+  }
+
+  .actions,
+  .translate,
+  .avatar {
+    margin: get-spacing(small) 0;
+  }
+
+  .translate {
+    a {
+      &::before,
+      &::after {
+        position: relative;
+        @include transition(margin .2s ease-in-out);
+      }
+
+      &::before {
+        content: "[";
+        margin-right: 3px;
+      }
+
+      &::after {
+        content: "]";
+        margin-left: 3px;
+      }
+
+      &:hover {
+        &::before {
+          margin-right: 5px;
+        }
+
+        &::after {
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  a {
+    color: get-color(white);
+    opacity: .7;
+    @include transition(opacity .2s ease-in-out);
+
+    @include attention(false) {
+      opacity: 1;
+    }
+  }
+
+  .actions {
+    margin-top: get-spacing(base);
+
+    a {
+      border-radius: 150px;
+      margin: 0 (get-spacing(small) / 3);
+      text-transform: uppercase;
+    }
+  }
+
+  h1 {
+    color: get-color(white);
+    margin: 0;
+    padding: 0;
+
+    span {
+      opacity: .7;
+      font-family: $base-font-family;
+      // font-weight: $font-weight-light;
+      font-weight: 200;
+      @include font-size(24);
+
+      @include media($screen-tablet) {
+        @include font-size(28);
+      }
+
+      @include media($screen-large-tablet) {
+        @include font-size(32);
+      }
+    }
+
+    em {
+      @extend %after;
+
+      &::after {
+        background: get-color(white);
+      }
+    }
+
+    strong {
+      display: block;
+      margin: get-spacing(small) 0;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      @include font-size(26);
+
+      @include media($screen-large-phone) {
+        @include font-size(38);
+      }
+
+      @include media($screen-tablet) {
+        @include font-size(50);
+      }
+
+      @include media($screen-large-tablet) {
+        @include font-size(75);
+      }
+
+      &::before,
+      &::after {
+        opacity: .7;
+        content: "";
+        display: block;
+        border: none;
+        background-color: get-color(white);
+        width: 100%;
+        height: 2px;
+        @include transition(opacity .2s ease-in-out);
+      }
+
+      &:hover,
+      &:focus {
+        &::before,
+        &::after {
+          opacity: .75;
+        }
+      }
+    }
+  }
+
+  .social {
+    margin: get-spacing(base) 0 0;
+
+    li {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+

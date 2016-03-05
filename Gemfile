@@ -2,13 +2,15 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
-ruby '2.2.4'
+ruby '2.3.0'
 
 group :development do
-  gem 'jekyll', '~> 2.5.3'
-  gem 'jekyll-assets', '~> 1.0'
-  gem 'rake', '~> 10.4.2'
-  gem 'sass', '~> 3.4'
-  gem 'compass', '~> 1.0', '>= 1.0.3'
-  gem 'html-proofer', '~> 2.6', '>= 2.6.1'
+  gem 'sass', '~> 3.4', '>= 3.4.21'
+  gem 'bourbon', '~> 4.2', '>= 4.2.6'
+
+  gem 'foreman', '~> 0.78.0'
+
+  gem 'jekyll', '~> 3.1', '>= 3.1.2'
+  gem 'jekyll-seo-tag', '~> 1.3', '>= 1.3.2'
+  gem 'jekyll-assets', '~> 2.1', '>= 2.1.2'
 end

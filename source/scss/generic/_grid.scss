@@ -1,0 +1,9 @@
+
+.container {
+  background-color: get-color(white);
+  padding: get-spacing(base);
+  margin: {
+    right: auto;
+    left: auto;
+  };
+}
