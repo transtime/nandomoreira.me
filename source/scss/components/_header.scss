@@ -1,0 +1,193 @@
+
+.header {
+  padding-bottom: get-spacing(base);
+  position: relative;
+  @extend %clearfix;
+
+  @include media(max-width $screen-tablet) {
+    padding-bottom: get-spacing(mini);
+
+    .container {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.logotipo,
+.navbar li {
+  text-transform: lowercase;
+  @include font-size(20);
+}
+
+.logotipo a,
+.navbar a {
+  display: inline-block;
+  line-height: 40px;
+}
+
+.logotipo {
+  font-weight: $font-weight-medium;
+  float: left;
+  margin: 0;
+
+  @include media(max-width $screen-tablet) {
+    line-height: 30px;
+  }
+
+  @include media(max-width $screen-phone) {
+    span {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}
+
+.navbar {
+  opacity: 0;
+  float: right;
+  transform: translateY(-100%);
+  padding-right: get-spacing(large);
+
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+
+  @include media(max-width $screen-tablet) {
+    @include position(fixed, 0);
+    background-color: get-color(primary, base);
+    padding: 0;
+    padding-top: get-spacing(big);
+    z-index: 100;
+
+    &,
+    ul {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+
+    a {
+      color: get-color(white);
+    }
+  }
+
+  &.is-open {
+    animation-name: translateTopIn;
+    animation-duration: .3s;
+  }
+
+  &.is-close {
+    animation-name: translateTopOut;
+    animation-duration: .2s;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    float: right;
+  }
+
+  li {
+    margin-left: get-spacing(mini);
+    display: inline-block;
+
+    @include media(max-width $screen-tablet) {
+      margin-left: 0;
+      text-align: center;
+      margin-bottom: get-spacing(small);
+
+      &,
+      a {
+        width: 100%;
+        display: block;
+      }
+
+      a {
+        padding: get-spacing(mini) 0;
+      }
+    }
+  }
+
+  a {
+    font-weight: $font-weight-light;
+    padding: 0 get-spacing(mini);
+  }
+}
+
+.hamburger {
+  @include position(absolute, (get-spacing(base) + 5) get-spacing(small) auto auto);
+  z-index: 200;
+  cursor: pointer;
+  padding: 0;
+  background: none;
+  background-color: transparent;
+  border: none;
+  width: 50px;
+  height: 30px;
+  display: block;
+
+  @include media(max-width $screen-tablet) {
+    top: get-spacing(small);
+  }
+
+  .top,
+  .bottom,
+  .middle {
+    height: .4px;
+    width: 100%;
+    fill: get-color(primary, base);
+    transition: transform .2s linear 0s, width .2s linear 0s;
+  }
+
+  .top {
+    transform: translateY(1px);
+  }
+
+  .middle {
+    transform: translateY(3px);
+  }
+
+  .bottom {
+    transform: translateY(5px);
+  }
+
+  &:hover {
+    .top {
+      transform: translateY(.5px);
+    }
+
+    .bottom {
+      transform: translateY(5.5px);
+    }
+  }
+
+  &.close {
+    @include media(max-width $screen-tablet) {
+      position: fixed;
+    }
+
+    .top,
+    .bottom,
+    .middle {
+      fill: get-color(primary, light);
+    }
+
+    .top {
+      transform: translateY(0) rotate(35deg);
+    }
+
+    .middle {
+      transform: translateX(110%) translateY(3px);
+    }
+
+    .bottom {
+      transform: translateY(7px) rotate(-35deg);
+    }
+  }
+}
+
+@include media(max-width $screen-tablet) {
+  body.nav-open {
+    overflow: hidden;
+  }
+}

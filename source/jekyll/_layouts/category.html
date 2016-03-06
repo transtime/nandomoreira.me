@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<section class="container-full post-single">
+
+  {% include header.html %}
+
+  <header class="post-header header-single {% if page.cover %}has-image{% endif %}">
+    {% if page.cover %}<div class="header-overlay parallax" data-parallax-speed="5" style="background-image: url({{ page.cover }})"></div>{% endif %}
+    <div class="container-inn">
+      {% if page.slug == "about" %}
+        {% img avatar.jpg alt:'{{ site.author }}' class:'avatar' %}
+      {% endif %}
+      <h1 class="post-title"><strong>Categoria: {{ page.title }}</strong>{% if page.description %} <small>{{ page.description }}</small>{% endif %}</h1>
+    </div>
+  </header>
+
+  <div class="container-inn">
+    {% if site.categories[page.slug] %}
+
+      {% for post in site.categories[page.slug] %}
+        {% include article.html %}
+      {% endfor %}
+
+    {% else %}
+
+      <div class="post txt-center" role="alert">
+        <p>Não há artigos para a categoria: <strong>{{ page.title }}</strong></p>
+      </div>
+
+    {% endif %}
+  </div>
+
+  {% include footer.html %}
+
+</section>

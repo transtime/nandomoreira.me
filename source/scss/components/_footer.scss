@@ -1,0 +1,11 @@
+
+.footer {
+  text-align: center;
+  padding: get-spacing(base) 0;
+  border-top: 1px solid get-color(border);
+
+  p {
+    color: rgba(get-color(gray, base), .5);
+    @include font-size(14);
+  }
+}

@@ -1,0 +1,13 @@
+---
+layout: page
+title: Blog
+description: Alguns artigos sobre desenvolvimento front-end e pensamentos aleatórios sobre assuntos em geral..
+slug: blog
+class: blog-page
+---
+
+{% for post in paginator.posts %}
+  {% include article.html %}
+{% endfor %}
+
+{% include pagination.html %}

@@ -1,0 +1,40 @@
+
+%clearfix,
+.clearfix {
+  @include clearfix;
+}
+
+.dot {
+  border-radius: 50%;
+}
+
+.avatar {
+  @extend .dot;
+  padding: 2px;
+  border: 1px solid rgba(get-color(white), .5);
+}
+
+%after,
+.after {
+  position: relative;
+
+  &::after {
+    content: "";
+    @include transition(all .2s $base-timing);
+    @include transform(translateX(-50%));
+    backface-visibility: hidden;
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 50%;
+    bottom: 0;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    &::after {
+      width: 100%;
+    }
+  }
+}

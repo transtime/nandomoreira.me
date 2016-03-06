@@ -1,0 +1,27 @@
+
+.container-full {
+  background-color: get-color(white);
+  margin-bottom: get-spacing(base);
+}
+
+.container,
+.container-inn {
+  padding: get-spacing(small);
+  margin: {
+    right: auto;
+    left: auto;
+  };
+
+  @include media($screen-tablet) {
+    padding: get-spacing(medium);
+  }
+
+  @include media($screen-large-tablet) {
+    padding: get-spacing(base);
+  }
+}
+
+.container-inn {
+  max-width: $max-width;
+  overflow: hidden;
+}

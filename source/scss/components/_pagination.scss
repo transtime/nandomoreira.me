@@ -1,0 +1,58 @@
+
+.pagination {
+  margin: get-spacing(small) auto;
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    @include media($screen-large-tablet) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+  }
+
+  li,
+  .next,
+  .prev,
+  .page-number {
+    @include media(max-width $screen-large-tablet) {
+      text-align: center;
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .next,
+  .prev,
+  .page-number {
+    padding: 15px 30px;
+    @include font-size(16);
+    display: inline-block;
+  }
+
+  .page-number {
+    color: get-color(gray, transp);
+    @include font-size(16);
+  }
+
+  .next,
+  .prev {
+    @extend .button;
+    @extend .ghost;
+    color: get-color(primary, base);
+    border-color: get-color(primary, base);
+    border-radius: 100px;
+
+    @include attention() {
+      color: get-color(primary, light);
+      border-color: get-color(primary, light);
+    }
+  }
+
+  li {
+    display: inline-block;
+  }
+}
