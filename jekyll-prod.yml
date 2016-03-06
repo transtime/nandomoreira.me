@@ -54,7 +54,7 @@ assets:
   compress:
     css: true
     js: true
-  cache: false
+  cache: .asset-cache/
   prefix: "/assets/build"
   assets:
     - "*.png"

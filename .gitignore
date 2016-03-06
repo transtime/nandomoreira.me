@@ -5,6 +5,7 @@ _site
 .jekyll-metadata
 .ruby-version
 .sass-cache
+.asset-cache
 .scss-lint-report.json
 .tmp
 tmp
