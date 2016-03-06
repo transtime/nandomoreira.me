@@ -1,9 +1,18 @@
 
-.container {
+.container-full {
   background-color: get-color(white);
+  margin-bottom: get-spacing(base);
+}
+
+.container,
+.container-inn {
   padding: get-spacing(base);
   margin: {
     right: auto;
     left: auto;
   };
+}
+
+.container-inn {
+  max-width: $max-width;
 }

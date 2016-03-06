@@ -13,4 +13,7 @@ group :development do
   gem 'jekyll', '~> 3.1', '>= 3.1.2'
   gem 'jekyll-seo-tag', '~> 1.3', '>= 1.3.2'
   gem 'jekyll-assets', '~> 2.1', '>= 2.1.2'
+  gem 'jekyll-paginate', '~> 1.1'
+
+  gem 'pygments.rb', '~> 0.6.3'
 end

@@ -12,7 +12,6 @@ body {
   font-family: $base-font-family;
   line-height: $base-line-height;
   font-weight: $font-weight-light;
-  text-rendering: optimizeLegibility;
   @include font-size();
 }
 
@@ -26,6 +25,7 @@ h6 {
   font-family: $heading-font-family;
   line-height: $heading-line-height;
   margin: get-spacing(small) 0;
+  text-rendering: optimizeLegibility;
 
   &:first-child {
     margin-top: 0;
@@ -36,15 +36,16 @@ h6 {
   }
 }
 
-h1 { @include font-size(48); }
-h2 { @include font-size(38); }
-h3 { @include font-size(32); }
-h4 { @include font-size(28); }
-h5 { @include font-size(22); }
-h6 { @include font-size(18); }
+h1 { @include font-size(30); }
+h2 { @include font-size(28); }
+h3 { @include font-size(22); }
+h4 { @include font-size(18); }
+h5 { @include font-size(26); }
+h6 { @include font-size(14); }
 
 p {
   margin: 0 0 get-spacing(small);
+  text-rendering: optimizeLegibility;
 }
 
 a {
@@ -70,4 +71,26 @@ em {
 
 strong {
   font-weight: $font-weight-bold;
+}
+
+code {
+  background: none;
+  border-radius: 0;
+  border: 0;
+  font-family: $monospace-font-family;
+  font-size: .9em;
+  margin: 0;
+  background-color: get-color(code);
+  padding: 0 4px;
+}
+
+pre {
+  -webkit-overflow-scrolling: touch;
+  font-family: $monospace-font-family;
+  font-size: .9em;
+  margin: 0;
+
+  code {
+    line-height: 1.75em;
+  }
 }

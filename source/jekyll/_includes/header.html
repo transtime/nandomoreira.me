@@ -1,14 +1,18 @@
 <header class="header">
 
-  <h1 class="logotipo">
-    <a href="#">nandomoreira.me</a>
-  </h1>
+  <div class="container">
 
-  <nav class="nav">
-    <ul>
-      <li><a href="#">Sobre mim</a></li>
-      <li><a href="#">blog</a></li>
-    </ul>
-  </nav>
+    <h1 class="logotipo">
+      <a href="{{ "/" | prepend: site.baseurl }}">nandomoreira.me</a>
+    </h1>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="{{ "/about" | prepend: site.baseurl }}">Sobre mim</a></li>
+        <li><a href="{{ "/blog" | prepend: site.baseurl }}">blog</a></li>
+      </ul>
+    </nav>
+
+  </div>
 
 </header>

@@ -5,6 +5,17 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
+# Build settings
+markdown: kramdown
+highlighter: pygments
+
+paginate: 12
+paginate_path: "/blog/page/:num/"
+
+source: source/jekyll/
+destination: _site/
+permalink: /:categories/:year/:slug/
+
 # Site settings
 title: "Fernando Moreira"
 description: "Desenvolvedor Front-end, Design Responsivo, HTML5, CSS3 e JavaScript"
@@ -14,13 +25,16 @@ url: "http://nandomoreira.me"
 image: "/assets/images/avatar.jpg"
 logotipo: "/assets/images/avatar.jpg"
 baseurl: null
+comments: true
 
-source: source/jekyll
-destination: _site
+twitter:
+  username: Pia_Frontend
 
-twitter: Pia_Frontend
-github: nandomoreirame
-linkedin: nandomoreirame
+github:
+  username: nandomoreirame
+
+linkedin:
+  username: nandomoreirame
 
 facebook:
   app_id: 585852118228520
@@ -28,10 +42,29 @@ facebook:
 
 google_site_verification: null
 
-# Build settings
-markdown: kramdown
-
 gems:
   - jekyll-assets
   - jekyll-seo-tag
-  # - jekyll-paginate
+  - jekyll-paginate
+
+assets:
+  compress:
+    css: true
+    js: true
+  cache: false
+  prefix: "/assets/build"
+  assets:
+    - "*.png"
+    - "*.jpg"
+    - "*.gif"
+    - "*.css"
+    - "*.js"
+  digest: true
+  sources:
+    - assets/css
+    - assets/images
+    - assets/js
+  features:
+    liquid: true
+    automatic_img_size: true
+    automatic_img_alt : true

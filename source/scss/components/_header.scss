@@ -1,0 +1,39 @@
+
+.header {
+  padding-bottom: get-spacing(base);
+  @extend %clearfix;
+}
+
+.logotipo {
+  float: left;
+  margin: 0;
+}
+
+.logotipo,
+.navbar li {
+  text-transform: lowercase;
+  @include font-size(20);
+}
+
+.logotipo a,
+.navbar a {
+  display: inline-block;
+  line-height: 40px;
+}
+
+.navbar {
+  ul {
+    list-style: none;
+    padding: 0;
+    float: right;
+  }
+
+  li {
+    margin-left: get-spacing(mini);
+    display: inline-block;
+  }
+
+  a {
+    padding: 0 get-spacing(mini);
+  }
+}

@@ -1,0 +1,56 @@
+
+$header-spacing: get-spacing(mini);
+$header-big-spacing: get-spacing(large) get-spacing(big);
+
+.post {
+  margin-bottom: get-spacing(big);
+
+  p {
+    opacity: .6;
+    @include font-size(22);
+  }
+
+  .read-more {
+  }
+}
+
+.post-header {
+  padding-bottom: $header-spacing;
+  // border-bottom: 1px solid get-color(border);
+  @extend %clearfix;
+
+  .post-title {
+    @include font-size(32);
+
+    small {
+      display: block;
+      opacity: .75;
+      width: 80%;
+      margin: get-spacing(mini) auto 0;
+      font-weight: 300;
+      font-size: 60%;
+    }
+  }
+}
+
+.post-single,
+.post-page {
+  .post-header.header-single {
+    padding: $header-big-spacing;
+    color: get-color(white);
+    background-color: get-color(primary, base);
+    text-align: center;
+    @extend %clearfix;
+  }
+}
+
+.post-title {
+  margin: 0;
+}
+
+.post-meta {
+  opacity: .6;
+  display: block;
+  margin-bottom: spacing(mini);
+  @include font-size(14);
+}

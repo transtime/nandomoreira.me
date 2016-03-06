@@ -53,6 +53,7 @@
   }
 }
 
+.social a,
 a.button {
   @include attention() {
     &::after {

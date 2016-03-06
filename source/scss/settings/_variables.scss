@@ -4,27 +4,43 @@ $base-font-family: "Roboto", Helvetica, Arial, sans-serif;
 // $heading-font-family: "Raleway", $base-font-family;
 // $heading-font-family: "Roboto", $base-font-family;
 $heading-font-family: "Exo 2", $base-font-family;
+$monospace-font-family: "courier new", monospace;
 
 // Font Sizes
-$inuit-font-size: 16px;
+$inuit-font-size: 18px;
 
 $palette: (
   white: #fff,
   black: #000,
-  silver: #f1f2f3,
-  background: #f8f9f0,
+  silver: #f9f2e7,
   border: #eaeaea,
+  code: #ededed,
+  warning: #aee239,
+  error: #8fbe00,
   primary: (
-    base: #4682b4,
-    light: lighten(#4682b4, 15%),
-    dark: darken(#4682b4, 15%),
-    transp: transparentize(#4682b4, .5)
+    base: #00a8c6,
+    light: lighten(#00a8c6, 15%),
+    dark: darken(#00a8c6, 15%),
+    transp: transparentize(#00a8c6, .5)
+  ),
+  secondary: (
+    base: #40c0cb,
+    light: lighten(#40c0cb, 15%),
+    dark: darken(#40c0cb, 15%),
+    transp: transparentize(#40c0cb, .5)
   ),
   gray: (
     base: #222,
     light: lighten(#222, 15%),
     dark: darken(#222, 15%),
     transp: transparentize(#222, .5)
+  ),
+  social: (
+    facebook: #3b5998,
+    twitter: #64a8f2,
+    gplus: #e85c62,
+    linkedin: #0077b5,
+    github: #323131,
   )
 );
 
@@ -38,7 +54,8 @@ $heading-line-height: 1.2;
 
 // Other Sizes
 $spacings: (
-  large: 60px,
+  large: 80px,
+  big: 60px,
   base: 40px,
   medium: 30px,
   small: 20px,
@@ -60,6 +77,6 @@ $screen-large-tablet: 1024px;
 $screen-desktop: 1280px;
 $screen-large-desktop: 1440px;
 
-$max-width: $screen-desktop;
+$max-width: $screen-large-tablet;
 $default-feature: min-width;
 

@@ -1,4 +1,9 @@
 
+%clearfix,
+.clearfix {
+  @include clearfix;
+}
+
 .dot {
   border-radius: 50%;
 }
