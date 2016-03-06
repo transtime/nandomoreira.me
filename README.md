@@ -35,27 +35,13 @@ npm install
 ---
 
 
-### Using Jekyll ###
+### Using [foreman](https://github.com/ddollar/foreman) ###
 
 ```
-jekyll server
+foreman start
 ```
 
-Access, [localhost:4000](http://localhost:4000/)
-
----
-
-### Using Gulp ###
-
-```
-gulp
-```
-or
-
-```
-gulp serve
-```
-
+Access, [localhost:3000](http://localhost:3000/)
 
 ### Create a posts and page using Rake tasks ###
 

@@ -1,7 +1,7 @@
 # encoding: UTF-8
 require "rubygems"
 
-SOURCE = "source/"
+SOURCE = "source/jekyll/"
 CONFIG = {
   'posts'      => File.join(SOURCE, "_posts"),
   'post_ext'   => "md",
@@ -46,7 +46,7 @@ task :post do
     post.puts "---"
     post.puts "layout: post"
     post.puts "title: \"#{title.gsub(/-/,' ')}\""
-    post.puts "permalink: #{slug}"
+    post.puts "permalink: /#{slug}/"
     post.puts "date: #{date} #{time}"
     post.puts "comments: true"
     post.puts "description: \"#{title}\""
