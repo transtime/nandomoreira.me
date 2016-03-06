@@ -39,9 +39,8 @@ h6 {
 h1 { @include font-size(30); }
 h2 { @include font-size(28); }
 h3 { @include font-size(22); }
-h4 { @include font-size(18); }
-h5 { @include font-size(26); }
-h6 { @include font-size(14); }
+h4 { @include font-size(20); }
+h5, h6 { @include font-size(18); }
 
 p {
   margin: 0 0 get-spacing(small);

@@ -14,7 +14,7 @@ paginate_path: "/blog/page/:num/"
 
 source: source/jekyll/
 destination: _site/
-permalink: /:categories/:year/:slug/
+permalink: /:slug/
 
 # Site settings
 title: "Fernando Moreira"
@@ -26,6 +26,8 @@ image: "/assets/images/avatar.jpg"
 logotipo: "/assets/images/avatar.jpg"
 baseurl: null
 comments: true
+disqus_shortname: "fernandomoreira"
+# google_analytics: UA-52446115-1
 
 twitter:
   username: Pia_Frontend

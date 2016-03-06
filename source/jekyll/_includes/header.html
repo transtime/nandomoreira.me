@@ -3,13 +3,23 @@
   <div class="container">
 
     <h1 class="logotipo">
-      <a href="{{ "/" | prepend: site.baseurl }}">nandomoreira.me</a>
+      <a href="{{ "/" | prepend: site.baseurl }}">nandomoreira<span>.me</span></a>
     </h1>
+
+    <a href="#" role="button" class="hamburger menu-toggle">
+      <svg height="30px" width="40px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 12 8" xml:space="preserve">
+        <rect class="top"></rect>
+        <rect class="middle"></rect>
+        <rect class="bottom"></rect>
+      </svg>
+    </a>
 
     <nav class="navbar">
       <ul>
         <li><a href="{{ "/about" | prepend: site.baseurl }}">Sobre mim</a></li>
         <li><a href="{{ "/blog" | prepend: site.baseurl }}">blog</a></li>
+        <li><a href="{{ "/english-diary" | prepend: site.baseurl }}">English diary</a></li>
+        <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}" target="_blank"><i class="icon-rss"></i></a></li>
       </ul>
     </nav>
 

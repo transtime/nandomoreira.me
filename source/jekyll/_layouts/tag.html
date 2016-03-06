@@ -1,0 +1,38 @@
+---
+layout: default
+post_class: open-sidebar
+---
+
+<section class="container-full post-single">
+
+  {% include header.html %}
+
+  <header class="post-header header-single {% if page.cover %}has-image{% endif %}">
+    {% if page.cover %}<div class="header-overlay parallax" data-parallax-speed="5" style="background-image: url({{ page.cover }})"></div>{% endif %}
+    <div class="container-inn">
+      {% if page.slug == "about" %}
+        {% img avatar.jpg alt:'{{ site.author }}' class:'avatar' %}
+      {% endif %}
+      <h1 class="post-title"><strong>Tag: {{ page.title }}</strong>{% if page.description %} <small>{{ page.description }}</small>{% endif %}</h1>
+    </div>
+  </header>
+
+  <div class="container-inn">
+    {% if site.tags[page.slug] %}
+
+      {% for post in site.tags[page.slug] %}
+        {% include article.html %}
+      {% endfor %}
+
+    {% else %}
+
+      <article class="post txt-center">
+          <p>Não há artigos para a tag: <strong>{{ page.title }}</strong></p>
+      </article>
+
+    {% endif %}
+  </div>
+
+  {% include footer.html %}
+
+</section>

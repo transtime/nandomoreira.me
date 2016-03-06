@@ -39,6 +39,10 @@
   }
 }
 
+@function toem($pxval, $base: $inuit-font-size) {
+  @return #{strip-unit($pxval) / strip-unit($base)}em;
+}
+
 @mixin attribute($attr: class, $class: button) {
   [#{$attr}^="#{$class}"] {
     @content;

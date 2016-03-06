@@ -24,13 +24,10 @@
     color: get-color(white);
   }
 
+  &.disabled,
   &:disabled {
     cursor: not-allowed;
-    opacity: 0.5;
-
-    &:hover {
-      background-color: get-color(primary, base);
-    }
+    opacity: .5;
   }
 
   &.ghost {
@@ -53,7 +50,20 @@
   }
 }
 
+.button-secondary {
+  @extend .button;
+  background-color: get-color(secondary, base);
+  border: 1px solid get-color(secondary, dark);
+
+  &:hover,
+  &:focus {
+    background-color: shade(get-color(secondary, base), 20%);
+    color: get-color(white);
+  }
+}
+
 .social a,
+.hamburger,
 a.button {
   @include attention() {
     &::after {

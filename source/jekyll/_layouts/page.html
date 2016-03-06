@@ -8,9 +8,13 @@ layout: default
 
   <article class="post post-page">
 
-    <header class="post-header header-single">
+    <header class="post-header header-single {% if page.cover %}has-image{% endif %}">
+      {% if page.cover %}<div class="header-overlay parallax" data-parallax-speed="5" style="background-image: url({{ page.cover }})"></div>{% endif %}
       <div class="container-inn">
-        <h1 class="post-title">{{ page.title }}{% if page.description %} <small>{{ page.description }}</small>{% endif %}</h1>
+        {% if page.slug == "about" %}
+          {% img avatar.jpg alt:'{{ site.author }}' class:'avatar' %}
+        {% endif %}
+        <h1 class="post-title"><strong>{{ page.title }}</strong>{% if page.description %} <small>{{ page.description }}</small>{% endif %}</h1>
       </div>
     </header>
 

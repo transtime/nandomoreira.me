@@ -5,7 +5,7 @@ class: home-hero
 
 <section class="hero">
   <div class="hero-inner">
-    <img src="{{ site.logotipo | prepend: site.baseurl }}" alt="avatar de {{ site.author }}" class="avatar">
+    {% img avatar.jpg alt:'{{ site.author }}' class:'avatar' %}
     <h1><span>Olá meu nome é</span> <strong>{{ site.author }}</strong> <span>eu sou <em>Front-end</em> e gosto muito de café.</span></h1>
 
     <nav class="actions">
@@ -14,8 +14,8 @@ class: home-hero
 
     {% include social.html %}
 
-    <!-- <div class="translate">
-      <a href="#">English</a>
-    </div> -->
+    <div class="translate">
+      <a href="{{ "/english-diary" | prepend: site.baseurl }}">english diary</a>
+    </div>
   </div>
 </section>

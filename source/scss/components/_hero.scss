@@ -5,23 +5,28 @@ body.home-hero {
 
 .hero {
   width: 100%;
-  height: 100%;
   text-align: center;
   background-color: get-color(primary, base);
+  margin-bottom: get-spacing(mini);
   @include clearfix;
 
+  @include media($screen-tablet) {
+    margin-bottom: get-spacing(small);
+  }
+
   @include media($screen-large-tablet) {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: get-spacing(base);
   }
 
   .hero-inner {
-    max-width: 1200px;
-    min-height: 600px;
-    padding: get-spacing(small) 0;
+    max-width: $max-width;
 
     @include media(max-width $screen-large-tablet) {
+      min-height: 600px;
       padding: get-spacing(small);
     }
   }
@@ -30,36 +35,6 @@ body.home-hero {
   .translate,
   .avatar {
     margin: get-spacing(small) 0;
-  }
-
-  .translate {
-    a {
-      &::before,
-      &::after {
-        position: relative;
-        @include transition(margin .2s ease-in-out);
-      }
-
-      &::before {
-        content: "[";
-        margin-right: 3px;
-      }
-
-      &::after {
-        content: "]";
-        margin-left: 3px;
-      }
-
-      &:hover {
-        &::before {
-          margin-right: 5px;
-        }
-
-        &::after {
-          margin-left: 5px;
-        }
-      }
-    }
   }
 
   a {
@@ -158,6 +133,40 @@ body.home-hero {
     li {
       padding-top: 0;
       padding-bottom: 0;
+    }
+  }
+}
+
+.translate {
+  a {
+    @include font-size(14);
+
+    &::before,
+    &::after {
+      position: relative;
+      background: none;
+      @include transition(margin .2s ease-in-out);
+    }
+
+    &::before {
+      content: "[";
+      margin-right: 3px;
+    }
+
+    &::after {
+      content: "]";
+      margin-left: 3px;
+      left: auto;
+    }
+
+    &:hover {
+      &::before {
+        margin-right: 5px;
+      }
+
+      &::after {
+        margin-left: 5px;
+      }
     }
   }
 }

@@ -4,5 +4,10 @@
     @include font-size(28);
     display: inline-block;
     padding: get-spacing(small);
+    transition: transform .2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
