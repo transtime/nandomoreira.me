@@ -9,6 +9,7 @@ group :development do
   gem 'bourbon', '~> 4.2', '>= 4.2.6'
 
   gem 'foreman', '~> 0.78.0'
+  gem 'rake', '~> 10.5'
 
   gem 'jekyll', '~> 3.1', '>= 3.1.2'
   gem 'jekyll-seo-tag', '~> 1.3', '>= 1.3.2'
