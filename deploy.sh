@@ -5,7 +5,7 @@ echo 'Testing travis...'
 bundle exec travis-lint
 
 echo 'Jekyll build...'
-bundle exec jekyll build --config jekyll-prod.yml
+bundle exec jekyll build --incremental --config jekyll-prod.yml
 
 echo 'Testing htmlproof...'
 bundle exec htmlproof ./_site --href-ignore "#","#!","{( post.url )}" --disable-external
