@@ -6,7 +6,7 @@
 
 var gulp = require('gulp');
 
-gulp.task('default', ['sass'], function () {
+gulp.task('default', ['sass', 'js'], function () {
   gulp.watch('source/scss/**/*.scss', ['sass']);
   gulp.watch('source/js/**/*.js', ['js']);
 });
