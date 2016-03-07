@@ -45,6 +45,8 @@ facebook:
 
 google_site_verification: null
 
+enable_tawk: false
+
 gems:
   - jekyll-assets
   - jekyll-seo-tag

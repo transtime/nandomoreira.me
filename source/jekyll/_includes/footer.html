@@ -8,10 +8,9 @@
 
 </footer>
 
-{% js main.js %}
-
+{% if enable_tawk %}
 <!--Start of Tawk.to Script-->
-<script type="text/javascript">
+<script type="text/javascript" async>
   var Tawk_API=Tawk_API || {},
       Tawk_LoadStart=new Date();
   (function(){
@@ -24,3 +23,6 @@
   })();
 </script>
 <!--End of Tawk.to Script-->
+{% endif %}
+
+{% js main.js async %}

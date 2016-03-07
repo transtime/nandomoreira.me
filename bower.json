@@ -8,6 +8,6 @@
     "Fernando Moreira <nandomoreira.me@gmail.com>"
   ],
   "devDependencies": {
-    "jquery": "^2.2.1"
+    "classie": "^1.0.1"
   }
 }

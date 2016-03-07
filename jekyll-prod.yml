@@ -45,6 +45,8 @@ facebook:
 
 google_site_verification: zS1dSn20XtA4FJYEOQLXqI0boxZdMnJ2g3beje-cl20
 
+enable_tawk: true
+
 gems:
   - jekyll-assets
   - jekyll-seo-tag

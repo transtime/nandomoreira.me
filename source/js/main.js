@@ -1,28 +1,24 @@
-
-//=require bower/jquery/dist/jquery.min.js
-//=require parallax.js
+//=require bower/classie/classie.js
 
 (function($) {
   'use strict';
 
-  $(document).ready(function() {
-    $('.parallax').sparallax();
+  var menu = document.querySelector('.menu-toggle'),
+      nav  = document.querySelector('.navbar'),
+      body = document.querySelector('body');
 
-    $('.menu-toggle').on('click', function(e) {
-      e.preventDefault();
-      $(this).toggleClass('close');
+  menu.addEventListener("click", function (e) {
+    e.preventDefault();
 
-      var $nav = $('.navbar'),
-          $body = $('body');
+    classie.toggle( this, 'close' );
 
-      if ($nav.hasClass('is-open')) {
-        $nav.removeClass('is-open').addClass('is-close');
-        $body.removeClass('nav-open');
-      } else {
-        $body.addClass('nav-open');
-        $nav.removeClass('is-close').addClass('is-open');
-      }
-    });
+    if (classie.has( nav, 'is-open' )) {
+      classie.remove( nav, 'is-open' ).add( nav, 'is-close' );
+      classie.remove( body, 'nav-open' );
+    } else {
+      classie.add( body, 'nav-open' );
+      classie.add( nav, 'is-open' );
+    }
   });
 
-})(jQuery);
+})();
