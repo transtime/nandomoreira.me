@@ -6,8 +6,10 @@ slug: blog
 class: blog-page
 ---
 
-{% for post in paginator.posts %}
-  {% include article.html %}
-{% endfor %}
+<div class="flex-row">
+  {% for post in paginator.posts %}
+    {% include article.html %}
+  {% endfor %}
+</div>
 
 {% include pagination.html %}

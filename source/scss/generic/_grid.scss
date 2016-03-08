@@ -25,3 +25,23 @@
   max-width: $max-width;
   overflow: hidden;
 }
+
+.flex-row {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: -(get-spacing(base));
+  margin-right: -(get-spacing(base));
+
+  .post {
+    padding-left: get-spacing(base);
+    padding-right: get-spacing(base);
+
+    @include media($screen-tablet) {
+      flex-basis: percentage(1/2);
+      max-width: percentage(1/2);
+    }
+  }
+}

@@ -6,7 +6,7 @@
     list-style: none;
     padding: 0;
 
-    @include media($screen-large-tablet) {
+    @include media($screen-tablet) {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
@@ -18,7 +18,7 @@
   .next,
   .prev,
   .page-number {
-    @include media(max-width $screen-large-tablet) {
+    @include media(max-width $screen-tablet) {
       text-align: center;
       display: block;
       width: 100%;

@@ -7,8 +7,7 @@ post_class: open-sidebar
 
   {% include header.html %}
 
-  <header class="post-header header-single {% if page.cover %}has-image{% endif %}">
-    {% if page.cover %}<div class="header-overlay parallax" data-parallax-speed="5" style="background-image: url({{ page.cover }})"></div>{% endif %}
+  <header class="post-header header-single">
     <div class="container-inn">
       {% if page.slug == "about" %}
         {% img avatar.jpg alt:'{{ site.author }}' class:'avatar' %}

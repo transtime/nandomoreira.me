@@ -8,8 +8,7 @@ layout: default
 
   <article class="post post-single" itemscope itemtype="http://schema.org/BlogPosting">
 
-    <header class="post-header header-single {% if page.cover %}has-image{% endif %}">
-      {% if page.cover %}<div class="header-overlay parallax" data-parallax-speed="5" style="background-image: url({{ page.cover }})"></div>{% endif %}
+    <header class="post-header header-single">
       <div class="container-inn">
         <span class="post-meta">
           <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>

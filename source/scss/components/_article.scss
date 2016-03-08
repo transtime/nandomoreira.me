@@ -71,10 +71,18 @@ $header-big-spacing: toem(get-spacing(large)) toem(get-spacing(big));
   margin-bottom: get-spacing(big);
 
   .post-title {
-    @include font-size(20);
+    @include font-size(18);
+
+    a {
+      color: get-color(gray, light);
+
+      &:hover {
+        color: get-color(primary, light);
+      }
+    }
 
     @include media($screen-tablet) {
-      @include font-size(30);
+      @include font-size(22);
     }
   }
 
@@ -82,9 +90,9 @@ $header-big-spacing: toem(get-spacing(large)) toem(get-spacing(big));
     opacity: .6;
     @include font-size(16);
 
-    @include media($screen-tablet) {
-      @include font-size(20);
-    }
+    // @include media($screen-tablet) {
+    //   @include font-size(20);
+    // }
   }
 }
 
