@@ -13,11 +13,13 @@
     classie.toggle( this, 'close' );
 
     if (classie.has( nav, 'is-open' )) {
-      classie.remove( nav, 'is-open' ).add( nav, 'is-close' );
+      classie.remove( nav, 'is-open' );
       classie.remove( body, 'nav-open' );
+      classie.add( nav, 'is-close' );
     } else {
       classie.add( body, 'nav-open' );
       classie.add( nav, 'is-open' );
+      classie.remove( nav, 'is-close' );
     }
   });
 
