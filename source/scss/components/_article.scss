@@ -44,6 +44,20 @@ $header-big-spacing: toem(get-spacing(large)) toem(get-spacing(big));
       padding: $header-big-spacing;
     }
 
+    .container-inn {
+      overflow: visible;
+    }
+
+    .post-title {
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(.25, .1, .25, 1);
+      opacity: 0;
+      transform: translateY(10%);
+      animation-name: animateFadeIn;
+      animation-duration: 600ms;
+      animation-delay: .15s;
+    }
+
     // h1 strong {
       // text-transform: uppercase;
     // }

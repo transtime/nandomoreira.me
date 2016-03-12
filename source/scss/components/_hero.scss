@@ -22,17 +22,22 @@ body.home-hero {
     margin-bottom: get-spacing(base);
   }
 
+  h1,
+  .actions,
+  .social {
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.25, .1, .25, 1);
+  }
+
   .hero-inner {
     max-width: $max-width;
 
     @include media(max-width $screen-large-tablet) {
-      min-height: 600px;
       padding: get-spacing(small);
     }
   }
 
   .actions,
-  .translate,
   .avatar {
     margin: get-spacing(small) 0;
   }
@@ -40,7 +45,7 @@ body.home-hero {
   a {
     color: get-color(white);
     opacity: .7;
-    @include transition(opacity .2s ease-in-out);
+    transition: opacity .2s ease-in-out;
 
     @include attention(false) {
       opacity: 1;
@@ -48,6 +53,12 @@ body.home-hero {
   }
 
   .actions {
+    opacity: 0;
+    transform: translateY(100%);
+    animation-name: translateBottomIn;
+    animation-duration: 600ms;
+    animation-delay: 1.2s;
+
     margin-top: get-spacing(base);
 
     a {
@@ -57,7 +68,16 @@ body.home-hero {
     }
   }
 
+  h1,
+  .social {
+    opacity: 0;
+    transform: translateY(10%);
+    animation-name: animateFadeIn;
+  }
+
   h1 {
+    animation-duration: 900ms;
+    animation-delay: .5s;
     color: get-color(white);
     margin: 0;
     padding: 0;
@@ -128,6 +148,8 @@ body.home-hero {
   }
 
   .social {
+    animation-duration: 800ms;
+    animation-delay: 1.8s;
     margin: get-spacing(base) 0 0;
 
     li {
@@ -136,38 +158,3 @@ body.home-hero {
     }
   }
 }
-
-.translate {
-  a {
-    @include font-size(14);
-
-    &::before,
-    &::after {
-      position: relative;
-      background: none;
-      @include transition(margin .2s ease-in-out);
-    }
-
-    &::before {
-      content: "[";
-      margin-right: 3px;
-    }
-
-    &::after {
-      content: "]";
-      margin-left: 3px;
-      left: auto;
-    }
-
-    &:hover {
-      &::before {
-        margin-right: 5px;
-      }
-
-      &::after {
-        margin-left: 5px;
-      }
-    }
-  }
-}
-

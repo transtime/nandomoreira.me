@@ -1,5 +1,7 @@
 
 .social {
+  padding: 0;
+
   li {
     @include font-size(28);
     display: inline-block;

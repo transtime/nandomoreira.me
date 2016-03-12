@@ -12,6 +12,15 @@
   @extend .dot;
   padding: 2px;
   border: 1px solid rgba(get-color(white), .5);
+  margin-bottom: get-spacing(small);
+
+  opacity: 0;
+  @include transform(translateY(-100%) rotate(-10deg));
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(.25, .1, .25, 1);
+  animation-name: translateTopIn;
+  animation-duration: 1s;
+  animation-delay: .2s;
 }
 
 %after,

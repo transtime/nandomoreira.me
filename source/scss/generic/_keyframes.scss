@@ -3,71 +3,47 @@
 @include keyframes(translateTopIn) {
   from {
     opacity: 0;
-    @include transform(translateY(-100%));
+    transform: translateY(-100%) rotate(-10deg);
   }
 
   to {
     opacity: 1;
-    @include transform(translateY(0));
+    transform: translateY(0) rotate(0);
   }
 }
 
 @include keyframes(translateTopOut) {
   from {
     opacity: 1;
-    @include transform(translateY(0));
+    @include transform(translateY(0) rotate(0));
   }
 
   to {
     opacity: 0;
-    @include transform(translateY(-100%));
+    @include transform(translateY(-100%) rotate(-10deg));
   }
 }
 
-@include keyframes(translateLeftIn) {
+@include keyframes(translateBottomIn) {
   from {
     opacity: 0;
-    @include transform(translateX(-100%));
+    transform: translateY(100%);
   }
 
   to {
     opacity: 1;
-    @include transform(translateX(0));
+    transform: translateY(0);
   }
 }
 
-@include keyframes(translateLeftOut) {
-  from {
-    opacity: 1;
-    @include transform(translateX(0));
-  }
-
-  to {
-    opacity: 0;
-    @include transform(translateX(-100%));
-  }
-}
-
-@include keyframes(translateRightIn) {
+@include keyframes(animateFadeIn) {
   from {
     opacity: 0;
-    @include transform(translateX(100%));
+    transform: translateY(10%);
   }
 
   to {
     opacity: 1;
-    @include transform(translateX(0));
-  }
-}
-
-@include keyframes(translateRightOut) {
-  from {
-    opacity: 1;
-    @include transform(translateX(0));
-  }
-
-  to {
-    opacity: 0;
-    @include transform(translateX(100%));
+    transform: translateY(0);
   }
 }
