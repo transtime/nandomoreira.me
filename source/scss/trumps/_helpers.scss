@@ -21,6 +21,11 @@
   animation-name: translateTopIn;
   animation-duration: 1s;
   animation-delay: .2s;
+
+  @include media(max-width $screen-tablet) {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 %after,

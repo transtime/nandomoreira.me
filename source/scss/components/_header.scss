@@ -43,6 +43,10 @@
 
   @include media(max-width $screen-tablet) {
     line-height: 30px;
+
+    a {
+      line-height: 33px;
+    }
   }
 
   @include media(max-width $screen-phone) {

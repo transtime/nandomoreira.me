@@ -79,15 +79,19 @@ body.home-hero {
     animation-duration: 900ms;
     animation-delay: .5s;
     color: get-color(white);
+    line-height: 1;
     margin: 0;
     padding: 0;
+
+    @include media($screen-tablet) {
+      line-height: 1.6;
+    }
 
     span {
       opacity: .7;
       font-family: $base-font-family;
-      // font-weight: $font-weight-light;
       font-weight: 200;
-      @include font-size(24);
+      @include font-size(20);
 
       @include media($screen-tablet) {
         @include font-size(28);
@@ -110,10 +114,11 @@ body.home-hero {
       display: block;
       margin: get-spacing(small) 0;
       text-transform: uppercase;
-      letter-spacing: .2em;
-      @include font-size(26);
+      letter-spacing: .1em;
+      @include font-size(22);
 
       @include media($screen-large-phone) {
+        letter-spacing: .2em;
         @include font-size(38);
       }
 
