@@ -1,6 +1,7 @@
 
 .header {
   padding-bottom: get-spacing(base);
+  border-top: 5px solid get-color(primary, base);
   position: relative;
   @extend %clearfix;
 
@@ -31,6 +32,15 @@
   float: left;
   margin: 0;
 
+  a {
+    color: get-color(gray, base);
+  }
+
+  span {
+    font-weight: $font-weight-light;
+    color: get-color(primary, base);
+  }
+
   @include media(max-width $screen-tablet) {
     line-height: 30px;
   }
@@ -47,10 +57,10 @@
   opacity: 0;
   float: right;
   transform: translateY(-100%);
-  padding-right: get-spacing(large);
+  padding-right: get-spacing(big);
 
   animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: cubic-bezier(.25, .1, .25, 1);
 
   @include media(max-width $screen-tablet) {
     @include position(fixed, 0);
@@ -72,12 +82,12 @@
   }
 
   &.is-open {
-    animation-name: translateTopIn;
+    animation-name: navbarIn;
     animation-duration: .3s;
   }
 
   &.is-close {
-    animation-name: translateTopOut;
+    animation-name: navbarOut;
     animation-duration: .2s;
   }
 

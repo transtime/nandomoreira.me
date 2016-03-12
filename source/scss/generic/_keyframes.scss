@@ -1,5 +1,4 @@
 
-
 @include keyframes(translateTopIn) {
   from {
     opacity: 0;
@@ -15,12 +14,12 @@
 @include keyframes(translateTopOut) {
   from {
     opacity: 1;
-    @include transform(translateY(0) rotate(0));
+   transform: translateY(0) rotate(0);
   }
 
   to {
     opacity: 0;
-    @include transform(translateY(-100%) rotate(-10deg));
+   transform: translateY(-100%) rotate(-10deg);
   }
 }
 
@@ -45,5 +44,30 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+
+@include keyframes(navbarIn) {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@include keyframes(navbarOut) {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
   }
 }
