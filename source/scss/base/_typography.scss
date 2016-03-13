@@ -7,10 +7,10 @@ html {
 }
 
 body {
-  color: get-color(gray, light);
   font-family: $base-font-family;
   line-height: $base-line-height;
   font-weight: $font-weight-light;
+  color: get-color(gray, base);
   @include font-size();
 }
 

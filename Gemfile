@@ -12,9 +12,12 @@ group :development do
   gem 'rake', '~> 10.5'
 
   gem 'jekyll', '~> 3.1', '>= 3.1.2'
+  gem 'pygments.rb', '~> 0.6.3'
+end
+
+group :jekyll_plugins do
   gem 'jekyll-seo-tag', '~> 1.3', '>= 1.3.2'
   gem 'jekyll-assets', '~> 2.1', '>= 2.1.2'
   gem 'jekyll-paginate', '~> 1.1'
-
-  gem 'pygments.rb', '~> 0.6.3'
+  gem 'jekyll-minify-html', '~> 1.1'
 end

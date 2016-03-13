@@ -5,6 +5,8 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
+env: production
+
 # Build settings
 markdown: kramdown
 highlighter: pygments
@@ -51,6 +53,13 @@ gems:
   - jekyll-assets
   - jekyll-seo-tag
   - jekyll-paginate
+  - jekyll-minify-html
+
+html_press:
+  unquoted_attributes: false
+  drop_empty_values: false
+  strip_crlf: false
+  js_minifier_options: false
 
 assets:
   compress:

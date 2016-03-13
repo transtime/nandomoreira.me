@@ -17,6 +17,9 @@ gulp.task('sass', function () {
     .on('error', $.rubySass.logError)
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
+    .pipe($.size({ title: "Default file" }))
+    .pipe($.combineMq())
+    .pipe($.size({ title: "After combineMq" }))
     .pipe($.autoprefixer({
       browsers: [
         "ie >= 10",
@@ -31,7 +34,9 @@ gulp.task('sass', function () {
       ],
       cascade: false
     }))
+    .pipe($.size({ title: "After autoprefixer" }))
     .pipe($.cssnano({ processImport: true }))
+    .pipe($.size({ title: "After cssnano" }))
     .pipe($.sourcemaps.write('.'))
     .pipe(gulp.dest(dest))
     .pipe($.plumber.stop());

@@ -108,9 +108,10 @@ body.home-hero {
 
     em {
       @extend %after;
+      font-style: normal;
 
       &::after {
-        background: get-color(white);
+        background-color: get-color(white);
       }
     }
 
