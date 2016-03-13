@@ -40,7 +40,7 @@ end
 
 Se você rodar no seu terminal o comando `rake hello` aparecerá na tela, bem bonitão, o nosso famoso "Hello World".
 
-<a href="/assets/images/posts/2015/08/rake-hello-world.png" class="swipebox" rel="gallery" title="{{ page.title }}">
+<a href="/assets/images/posts/2015/08/rake-hello-world.png" class="lightbox" rel="gallery" title="{{ page.title }}">
   <img src="/assets/images/posts/2015/08/rake-hello-world.png" alt="{{ page.title }}">
 </a>
 
@@ -92,7 +92,7 @@ end
 
 Fácil não? Basta passar o título do post como parâmentro pelo terminal assim: `rake post title="Rake é bem legal"`, note que se você deixar vazio ele automaticamente coloca `Novo post` como valor padrão para o título.
 
-<a href="/assets/images/posts/2015/08/rake-post-title.png" class="swipebox" rel="gallery" title="{{ page.title }}">
+<a href="/assets/images/posts/2015/08/rake-post-title.png" class="lightbox" rel="gallery" title="{{ page.title }}">
   <img src="/assets/images/posts/2015/08/rake-post-title.png" alt="rake post title">
 </a>
 
@@ -125,7 +125,7 @@ task :post do
 end
 {% endhighlight %}
 
-<a href="/assets/images/posts/2015/08/rake-e-bem-legal.png" class="swipebox" rel="gallery" title="{{ page.title }}">
+<a href="/assets/images/posts/2015/08/rake-e-bem-legal.png" class="lightbox" rel="gallery" title="{{ page.title }}">
   <img src="/assets/images/posts/2015/08/rake-e-bem-legal.png" alt="rake e bem legal">
 </a>
 
@@ -156,7 +156,7 @@ task :post do
 end
 {% endhighlight %}
 
-<a href="/assets/images/posts/2015/08/rake-post-date-time.png" class="swipebox" rel="gallery" title="{{ page.title }}">
+<a href="/assets/images/posts/2015/08/rake-post-date-time.png" class="lightbox" rel="gallery" title="{{ page.title }}">
   <img src="/assets/images/posts/2015/08/rake-post-date-time.png" alt="rake - date time">
 </a>
 
@@ -182,7 +182,7 @@ task :post do
 end
 {% endhighlight %}
 
-<a href="/assets/images/posts/2015/08/rake-post-filename.png" class="swipebox" rel="gallery" title="{{ page.title }}">
+<a href="/assets/images/posts/2015/08/rake-post-filename.png" class="lightbox" rel="gallery" title="{{ page.title }}">
   <img src="/assets/images/posts/2015/08/rake-post-filename.png" alt="rake - post filename">
 </a>
 

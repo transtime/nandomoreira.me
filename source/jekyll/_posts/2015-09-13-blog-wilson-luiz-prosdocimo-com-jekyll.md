@@ -24,13 +24,13 @@ O link do projeto é: [wprosdocimo.com.br](http://wprosdocimo.com.br/)
 O resultado foi bem bacana, veja logo abaixo.
 
 <figure class="thumb">
-  <a href="{{ 'posts/2015/09/blog-wprosdocimo.png' | asset_path }}" class="swipebox" rel="gallery" title="{{ page.title }}">
+  <a href="{{ 'posts/2015/09/blog-wprosdocimo.png' | asset_path }}" class="lightbox" rel="gallery" title="{{ page.title }}">
     {% image posts/2015/09/blog-wprosdocimo.png alt="Blog Wilson Luiz Prosdocimo - um blog com um pouco de tudo.." [autosize] %}
   </a>
 </figure>
 
 <figure class="thumb">
-  <a href="{{ 'posts/2015/09/blog-wprosdocimo-single.png' | asset_path }}" class="swipebox" rel="gallery" title="{{ page.title }}">
+  <a href="{{ 'posts/2015/09/blog-wprosdocimo-single.png' | asset_path }}" class="lightbox" rel="gallery" title="{{ page.title }}">
     {% image posts/2015/09/blog-wprosdocimo-single.png alt="Blog Wilson Luiz Prosdocimo - um blog com um pouco de tudo.." [autosize] %}
   </a>
 </figure>

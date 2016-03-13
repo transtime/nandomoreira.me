@@ -35,7 +35,7 @@ A instalação de um generator yo é bem simples, basta que você encontra o gen
 
 Nós vamos procurar por **yo-wordpress** no campo de busca e clicar no link.
 
-<a href="/assets/images/posts/2016/01/find-yo-wordpress.png" class="swipebox" rel="gallery" title="find yo-wordpress">
+<a href="/assets/images/posts/2016/01/find-yo-wordpress.png" class="lightbox" rel="gallery" title="find yo-wordpress">
 ![find yo-wordpress](/assets/images/posts/2016/01/find-yo-wordpress.png)
 </a>
 
@@ -49,7 +49,7 @@ sudo npm install -g yo generator-yo-wordpress
 
 Com o comando acima instalamos o **Yeoman** e o **yo-wordpress**
 
-<a href="/assets/images/posts/2016/01/instalando-yo-wordpress.png" class="swipebox" rel="gallery" title="Instalando yo-wordpress">
+<a href="/assets/images/posts/2016/01/instalando-yo-wordpress.png" class="lightbox" rel="gallery" title="Instalando yo-wordpress">
 ![instalando yo-wordpress](/assets/images/posts/2016/01/instalando-yo-wordpress.png)
 </a>
 
@@ -61,7 +61,7 @@ Após a instalação o seu generator poderá ser executado normalmente de qualqu
 yo wordpress
 {% endhighlight %}
 
-<a href="/assets/images/posts/2016/01/yo-wordpress-command.png" class="swipebox" rel="gallery" title="command yo wordpress">
+<a href="/assets/images/posts/2016/01/yo-wordpress-command.png" class="lightbox" rel="gallery" title="command yo wordpress">
 ![instalando yo-wordpress](/assets/images/posts/2016/01/yo-wordpress-command.png)
 </a>
 
@@ -86,13 +86,13 @@ Logo em seguida o generator irá pedir que você preencha alguns campos para que
   * `Repository branch`: Deixe como `template`;
 * `Does this all look correct? (Y/n)`: Responda `Y` e seja feliz :D
 
-<a href="/assets/images/posts/2016/01/executando-yo-wordpress.png" class="swipebox" rel="gallery" title="executando yo wordpress">
+<a href="/assets/images/posts/2016/01/executando-yo-wordpress.png" class="lightbox" rel="gallery" title="executando yo wordpress">
 ![instalando yo-wordpress](/assets/images/posts/2016/01/executando-yo-wordpress.png)
 </a>
 
 O Generator vai gerar todos os arquivos para o seu novo projeto, e também um arquivo `.json` chamado `.yeopress`, ele usa esse arquivo para armazenar as configurações que você preencheu ao rodar o comando no terminal, pra mim ficou assim:
 
-<a href="/assets/images/posts/2016/01/generator-files-and-yopress-file.png" class="swipebox" rel="gallery" title="generator files">
+<a href="/assets/images/posts/2016/01/generator-files-and-yopress-file.png" class="lightbox" rel="gallery" title="generator files">
 ![instalando yo-wordpress](/assets/images/posts/2016/01/generator-files-and-yopress-file.png)
 </a>
 

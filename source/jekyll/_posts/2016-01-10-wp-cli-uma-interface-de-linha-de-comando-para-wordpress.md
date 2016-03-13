@@ -51,7 +51,7 @@ Agora é só executar `wp --info`.
 
 Executando `wp help` ou apenas `wp` ele nos trará uma lista de subcomandos.
 
-<a href="/assets/images/posts/2016/01/wp-cli-help.png" class="swipebox" rel="gallery" title="WP-CLI help">
+<a href="/assets/images/posts/2016/01/wp-cli-help.png" class="lightbox" rel="gallery" title="WP-CLI help">
 ![WP-CLI help](/assets/images/posts/2016/01/wp-cli-help.png)
 </a>
 
@@ -65,7 +65,7 @@ wp plugin install hello-dolly
 
 Fácil não?
 
-<a href="/assets/images/posts/2016/01/wp-cli-theme-status.png" class="swipebox" rel="gallery" title="WP-CLI theme status">
+<a href="/assets/images/posts/2016/01/wp-cli-theme-status.png" class="lightbox" rel="gallery" title="WP-CLI theme status">
 ![WP-CLI theme status](/assets/images/posts/2016/01/wp-cli-theme-status.png)
 </a>
 

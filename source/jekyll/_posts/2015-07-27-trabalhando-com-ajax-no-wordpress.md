@@ -41,7 +41,7 @@ add_action( 'wp_enqueue_scripts', 'footer_scripts', 1 );
 
 Após inserir essas linhas de código no seu arquivo `functions.php` vamos ver como ficou nosso site no navegador.. nada mudou certo? Aparentemente não, mas vamos visualizar o código fonte.
 
-<a href="/assets/images/posts/2015/07/trabalhando-com-ajax-usando-jquery-no-wordpress-scripts-footer.png" class="swipebox" rel="gallery" title="{{ page.title }}">
+<a href="/assets/images/posts/2015/07/trabalhando-com-ajax-usando-jquery-no-wordpress-scripts-footer.png" class="lightbox" rel="gallery" title="{{ page.title }}">
   <img src="/assets/images/posts/2015/07/trabalhando-com-ajax-usando-jquery-no-wordpress-scripts-footer.png" alt="{{ page.title }}">
 </a>
 

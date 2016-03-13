@@ -21,7 +21,7 @@ Aderi ao **GNU linux** como OS padrão no final de 2014, apesar de usá-lo desde
 
 Uso **Ubuntu 15.04** com **Gnome-shell 3.14** pois acho ele muito bonito, elegante e rápido. Uso também uma máquina virtual com o *Windows 8.1* e *Windows 7* para testes em navegadores mais antigos (ie8) e as vezes abrir o Photoshop de vez em quando.
 
-<a href="{{ 'posts/2015/08/meu-ambiente-de-trabalho-detalhes-do-sistema.png' | asset_path }}" class="swipebox" rel="gallery" title="{{ page.title }}">
+<a href="{{ 'posts/2015/08/meu-ambiente-de-trabalho-detalhes-do-sistema.png' | asset_path }}" class="lightbox" rel="gallery" title="{{ page.title }}">
   {% image posts/2015/08/meu-ambiente-de-trabalho-detalhes-do-sistema.png alt="Detalhes do sistema" [autosize] %}
 </a>
 
@@ -31,7 +31,7 @@ Uso **Ubuntu 15.04** com **Gnome-shell 3.14** pois acho ele muito bonito, elegan
 
 Uso o [Sublime text 3](http://www.sublimetext.com/3) como editor de código padrão, gratuito e indispensável para um desenvolvedor front-end
 
-<a href="{{ 'posts/2015/08/meu-ambiente-sublime-text-3.png' | asset_path }}" class="swipebox" rel="gallery" title="{{ page.title }}">
+<a href="{{ 'posts/2015/08/meu-ambiente-sublime-text-3.png' | asset_path }}" class="lightbox" rel="gallery" title="{{ page.title }}">
   {% image posts/2015/08/meu-ambiente-sublime-text-3.png alt="Sublime text 3" [autosize] %}
 </a>
 
@@ -70,7 +70,7 @@ Hoje uso o **Yakuake** com muito prazer, e sou mais feliz por isso.
 
 Ah! Não poderia esquecer do **[Fish shell](http://fishshell.com/)**, com ele tudo fica mais fácil no terminal, sério, tudo.
 
-<a href="{{ 'posts/2015/08/meu-ambiente-linha-de-comando-yakuake-fish-shell.png' | asset_path }}" class="swipebox" rel="gallery" title="{{ page.title }}">
+<a href="{{ 'posts/2015/08/meu-ambiente-linha-de-comando-yakuake-fish-shell.png' | asset_path }}" class="lightbox" rel="gallery" title="{{ page.title }}">
   {% image posts/2015/08/meu-ambiente-linha-de-comando-yakuake-fish-shell.png alt="Yakuake e fish shell" [autosize] %}
 </a>
 
@@ -82,7 +82,7 @@ Mas é claro que é o **Git**, não precisaria nem discutir isso aqui pelo simpl
 
 Uso **[Github](http://github.com/nandomoreirame)** para repositórios públicos e **[Bitbucket](https://bitbucket.org/)** para repositórios privados.
 
-<a href="{{ 'posts/2015/08/meu-ambiente-github.jpg' | asset_path }}" class="swipebox" rel="gallery" title="{{ page.title }}">
+<a href="{{ 'posts/2015/08/meu-ambiente-github.jpg' | asset_path }}" class="lightbox" rel="gallery" title="{{ page.title }}">
   {% image posts/2015/08/meu-ambiente-github.jpg alt="Github" [autosize] %}
 </a>
 
@@ -94,7 +94,7 @@ Todo front-end precisa usar um **[pré-processador](https://goo.gl/G79yVN)**, se
 
 Eu uso **[SASS/SCSS](http://sass-lang.com/)**, apesar de ouvir falar muito bem do **Stylus** prefiro ficar com o **SASS**, ele tem tudo que preciso em um pré-processador e muito mais..
 
-<a href="{{ 'posts/2015/08/meu-ambiente-sass-compass.jpg' | asset_path }}" class="swipebox" rel="gallery" title="{{ page.title }}">
+<a href="{{ 'posts/2015/08/meu-ambiente-sass-compass.jpg' | asset_path }}" class="lightbox" rel="gallery" title="{{ page.title }}">
   {% image posts/2015/08/meu-ambiente-sass-compass.jpg alt="SASS e Compass" [autosize] %}
 </a>
 
@@ -106,7 +106,7 @@ Eu uso **[SASS/SCSS](http://sass-lang.com/)**, apesar de ouvir falar muito bem d
 
 O **Gulp** é muito mais rápido que o **Grunt**, pois ele faz uso das streams do node para escrever arquivos diretamente para o disco, dispensando intermediários.
 
-<a href="{{ 'posts/2015/08/meu-ambiente-gulpjs.png' | asset_path }}" class="swipebox" rel="gallery" title="{{ page.title }}">
+<a href="{{ 'posts/2015/08/meu-ambiente-gulpjs.png' | asset_path }}" class="lightbox" rel="gallery" title="{{ page.title }}">
   {% image posts/2015/08/meu-ambiente-gulpjs.png alt="Gulpjs" [autosize] %}
 </a>
 
@@ -136,7 +136,7 @@ Junto com ele uso uma série de *packages*, que são indispensáveis em meu arse
 
 Nós usamos o **[Jira](https://www.atlassian.com/software/jira)** lá na **[MalaPronta.com](http://www.malapronta.com.br)** um software incrível da **Atlassian** a mesma empresa que criou o **Bitbucket**.
 
-<a href="{{ 'posts/2015/08/meu-ambiente-jira.png' | asset_path }}" class="swipebox" rel="gallery" title="{{ page.title }}">
+<a href="{{ 'posts/2015/08/meu-ambiente-jira.png' | asset_path }}" class="lightbox" rel="gallery" title="{{ page.title }}">
   {% image posts/2015/08/meu-ambiente-jira.png alt="Jira Atlassian" [autosize] %}
 </a>
 

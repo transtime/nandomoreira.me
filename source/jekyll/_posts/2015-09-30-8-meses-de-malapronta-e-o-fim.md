@@ -82,7 +82,7 @@ Sempre vou sentir saudades das pessoas do porão da MalaPronta, vulgo **3° anda
 
 <div class="gallery">
   <figure class="thumb">
-    <a href="{{ 'posts/2015/09/galera-do-porao-malapronta.jpg' | asset_path }}" class="swipebox" rel="gallery" title="{{ page.title }}">
+    <a href="{{ 'posts/2015/09/galera-do-porao-malapronta.jpg' | asset_path }}" class="lightbox" rel="gallery" title="{{ page.title }}">
 
       {% image posts/2015/09/galera-do-porao-malapronta.jpg alt="Galera do Porão da MalaPronta" [autosize] %}
 

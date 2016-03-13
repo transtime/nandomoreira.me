@@ -1,11 +1,11 @@
 //=require bower/classie/classie.js
+//=require lightbox.js
 
-(function($) {
+;(function() {
   'use strict';
 
-  var menuToggle,
-      isMobile,
-      titleParallax;
+  var menuToggle, isMobile,
+      titleParallax, gallery;
 
   isMobile = {
     Android: function() {
@@ -73,8 +73,15 @@
     }
   };
 
+  gallery = {
+    init: function() {
+      return new lightBox();
+    }
+  };
+
   menuToggle.init();
   titleParallax.init();
+  gallery.init();
 
 })();
 

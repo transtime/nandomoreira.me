@@ -23,12 +23,12 @@ Ele foi feito para ser clean, simples e direto, para que você possa modificá-l
 
 <div class="gallery">
   <figure class="thumb">
-    <a href="{{ 'posts/2015/08/zetsu-chrome.png' | asset_path }}" class="swipebox" rel="gallery" title="{{ page.title }}">
+    <a href="{{ 'posts/2015/08/zetsu-chrome.png' | asset_path }}" class="lightbox" rel="gallery" title="{{ page.title }}">
       {% image posts/2015/08/zetsu-chrome.png alt="Zetsu - Chrome" [autosize] %}
     </a>
   </figure>
   <figure class="thumb">
-    <a href="{{ 'posts/2015/08/zetsu-phone.png' | asset_path }}" class="swipebox" rel="gallery" title="{{ page.title }}">
+    <a href="{{ 'posts/2015/08/zetsu-phone.png' | asset_path }}" class="lightbox" rel="gallery" title="{{ page.title }}">
       {% image posts/2015/08/zetsu-phone.png alt="Zetsu - Smartphone" [autosize] %}
     </a>
   </figure>
