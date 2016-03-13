@@ -352,7 +352,7 @@ lightBox.prototype.slideRight = function () {
   };
 
   titleParallax = {
-    postTitle : document.querySelector('.post-title'),
+    parallax  : document.querySelector('.parallax'),
     container : document.querySelector('.post-header'),
 
     init: function() {
@@ -365,10 +365,10 @@ lightBox.prototype.slideRight = function () {
       }, false);
     },
     update: function(scroll) {
-      this.postTitle.style['-webkit-transform'] = 'translateY('+ (scroll * .5) +'px)';
-      this.postTitle.style['-moz-transform'] = 'translateY('+ (scroll * .5) +'px)';
-      this.postTitle.style['transform'] = 'translateY('+ (scroll * .5) +'px)';
-      this.postTitle.style['opacity'] = (1 - ( scroll * .005 ));
+      this.parallax.style['-webkit-transform'] = 'translateY(-'+ (scroll * .5) +'px)';
+      this.parallax.style['-moz-transform'] = 'translateY(-'+ (scroll * .5) +'px)';
+      this.parallax.style['transform'] = 'translateY(-'+ (scroll * .5) +'px)';
+      this.parallax.style['opacity'] = (1 - ( scroll * .005 ));
     }
   };
 

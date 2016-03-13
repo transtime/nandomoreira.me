@@ -4,6 +4,7 @@ $header-big-spacing: toem(get-spacing(large)) toem(get-spacing(big));
 
 .post-header {
   padding-bottom: $header-spacing;
+  overflow: hidden;
   position: relative;
   @extend %clearfix;
 
@@ -48,19 +49,15 @@ $header-big-spacing: toem(get-spacing(large)) toem(get-spacing(big));
       overflow: visible;
     }
 
-    // .post-title {
-    //   animation-fill-mode: forwards;
-    //   animation-timing-function: cubic-bezier(.25, .1, .25, 1);
-    //   opacity: 0;
-    //   transform: translateY(10%);
-    //   animation-name: animateFadeIn;
-    //   animation-duration: 600ms;
-    //   animation-delay: .15s;
-    // }
-
-    // h1 strong {
-      // text-transform: uppercase;
-    // }
+    .post-title {
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(.25, .1, .25, 1);
+      opacity: 0;
+      transform: translateY(10%);
+      animation-name: animateFadeIn;
+      animation-duration: 600ms;
+      animation-delay: .15s;
+    }
 
     &.has-image {
       background-color: get-color(gray, base);
@@ -103,15 +100,10 @@ $header-big-spacing: toem(get-spacing(large)) toem(get-spacing(big));
   p {
     opacity: .6;
     @include font-size(16);
-
-    // @include media($screen-tablet) {
-    //   @include font-size(20);
-    // }
   }
 }
 
 .post-title {
-  transition: transform 1s cubic-bezier(.25, .1, .25, 1), opacity 1s cubic-bezier(.25, .1, .25, 1);
   margin: 0;
 
   a {
