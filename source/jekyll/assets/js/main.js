@@ -365,10 +365,10 @@ lightBox.prototype.slideRight = function () {
       }, false);
     },
     update: function(scroll) {
-      this.parallax.style['-webkit-transform'] = 'translateY(-'+ (scroll * .5) +'px)';
-      this.parallax.style['-moz-transform'] = 'translateY(-'+ (scroll * .5) +'px)';
-      this.parallax.style['transform'] = 'translateY(-'+ (scroll * .5) +'px)';
-      this.parallax.style['opacity'] = (1 - ( scroll * .005 ));
+      this.parallax.style['-webkit-transform'] = 'translateY('+ (scroll * .6) +'px)';
+      this.parallax.style['-moz-transform'] = 'translateY('+ (scroll * .6) +'px)';
+      this.parallax.style['transform'] = 'translateY('+ (scroll * .6) +'px)';
+      this.parallax.style['opacity'] = (1 - ( scroll * .002 ));
     }
   };
 

@@ -1,6 +1,10 @@
 
 body.home-hero {
   background-color: get-color(white);
+
+  @include media($screen-large-tablet) {
+    overflow: hidden;
+  }
 }
 
 .hero {
@@ -90,7 +94,7 @@ body.home-hero {
     span {
       opacity: .7;
       font-family: $base-font-family;
-      font-weight: 200;
+      font-weight: $font-weight-light;
       @include font-size(20);
 
       @include media($screen-tablet) {

@@ -28,10 +28,6 @@
   }
 }
 
-.parallax {
-  transition: transform 1s cubic-bezier(.25, .1, .25, 1), opacity 1s cubic-bezier(.25, .1, .25, 1);
-}
-
 %after,
 .after {
   position: relative;

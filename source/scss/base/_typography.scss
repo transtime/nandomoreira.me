@@ -1,6 +1,5 @@
 
-@import url("//fonts.googleapis.com/css?family=Roboto:400,300,700");
-// @import url("//fonts.googleapis.com/css?family=Raleway:300,700");
+@import url("//fonts.googleapis.com/css?family=Raleway:300,500,700");
 @import url("//fonts.googleapis.com/css?family=Exo+2:200,300,500,600");
 
 html {
@@ -21,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-semi-bold;
   font-family: $heading-font-family;
   line-height: $heading-line-height;
   margin: get-spacing(small) 0;
