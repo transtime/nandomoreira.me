@@ -1,9 +1,15 @@
 
 body.home-hero {
   background-color: get-color(white);
+  padding: get-spacing(mini);
+
+  @include media($screen-tablet) {
+    padding: get-spacing(small);
+  }
 
   @include media($screen-large-tablet) {
     overflow: hidden;
+    padding: get-spacing(medium);
   }
 }
 
@@ -95,10 +101,10 @@ body.home-hero {
       opacity: .7;
       font-family: $base-font-family;
       font-weight: $font-weight-light;
-      @include font-size(20);
+      @include font-size(18);
 
       @include media($screen-tablet) {
-        @include font-size(28);
+        @include font-size(18);
       }
 
       @include media($screen-large-tablet) {

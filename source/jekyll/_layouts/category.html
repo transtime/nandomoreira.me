@@ -18,9 +18,11 @@ layout: default
   <div class="container-inn">
     {% if site.categories[page.slug] %}
 
-      {% for post in site.categories[page.slug] %}
-        {% include article.html %}
-      {% endfor %}
+      <div class="flex-row">
+        {% for post in site.categories[page.slug] %}
+          {% include article.html %}
+        {% endfor %}
+      </div>
 
     {% else %}
 

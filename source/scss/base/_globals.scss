@@ -1,27 +1,13 @@
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
 html,
 body {
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
 }
 
 body {
   background-color: get-color(silver);
-  padding: get-spacing(mini);
-
-  @include media($screen-tablet) {
-    padding: get-spacing(small);
-  }
-
-  @include media($screen-large-tablet) {
-    padding: get-spacing(medium);
-  }
 }
 
 hr {

@@ -1,8 +1,12 @@
 
+body.nav-open {
+  overflow: hidden;
+}
+
 .header {
-  padding-bottom: get-spacing(base);
-  border-top: 5px solid get-color(primary, base);
-  position: relative;
+  @include position(fixed, 0 0 null 0);
+  z-index: 10000;
+  transition: background-color .1s linear;
   @extend %clearfix;
 
   @include media(max-width $screen-tablet) {
@@ -13,32 +17,50 @@
       padding-bottom: 10px;
     }
   }
-}
 
-.logotipo,
-.navbar li {
-  text-transform: lowercase;
-  @include font-size(20);
+  &.header-white {
+    background-color: get-color(white);
+    box-shadow: 0 1px 3px rgba(get-color(black), .1);
+    padding-bottom: get-spacing(base);
+
+    // .container {
+    //   padding-top: get-spacing(small);
+    // }
+
+    .logotipo a,
+    .logotipo a span {
+      color: get-color(primary, base);
+    }
+
+    .hamburger {
+      // top: 25px;
+
+      .menu-toggle span,
+      .menu-toggle:before,
+      .menu-toggle:after {
+        background-color: get-color(primary, base);
+      }
+    }
+  }
 }
 
 .logotipo a,
 .navbar a {
   display: inline-block;
   line-height: 40px;
+  color: get-color(white);
 }
 
 .logotipo {
+  text-transform: lowercase;
+  @include font-size(20);
   font-weight: $font-weight-medium;
   float: left;
   margin: 0;
 
-  a {
-    color: get-color(secondary, base);
-  }
-
   span {
     font-weight: $font-weight-light;
-    color: get-color(primary, base);
+    color: get-color(silver);
   }
 
   @include media(max-width $screen-tablet) {
@@ -59,55 +81,49 @@
 
 .navbar {
   opacity: 0;
-  float: right;
   transform: translateY(-100%);
-  padding-right: get-spacing(big);
-
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(.25, .1, .25, 1);
+  @include position(fixed, 0 0 null 0);
+  background-color: get-color(primary, base);
+  padding: get-spacing(big) 0 0;
+  z-index: 1000;
 
-  @include media(max-width $screen-tablet) {
-    @include position(fixed, 0);
-    background-color: get-color(primary, base);
-    padding: 0;
-    padding-top: get-spacing(big);
-    z-index: 100;
-
-    &,
-    ul {
-      width: 100%;
-      height: 100%;
-      margin: 0;
-    }
-
-    a {
-      color: get-color(white);
-    }
-  }
+  display: flex;
+  box-sizing: border-box;
+  box-orient: horizontal;
+  box-direction: normal;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
   &.is-open {
     animation-name: navbarIn;
-    animation-duration: .3s;
+    animation-duration: .5s;
   }
 
   &.is-close {
     animation-name: navbarOut;
-    animation-duration: .2s;
+    animation-duration: .3s;
   }
 
   ul {
+    display: inline-block;
     list-style: none;
     padding: 0;
-    float: right;
+    margin: 0;
   }
 
   li {
-    margin-left: get-spacing(mini);
+    text-transform: lowercase;
+    @include font-size(28);
+    text-align: center;
+    margin-left: get-spacing(base);
     display: inline-block;
 
     @include media(max-width $screen-tablet) {
       margin-left: 0;
-      text-align: center;
       margin-bottom: get-spacing(small);
 
       &,
@@ -129,79 +145,89 @@
 }
 
 .hamburger {
-  @include position(absolute, (get-spacing(base) + 5) get-spacing(small) auto auto);
-  z-index: 200;
-  cursor: pointer;
+  @include position(absolute, (get-spacing(base) + 10) get-spacing(base) auto auto);
+  z-index: 10000;
   padding: 0;
-  background: none;
-  background-color: transparent;
-  border: none;
-  width: 50px;
-  height: 30px;
-  display: block;
+  margin: 0;
 
-  @include media(max-width $screen-tablet) {
-    top: get-spacing(small);
+  &,
+  .menu-toggle {
+    border: none;
+    background: none;
   }
 
-  .top,
-  .bottom,
-  .middle {
-    height: .4px;
-    width: 100%;
-    fill: get-color(primary, base);
-    transition: transform .2s linear 0s, width .2s linear 0s;
-  }
+  .menu-toggle {
+    width: 40px;
+    height: 22px;
+    display: block;
+    position: relative;
 
-  .top {
-    transform: translateY(1px);
-  }
-
-  .middle {
-    transform: translateY(3px);
-  }
-
-  .bottom {
-    transform: translateY(5px);
-  }
-
-  &:hover {
-    .top {
-      transform: translateY(.5px);
+    span {
+      margin-top: -1px;
+      text-indent: -9999em;
+      top: 50%;
     }
 
-    .bottom {
-      transform: translateY(5.5px);
-    }
-  }
-
-  &.close {
-    @include media(max-width $screen-tablet) {
-      position: fixed;
-    }
-
-    .top,
-    .bottom,
-    .middle {
-      fill: get-color(primary, light);
+    span,
+    &:before,
+    &:after {
+      width: 40px;
+      display: block;
+      position: absolute;
+      height: 2px;
+      background: get-color(white);
+      transition: transform .2s linear 0s, top .2s linear 0s, bottom .2s linear 0s, opacity .1s linear 0s;
     }
 
-    .top {
-      transform: translateY(0) rotate(35deg);
+    &:before,
+    &:after {
+      content: "";
+      left: 0;
+      text-indent: -9999px;
+      top: 2px;
+      transform-origin: 50%;
+      transform: translateX(0);
     }
 
-    .middle {
-      transform: translateX(110%) translateY(3px);
+    &:after {
+      bottom: 2px;
+      left: auto;
+      right: 0;
+      top: auto;
     }
 
-    .bottom {
-      transform: translateY(7px) rotate(-35deg);
+    &:hover:before {
+      top: 0;
     }
-  }
-}
 
-@include media(max-width $screen-tablet) {
-  body.nav-open {
-    overflow: hidden;
+    &:hover:after {
+      bottom: 0;
+    }
+
+    &.close {
+      &:before,
+      &:after {
+        width: 40px;
+        top: 10px;
+      }
+
+      &:before {
+        transform: rotate(35deg);
+      }
+
+      span {
+        opacity: 0;
+      }
+
+      &:after {
+        transform: rotate(-35deg);
+      }
+
+      span,
+      &:before,
+      &:after {
+        background: get-color(white) !important;
+      }
+    }
   }
 }

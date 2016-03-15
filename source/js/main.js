@@ -5,7 +5,8 @@
   'use strict';
 
   var menuToggle, isMobile,
-      titleParallax, gallery;
+      titleParallax, gallery,
+      headerFixed;
 
   isMobile = {
     Android: function() {
@@ -32,13 +33,13 @@
     menu : document.querySelector('.menu-toggle'),
     nav  : document.querySelector('.navbar'),
     body : document.querySelector('body'),
+    postHeader : document.querySelector('.post-header'),
 
     init: function() {
       this.menu.addEventListener("click", function (e) {
         e.preventDefault();
-
+        menuToggle.nav.style.height = menuToggle.postHeader.offsetHeight + 'px';
         classie.toggle( this, 'close' );
-
         if (classie.has( menuToggle.nav, 'is-open' )) {
           classie.remove( menuToggle.nav, 'is-open' );
           classie.remove( menuToggle.body, 'nav-open' );
@@ -73,6 +74,24 @@
     }
   };
 
+  headerFixed = {
+    header     : document.querySelector('.header'),
+    postHeader : document.querySelector('.post-header'),
+
+    init: function() {
+      window.addEventListener("scroll", function(event) {
+        headerFixed.update(this.scrollY);
+      }, false);
+    },
+    update: function(scroll) {
+      if (scroll >= this.postHeader.offsetHeight) {
+        classie.add( this.header, 'header-white' );
+      } else {
+        classie.remove( this.header, 'header-white' );
+      }
+    }
+  };
+
   gallery = {
     init: function() {
       return new lightBox();
@@ -80,6 +99,7 @@
   };
 
   menuToggle.init();
+  headerFixed.init();
   titleParallax.init();
   gallery.init();
 

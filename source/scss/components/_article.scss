@@ -14,7 +14,8 @@ $header-big-spacing: toem(get-spacing(large)) toem(get-spacing(big));
   }
 
   .post-title {
-    @include font-size(32);
+    margin-top: get-spacing(mini);
+    @include font-size(38);
 
     small {
       display: block;
@@ -23,7 +24,7 @@ $header-big-spacing: toem(get-spacing(large)) toem(get-spacing(big));
       line-height: 1.6;
       margin: get-spacing(mini) auto 0;
       font-weight: 300;
-      font-size: 60%;
+      @include font-size(18);
 
       @include media($screen-large-tablet) {
         width: 80%;
