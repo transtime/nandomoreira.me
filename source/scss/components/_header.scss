@@ -8,24 +8,12 @@ body.nav-open {
   z-index: 10000;
   transition: background-color .1s linear;
   @extend %clearfix;
-
-  @include media(max-width $screen-tablet) {
-    padding-bottom: get-spacing(mini);
-
-    .container {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-  }
+  padding-top: 30px;
 
   &.header-white {
     background-color: get-color(white);
     box-shadow: 0 1px 3px rgba(get-color(black), .1);
     padding-bottom: get-spacing(base);
-
-    // .container {
-    //   padding-top: get-spacing(small);
-    // }
 
     .logotipo a,
     .logotipo a span {
@@ -33,8 +21,6 @@ body.nav-open {
     }
 
     .hamburger {
-      // top: 25px;
-
       .menu-toggle span,
       .menu-toggle:before,
       .menu-toggle:after {
@@ -63,13 +49,13 @@ body.nav-open {
     color: get-color(silver);
   }
 
-  @include media(max-width $screen-tablet) {
-    line-height: 30px;
+  // @include media(max-width $screen-tablet) {
+  //   line-height: 30px;
 
-    a {
-      line-height: 33px;
-    }
-  }
+  //   a {
+  //     line-height: 33px;
+  //   }
+  // }
 
   @include media(max-width $screen-phone) {
     span {
