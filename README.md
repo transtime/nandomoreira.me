@@ -25,23 +25,17 @@
 ## Setup ##
 
 ```
-sudo npm install -g gulp bower browser-sync
 sudo gem install bundler
 bundle install
-bower install
-npm install
 ```
 
 ---
 
-
-### Using [foreman](https://github.com/ddollar/foreman) ###
+### [middleman](https://middlemanapp.com/) ###
 
 ```
-foreman start
+middleman server
 ```
-
-Access, [localhost:3000](http://localhost:3000/)
 
 ### Create a posts and page using Rake tasks ###
 
