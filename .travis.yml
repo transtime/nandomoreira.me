@@ -5,7 +5,8 @@ rvm:
 
 branches:
   only:
-  - master # branch to build
+  - master
+  - source
 
 cache:
   - bundler
