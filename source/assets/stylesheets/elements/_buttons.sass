@@ -1,0 +1,23 @@
+
+%button
+  @extend .text-truncate
+  font-weight: $font-weight-normal
+  font-size: get-font-size()
+  line-height: $line-height-base
+  border-radius: $base-border-radius
+  line-height: 3em
+  text-transform: none
+  border: 0
+  box-shadow: none
+  color: get-color(text)
+  display: inline-block
+  background-color: get-color(primary, base)
+  overflow: hidden
+  padding: 0 1.25em
+  text-align: center
+  text-decoration: none
+  @include appearance(none)
+  @include transition(background-color $base-duration $base-timing, color $base-duration $base-timing, box-shadow $base-duration $base-timing)
+
+.button
+  @extend %button

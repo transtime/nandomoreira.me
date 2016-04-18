@@ -1,0 +1,151 @@
+
+body.home-hero
+  background-color: get-color(primary, base)
+  padding: get-spacing(mini)
+
+  @include media($screen-tablet)
+    padding: get-spacing(small)
+
+  @include media($screen-large-tablet)
+    overflow: hidden
+    padding: get-spacing(medium)
+
+.hero
+  width: 100%
+  text-align: center
+  margin-bottom: get-spacing(mini)
+  @include clearfix
+
+  @include media($screen-tablet)
+    margin-bottom: get-spacing(small)
+
+  @include media($screen-large-tablet)
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    margin-bottom: get-spacing(base)
+
+  h1,
+  &-actions,
+  .social
+    animation-fill-mode: forwards
+    animation-timing-function: cubic-bezier(.25, .1, .25, 1)
+    @include transform(translateZ(0))
+    @include backface-visibility(hidden)
+
+  &-inner
+    max-width: $screen-large-tablet
+
+    @include media(max-width $screen-large-tablet)
+      padding: get-spacing(small)
+
+  &-avatar
+    @extend .avatar
+    border-color: rgba(get-color(white), .5)
+
+  &-actions,
+  &-avatar
+    margin: get-spacing(small) 0
+
+  a
+    color: get-color(white)
+    opacity: .7
+    transition: opacity .2s ease-in-out
+
+    @include attention(false)
+      opacity: 1
+
+  &-actions
+    opacity: 0
+    transform: translateY(100%)
+    animation-name: translateBottomIn
+    animation-duration: 600ms
+    animation-delay: 1.2s
+    margin-top: get-spacing(base)
+
+  &-button
+    @extend .button
+    border-radius: 150px
+    margin: 0 (get-spacing(small) / 3)
+    text-transform: uppercase
+    border: 1px solid get-color(white)
+
+  h1,
+  .social
+    opacity: 0
+    transform: translateY(10%)
+    animation-name: animateFadeIn
+
+  h1
+    animation-duration: 900ms
+    animation-delay: .5s
+    color: get-color(white)
+    letter-spacing: .035rem
+    line-height: 1
+    margin: 0
+    padding: 0
+
+    @include media($screen-tablet)
+      line-height: 1.6
+
+    span
+      opacity: .7
+      font-family: $font-family-base
+      font-weight: $font-weight-light
+      font-size: get-font-size(18px)
+
+      @include media($screen-tablet)
+        font-size: get-font-size(18px)
+
+
+      @include media($screen-large-tablet)
+        font-size: get-font-size(32px)
+
+    strong
+      display: block
+      margin: get-spacing(small) 0
+      text-transform: uppercase
+      letter-spacing: .1em
+      font-size: get-font-size(22px)
+
+      @include media($screen-large-phone)
+        letter-spacing: .2em
+        font-size: get-font-size(38px)
+
+
+      @include media($screen-tablet)
+        font-size: get-font-size(50px)
+
+
+      @include media($screen-large-tablet)
+        font-size: get-font-size(75px)
+
+      &::before,
+      &::after
+        opacity: .7
+        content: ""
+        display: block
+        border: none
+        background-color: get-color(white)
+        width: 100%
+        height: 2px
+        @include transition(opacity .2s ease-in-out)
+
+      &:hover,
+      &:focus
+        &::before,
+        &::after
+          opacity: .75
+
+  .social
+    animation-duration: 800ms
+    animation-delay: 1.8s
+    margin: get-spacing(base) 0 0
+
+    li
+      padding-top: 0
+      padding-bottom: 0
+
+
+

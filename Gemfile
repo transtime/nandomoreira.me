@@ -2,22 +2,28 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
-ruby '2.3.0'
+gem 'middleman', '~> 3.3.12'
+gem 'middleman-blog', '~> 3.5.3'
+gem 'middleman-gh-pages'
+gem "middleman-syntax"
+gem "middleman-deploy"
 
+gem 'nokogiri' # for article.summary
+
+###
+# Front-end assets
+###
+gem 'bourbon', '~> 4.2', '>= 4.2.6'
+gem 'neat', '~> 1.7', '>= 1.7.4'
+
+###
+# Development environment
+###
+gem 'middleman-livereload'
 group :development do
-  gem 'sass', '~> 3.4', '>= 3.4.21'
-  gem 'bourbon', '~> 4.2', '>= 4.2.6'
-
-  gem 'foreman', '~> 0.78.0'
-  gem 'rake', '~> 10.5'
-
-  gem 'jekyll', '~> 3.1', '>= 3.1.2'
-  gem 'pygments.rb', '~> 0.6.3'
+  gem 'foreman'
+  gem "pry"
 end
 
-group :jekyll_plugins do
-  gem 'jekyll-seo-tag', '~> 1.3', '>= 1.3.2'
-  gem 'jekyll-assets', '~> 2.1', '>= 2.1.2'
-  gem 'jekyll-paginate', '~> 1.1'
-  gem 'jekyll-minify-html', '~> 1.1'
-end
+# For feed.xml.builder
+gem 'builder', '~> 3.0'

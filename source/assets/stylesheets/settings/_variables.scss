@@ -1,0 +1,84 @@
+
+// Typography
+//
+$font-family-base: "Source Sans Pro", Helvetica, Arial, sans-serif;
+$font-family-heading: $font-family-base;
+$font-family-monospace: "courier new", monospace;
+
+// Font Sizes
+//
+$font-size-inuit: 16px;
+
+// Color palette
+//
+$palette: (
+  white: #fff,
+  black: #000,
+  text: #5e5650,
+  silver: #f9f2e7,
+  background: #f4f5f7,
+  border: #eaeaea,
+  code: #ededed,
+  primary: (
+    base: #37b0e9,
+    light: lighten(#37b0e9, 15%),
+    dark: darken(#37b0e9, 15%),
+    transp: transparentize(#37b0e9, .5)
+  ),
+  secondary: (
+    base: #42626f,
+    light: lighten(#42626f, 15%),
+    dark: darken(#42626f, 15%),
+    transp: transparentize(#42626f, .5)
+  ),
+  gray: (
+    base: #3a3a3b,
+    light: lighten(#3a3a3b, 25%),
+    dark: darken(#3a3a3b, 10%),
+    transp: transparentize(#3a3a3b, .5)
+  ),
+  social: (
+    facebook: #3b5998,
+    twitter: #64a8f2,
+    gplus: #e85c62,
+    linkedin: #0077b5,
+    github: #323131,
+  )
+);
+
+// font weight
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+// Line height
+$line-height-base: 1.5;
+$line-height-heading: 1.2;
+
+// Other Sizes
+$spacings: (
+  large: 80px,
+  big: 60px,
+  base: 30px,
+  medium: 20px,
+  small: 15px,
+  mini: 10px,
+);
+
+$base-border-radius: 3px;
+
+// Animations
+$base-duration: .15s;
+$base-timing: ease-in-out;
+
+// responsive
+$screen-phone: 320px;
+$screen-large-phone: 375px;
+$screen-tablet: 768px;
+$screen-large-tablet: 1024px;
+$screen-desktop: 1280px;
+$screen-large-desktop: 1440px;
+
+$max-width: $screen-tablet;
+$default-feature: min-width;

@@ -1,0 +1,22 @@
+---
+title: Home
+body_class: home-hero
+---
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <%= image_tag 'avatar.jpg', :class => 'hero-avatar' %>
+
+    <h1><span>Olá, meu nome é</span> <strong>Fernando Moreira</strong> <span>eu sou <em>Front-end</em> e gosto muito de café.</span></h1>
+
+    <nav class="hero-actions">
+      <%= link_to("Sobre mim", "/about", :class => "hero-button") %>
+    </nav>
+
+    <%= partial "partials/social" %>
+
+  </div>
+
+</section>

@@ -1,0 +1,39 @@
+
+.header
+  padding: get-spacing(base) 0 0
+  border-top: 4px solid get-color(primary, base)
+  @include clearfix()
+
+.logo
+  display: block
+  border-bottom: 0
+  font-size: get-font-size(22)
+  text-transform: uppercase
+  float: left
+  margin: 0
+
+  span
+    letter-spacing: .15em
+    color: get-color(primary, dark)
+
+  span,
+  .avatar
+    display: inline-block
+    vertical-align: middle
+
+  small
+    display: block
+    color: get-color(gray, transp)
+    letter-spacing: .05em
+    text-transform: none
+    font-weight: normal
+
+  .avatar
+    @include size(64px)
+    margin-right: 10px
+    padding: 3px
+
+.toggle-navbar
+  float: right
+  display: block
+  padding: 15px 10px 10px
