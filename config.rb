@@ -117,7 +117,7 @@ end
 
 activate :deploy do |deploy|
   deploy.method = :git
-  deploy.branch = 'gh-pages' # or master
+  deploy.branch = 'master' # or gh-pages
 
   committer_app = "#{Middleman::Deploy::PACKAGE} v#{Middleman::Deploy::VERSION}"
   commit_message = "Deployed using #{committer_app}"

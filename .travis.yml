@@ -11,8 +11,6 @@ branches:
 cache:
   - bundler
 
-gemfile: travisGemfile
-
 install:
 - bundle install
 
