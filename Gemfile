@@ -7,6 +7,9 @@ gem 'middleman-blog', '~> 3.5.3'
 gem 'middleman-gh-pages'
 gem "middleman-syntax"
 gem "middleman-deploy"
+gem 'middleman-title'
+gem 'middleman-meta-tags'
+gem 'middleman-search_engine_sitemap' # for sitemap
 
 gem 'nokogiri' # for article.summary
 

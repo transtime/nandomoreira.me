@@ -34,9 +34,21 @@ activate :blog do |blog|
 end
 
 page "/feed.xml", layout: false
+page "/sitemap.xml", layout: false
 page "/blog.html", layout: "blog"
 page "/about.html", layout: "pages"
 page "/posts/*.html", layout: "posts"
+
+# Title
+activate :title, site: 'Fernando Moreira', separator: ' — '
+
+# Metatags
+activate :meta_tags
+
+# Sitemap
+set :url_root, 'http://nandomoreira.me/'
+activate :search_engine_sitemap, default_priority: 0.5,
+                                 default_change_frequency: "always"
 
 ###
 # Compass
@@ -105,13 +117,12 @@ activate :syntax, :line_numbers => true
 
 # Build-specific configuration
 configure :build do
-  config[:host] = "http://nandomoreira.me"
   activate :minify_css
   activate :minify_javascript
   activate :gzip
   activate :asset_hash
   activate :cache_buster
-  activate :relative_assets
+  # activate :relative_assets
   # set :http_prefix, "/Content/images/"
 end
 
