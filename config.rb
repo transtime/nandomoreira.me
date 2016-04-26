@@ -5,8 +5,6 @@
 # Time.zone = "UTC"
 Time.zone = "America/Sao_Paulo"
 
-config[:host] = "http://localhost/"
-
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
@@ -31,6 +29,14 @@ activate :blog do |blog|
   blog.paginate = true
   blog.per_page = 10
   blog.page_link = "page/{num}"
+end
+
+# i18n
+# activate :i18n, :path => "/:locale/", :mount_at_root => :en, :lang_map => { :en => :en, :pt_br => "pt-br" }, :no_fallbacks => true
+activate :i18n do |l|
+  l.path = "/:locale/"
+  l.mount_at_root = :en
+  l.no_fallbacks = true
 end
 
 page "/feed.xml", layout: false
@@ -91,15 +97,18 @@ configure :development do
   activate :livereload
 end
 
-# Automatic image dimensions on image_tag helper
-# activate :automatic_image_sizes
-
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def local_path(path, options={})
+    lang = options[:language] ? options[:language] : I18n.locale.to_s
+
+    if lang == "en"
+      "/#{path}"
+    else
+      "/#{lang}/#{path}"
+    end
+  end
+end
 
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
@@ -109,14 +118,12 @@ set :images_dir, 'assets/images'
 activate :directory_indexes
 set :index_file, "index.html"
 
+# Automatic image dimensions on image_tag helper
 activate :automatic_image_sizes
 activate :automatic_alt_tags
 
 # syntax
 activate :syntax, :line_numbers => true
-
-# i18n
-activate :i18n, :path => "/lang/:locale/", :lang_map => { :en => :english, :pt => :portugues }
 
 # Build-specific configuration
 configure :build do
@@ -125,8 +132,6 @@ configure :build do
   activate :gzip
   activate :asset_hash
   activate :cache_buster
-  # activate :relative_assets
-  # set :http_prefix, "/Content/images/"
 end
 
 activate :deploy do |deploy|

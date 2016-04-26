@@ -25,7 +25,6 @@ gem 'neat', '~> 1.7', '>= 1.7.4'
 gem 'middleman-livereload'
 group :development do
   gem 'foreman'
-  gem "pry"
 end
 
 # For feed.xml.builder

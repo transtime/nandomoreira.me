@@ -4,3 +4,6 @@ pt_br:
   front_dev: "desenvolvedor front-end"
   about_me: "Sobre mim"
   blog: "Meu blog"
+  about: "Sobre"
+  paths:
+    about: "sobre"

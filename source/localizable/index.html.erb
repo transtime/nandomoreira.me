@@ -1,5 +1,6 @@
 ---
 body_class: home-hero
+layout: layout
 ---
 
 <section class="hero">
@@ -9,14 +10,14 @@ body_class: home-hero
     <%= image_tag 'avatar.jpg', :class => 'hero-avatar' %>
 
     <h1>
-      <small><%= I18n.t(:hello_iam) %></small>
+      <small><%= t(:hello_iam) %></small>
       <strong>Fernando Moreira</strong>
-      <small><%= I18n.t(:front_dev) %> <%= I18n.t(:like_coffee) %>.</small>
+      <small><%= t(:front_dev) %> <%= t(:like_coffee) %>.</small>
     </h1>
 
     <nav class="hero-actions">
-      <%= link_to(I18n.t(:about_me), "/about", :class => "hero-button") %>
-      <%= link_to(I18n.t(:blog), "/blog", :class => "hero-button") %>
+      <%= link_to(t(:about_me), local_path(t("paths.about")), :lang => :i18n, :class => "hero-button") %>
+      <%= link_to(t(:blog), "/blog", :class => "hero-button") %>
     </nav>
 
     <%= partial "partials/social" %>

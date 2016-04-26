@@ -4,3 +4,6 @@ en:
   front_dev: "front-end developer"
   about_me: "About me"
   blog: "My blog"
+  about: "About"
+  paths:
+    about: "about"
