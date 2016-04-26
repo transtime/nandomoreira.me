@@ -1,2 +1,6 @@
 en:
-  hello: "Hello Wold!"
+  hello_iam: "Hello, I'm..."
+  like_coffee: "and I really like coffee"
+  front_dev: "front-end developer"
+  about_me: "About me"
+  blog: "My blog"

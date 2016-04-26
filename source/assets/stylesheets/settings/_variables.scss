@@ -7,7 +7,17 @@ $font-family-monospace: "courier new", monospace;
 
 // Font Sizes
 //
-$font-size-inuit: 16px;
+$font-size-inuit: 18px;
+
+// font weight
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+// Line height
+$line-height-base: 1.6;
+$line-height-heading: 1.2;
 
 // Color palette
 //
@@ -26,10 +36,10 @@ $palette: (
     transp: transparentize(#37b0e9, .5)
   ),
   secondary: (
-    base: #42626f,
-    light: lighten(#42626f, 15%),
-    dark: darken(#42626f, 15%),
-    transp: transparentize(#42626f, .5)
+    base: #ff0f72,
+    light: lighten(#ff0f72, 15%),
+    dark: darken(#ff0f72, 15%),
+    transp: transparentize(#ff0f72, .5)
   ),
   gray: (
     base: #3a3a3b,
@@ -45,16 +55,6 @@ $palette: (
     github: #323131,
   )
 );
-
-// font weight
-$font-weight-light: 300;
-$font-weight-normal: 400;
-$font-weight-semi-bold: 600;
-$font-weight-bold: 700;
-
-// Line height
-$line-height-base: 1.5;
-$line-height-heading: 1.2;
 
 // Other Sizes
 $spacings: (
@@ -80,5 +80,5 @@ $screen-large-tablet: 1024px;
 $screen-desktop: 1280px;
 $screen-large-desktop: 1440px;
 
-$max-width: $screen-tablet;
+$max-width: 860px;
 $default-feature: min-width;

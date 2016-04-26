@@ -115,6 +115,9 @@ activate :automatic_alt_tags
 # syntax
 activate :syntax, :line_numbers => true
 
+# i18n
+activate :i18n, :path => "/lang/:locale/", :lang_map => { :en => :english, :pt => :portugues }
+
 # Build-specific configuration
 configure :build do
   activate :minify_css

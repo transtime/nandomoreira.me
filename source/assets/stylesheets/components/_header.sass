@@ -1,12 +1,13 @@
 
 .header
-  padding: get-spacing(base) 0 0
-  border-top: 4px solid get-color(primary, base)
+  padding: 0
+  background: get-color(primary, base)
   @include clearfix()
 
 .logo
   display: block
   border-bottom: 0
+  color: get-color(white)
   font-size: get-font-size(22)
   text-transform: uppercase
   float: left
@@ -14,7 +15,6 @@
 
   span
     letter-spacing: .15em
-    color: get-color(primary, dark)
 
   span,
   .avatar
@@ -23,13 +23,14 @@
 
   small
     display: block
-    color: get-color(gray, transp)
+    color: rgba(get-color(white), .7)
+    font-weight: $font-weight-light
     letter-spacing: .05em
     text-transform: none
-    font-weight: normal
 
   .avatar
     @include size(64px)
+    border-color: rgba(get-color(white), .5)
     margin-right: 10px
     padding: 3px
 
