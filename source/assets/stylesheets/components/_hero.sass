@@ -28,7 +28,9 @@ body.home-hero
 
   h1,
   &-actions,
-  .social
+  &-avatar,
+  .social,
+  .translate
     animation-fill-mode: forwards
     animation-timing-function: cubic-bezier(.25, .1, .25, 1)
     @include transform(translateZ(0))
@@ -42,6 +44,11 @@ body.home-hero
 
   &-avatar
     @extend .avatar
+    opacity: 0
+    transform: translateY(-100%) rotate(-15deg)
+    animation-name: translateTopInRotate
+    animation-duration: .9s
+    animation-delay: .15s
     border-color: rgba(get-color(white), .5)
 
   &-actions,
@@ -72,10 +79,15 @@ body.home-hero
     border: 1px solid get-color(white)
 
   h1,
-  .social
+  .social,
+  .translate
     opacity: 0
     transform: translateY(10%)
     animation-name: animateFadeIn
+
+  .translate
+    animation-duration: 900ms
+    animation-delay: 2s
 
   h1
     animation-duration: 900ms
@@ -93,10 +105,10 @@ body.home-hero
       opacity: .7
       font-family: $font-family-base
       font-weight: $font-weight-light
-      font-size: get-font-size(18px)
+      font-size: get-font-size(20px)
 
       @include media($screen-tablet)
-        font-size: get-font-size(18px)
+        font-size: get-font-size(20px)
 
 
       @include media($screen-large-tablet)
@@ -148,4 +160,35 @@ body.home-hero
       padding-bottom: 0
 
 
+.translate
+  display: block
+  margin-top: get-spacing(mini)
+
+  a
+    color: get-color(white)
+    display: inline-block
+    padding: 0 5px
+    position: relative
+
+    &::before,
+    &::after
+      position: absolute
+      transition: margin .2s ease-in-out
+      margin: 0
+
+    &::before
+      content: "["
+      margin-left: 0
+      left: 0
+
+    &::after
+      content: "]"
+      margin-right: 0
+      right: 0
+
+    &:hover::before
+      margin-left: -7px
+
+    &:hover::after
+      margin-right: -7px
 

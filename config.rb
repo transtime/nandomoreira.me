@@ -32,7 +32,6 @@ activate :blog do |blog|
 end
 
 # i18n
-# activate :i18n, :path => "/:locale/", :mount_at_root => :en, :lang_map => { :en => :en, :pt_br => "pt-br" }, :no_fallbacks => true
 activate :i18n do |l|
   l.path = "/:locale/"
   l.mount_at_root = :en
@@ -42,11 +41,10 @@ end
 page "/feed.xml", layout: false
 page "/sitemap.xml", layout: false
 page "/blog.html", layout: "blog"
-page "/about.html", layout: "pages"
 page "/posts/*.html", layout: "posts"
 
 # Title
-activate :title, site: 'Fernando Moreira', separator: ' — '
+activate :title, site: 'Fernando Moreira | Front-end developer', separator: ' — '
 
 # Metatags
 activate :meta_tags
@@ -102,11 +100,15 @@ helpers do
   def local_path(path, options={})
     lang = options[:language] ? options[:language] : I18n.locale.to_s
 
-    if lang == "en"
-      "/#{path}"
-    else
+    if lang != "en"
       "/#{lang}/#{path}"
+    else
+      "/#{path}"
     end
+  end
+
+  def other_langs
+    langs - [I18n.locale]
   end
 end
 

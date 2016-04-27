@@ -2,20 +2,38 @@
 @include keyframes(translateTopIn)
   from
     opacity: 0
-    transform: translateY(-100%) rotate(-10deg)
+    transform: translateY(-100%)
+
+  to
+    opacity: 1
+    transform: translateY(0)
+
+@include keyframes(translateTopOut)
+  from
+    opacity: 1
+    transform: translateY(0)
+
+  to
+    opacity: 0
+    transform: translateY(-100%)
+
+@include keyframes(translateTopInRotate)
+  from
+    opacity: 0
+    transform: translateY(-100%) rotate(-15deg)
 
   to
     opacity: 1
     transform: translateY(0) rotate(0)
 
-@include keyframes(translateTopOut)
+@include keyframes(translateTopOutRotate)
   from
     opacity: 1
     transform: translateY(0) rotate(0)
 
   to
     opacity: 0
-    transform: translateY(-100%) rotate(-10deg)
+    transform: translateY(-100%) rotate(-15deg)
 
 @include keyframes(translateBottomIn)
   from

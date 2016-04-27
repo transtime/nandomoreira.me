@@ -5,5 +5,7 @@ pt_br:
   about_me: "Sobre mim"
   blog: "Meu blog"
   about: "Sobre"
+  en: "Inglês"
+  pt_br: "Português"
   paths:
     about: "sobre"
