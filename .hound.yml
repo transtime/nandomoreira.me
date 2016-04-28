@@ -1,8 +1,0 @@
-scss:
-  enabled: true
-  config_file: source/assets/stylesheets/.scss-lint.yml
-  exclude:
-    - source/assets/stylesheets/vendors/**
-
-javascript:
-  enabled: false

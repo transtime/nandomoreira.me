@@ -19,6 +19,15 @@ gem 'nokogiri' # for article.summary
 gem 'bourbon', '~> 4.2', '>= 4.2.6'
 gem 'neat', '~> 1.7', '>= 1.7.4'
 
+# JS Linter
+gem 'jslint', '~> 1.2.0', :require => false
+
+# Sass plugin
+gem 'sass', '~> 3.4', :require => false
+
+# Linter for the project scss
+gem 'scss-lint', '~> 0.38.0' , :require => false
+
 ###
 # Development environment
 ###
