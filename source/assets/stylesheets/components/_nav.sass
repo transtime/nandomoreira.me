@@ -1,0 +1,86 @@
+// =================================================================
+// nav
+// =================================================================
+
+$nav-width: 22em
+
+.nav
+  transform: translateX(100%)
+  transition: transform .3s $base-timing, visibility .3s $base-timing
+  @include position(fixed, 0 0 0 null)
+  width: 100%
+  -webkit-overflow-scrolling: touch
+  background-color: get-color(primary, base)
+  box-shadow: -10px 0px 40px rgba(get-color(black), .2)
+  cursor: default
+  color: get-color(white)
+  visibility: hidden
+  z-index: 100
+
+  @include media($screen-large-phone)
+    width: $nav-width
+
+  h2
+    text-transform: uppercase
+    letter-spacing: $heading-letter-spacing
+    font-size: get-font-size(24px)
+
+  &-inner
+    padding: 2.75em
+    position: relative
+
+  &-close
+    transition: opacity .5s ease, transform .5s ease
+    transform: scale(.2)
+    -webkit-tap-highlight-color: transparent
+    opacity: 0
+    display: block
+    position: absolute
+    top: 50px
+    right: 50px
+    border: none
+    font-size: get-font-size(20px)
+
+    @include media($screen-large-phone)
+      right: auto
+      left: -50px
+
+.navbar
+  list-style: none
+  padding: 0
+  margin: 0
+
+  li
+    border-top: solid 1px rgba(get-color(white), .5)
+
+    &:first-child
+      border-top: 0
+
+  a
+    color: get-color(white)
+    display: block
+    padding: 1em 0
+    line-height: 1.5
+    border: 0
+    color: inherit
+    transition: opacity .3s $base-timing
+
+    &:hover,
+    &:focus
+      opacity: .7
+
+body.nav-opened
+  overflow: hidden
+
+  .nav
+    transform: translateX(0)
+    visibility: visible
+
+  .nav-close
+    transform: scale(1)
+    opacity: 1
+
+  .site-main
+    opacity: .6
+
+

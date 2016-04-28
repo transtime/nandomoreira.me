@@ -1,11 +1,11 @@
 en:
-  hello_iam: "Hello, I'm..."
-  like_coffee: "and I really like coffee"
-  front_dev: "front-end developer"
-  about_me: "About me"
-  blog: "My blog"
-  about: "About"
-  en: "English"
-  pt_br: "Portuguese"
+  hello_iam: Hello, I'm...
+  like_coffee: and I really like coffee
+  front_dev: front-end developer
+  about_me: About me
+  blog: My blog
+  about: About
+  en: English
+  pt_br: Portuguese
   paths:
-    about: "about"
+    about: about

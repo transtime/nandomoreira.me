@@ -10,12 +10,7 @@
 .container,
 .container-inn
   @extend .container-full
-
-  @include media($screen-tablet)
-    padding: get-spacing(medium)
-
-  @include media($screen-large-tablet)
-    padding: get-spacing(base)
+  padding: get-spacing(base)
 
 .container-inn
   max-width: $max-width

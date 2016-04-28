@@ -2,7 +2,8 @@
 <html>
   <%= partial "partials/head" %>
   <body<% if current_page.data.body_class %> class="<%= current_page.data.body_class %>"<% end %>>
-    <main role="main">
+    <%= partial "partials/nav" %>
+    <main role="main" class="site-main">
       <%= partial "partials/header" %>
 
       <section class="container-inn">

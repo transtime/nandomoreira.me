@@ -14,7 +14,7 @@
   margin: 0
 
   span
-    letter-spacing: .15em
+    letter-spacing: $heading-letter-spacing
 
   span,
   .avatar
@@ -25,7 +25,7 @@
     display: block
     color: rgba(get-color(white), .7)
     font-weight: $font-weight-light
-    letter-spacing: .05em
+    letter-spacing: $medium-letter-spacing
     text-transform: none
 
   .avatar
@@ -33,6 +33,11 @@
     border-color: rgba(get-color(white), .5)
     margin-right: 10px
     padding: 3px
+
+  span,
+  small
+    @include media(max-width $screen-large-phone)
+      display: none
 
 .toggle-navbar
   float: right

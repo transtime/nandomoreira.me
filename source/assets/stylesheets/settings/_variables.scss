@@ -19,6 +19,11 @@ $font-weight-bold: 700;
 $line-height-base: 1.6;
 $line-height-heading: 1.2;
 
+// Letter spacing
+$base-letter-spacing: 1;
+$medium-letter-spacing: .05em;
+$heading-letter-spacing: .18em;
+
 // Color palette
 //
 $palette: (
@@ -30,10 +35,10 @@ $palette: (
   border: #eaeaea,
   code: #ededed,
   primary: (
-    base: #37b0e9,
-    light: lighten(#37b0e9, 15%),
-    dark: darken(#37b0e9, 15%),
-    transp: transparentize(#37b0e9, .5)
+    base: #1588bf,
+    light: lighten(#1588bf, 15%),
+    dark: darken(#1588bf, 15%),
+    transp: transparentize(#1588bf, .5)
   ),
   secondary: (
     base: #ff0f72,
@@ -73,8 +78,8 @@ $base-duration: .15s;
 $base-timing: ease-in-out;
 
 // responsive
-$screen-phone: 320px;
-$screen-large-phone: 375px;
+$screen-phone: 375px;
+$screen-large-phone: 480px;
 $screen-tablet: 768px;
 $screen-large-tablet: 1024px;
 $screen-desktop: 1280px;
