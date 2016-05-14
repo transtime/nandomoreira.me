@@ -12,6 +12,10 @@
 
 ---
 
+![nandomoreira.me!](/nandomoreira.me.png)
+
+---
+
 ## Contributing ##
 
 1. Fork it
