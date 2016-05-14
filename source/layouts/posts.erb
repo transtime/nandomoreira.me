@@ -6,19 +6,26 @@
     <main role="main" class="site-main">
       <%= partial "partials/header" %>
 
-      <article role="article" class="container-inn article">
+      <article role="article" class="article">
+        <div class="container-inn">
+          <header class="article-header">
+            <span class="article-meta">
+              Posted on the <%= current_page.date.strftime('%d') %> of <%= current_page.date.strftime('%b') %> <%= current_page.date.strftime('%Y') %>
+            </span>
+            <h1 class="article-title"><%= current_page.data.title %></h1>
+          </header>
 
-        <header class="article-header">
-          <span class="article-meta">
-            Posted on the <%= current_page.date.strftime('%d') %> of <%= current_page.date.strftime('%b') %> <%= current_page.date.strftime('%Y') %>
-          </span>
-          <h1 class="article-title"><%= current_page.data.title %></h1>
-        </header>
-
-        <div class="article-content">
-          <%= yield %>
+          <div class="article-content">
+            <%= yield %>
+          </div>
         </div>
       </article>
+
+      <div class="comments">
+        <div class="container-inn">
+          <%= disqus %>
+        </div>
+      </div>
 
       <%= partial "partials/footer" %>
     </main>

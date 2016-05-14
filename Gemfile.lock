@@ -88,6 +88,8 @@ GEM
       middleman-core (>= 3.2)
       net-sftp
       ptools
+    middleman-disqus (1.1.0)
+      middleman-core (~> 3.3)
     middleman-gh-pages (0.3.1)
       rake (> 0.9.3)
     middleman-livereload (3.4.6)
@@ -140,6 +142,7 @@ GEM
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
+    redcarpet (3.3.4)
     rouge (1.10.1)
     sass (3.4.22)
     scss-lint (0.38.0)
@@ -178,6 +181,7 @@ DEPENDENCIES
   middleman (~> 3.3.12)
   middleman-blog (~> 3.5.3)
   middleman-deploy
+  middleman-disqus
   middleman-gh-pages
   middleman-livereload
   middleman-meta-tags
@@ -187,6 +191,7 @@ DEPENDENCIES
   middleman-title
   neat (~> 1.7, >= 1.7.4)
   nokogiri
+  redcarpet
   sass (~> 3.4)
   scss-lint (~> 0.38.0)
 

@@ -17,6 +17,7 @@ h3,
 h4,
 h5,
 h6
+  color: get-color(secondary, light)
   font-family: $font-family-heading
   line-height: $line-height-heading
   font-weight: $font-weight-bold
@@ -49,11 +50,11 @@ h6
 
 a
   text-decoration: none
-  color: get-color(secondary, base)
+  color: get-color(primary, base)
   +transition(color $base-duration $base-timing)
 
   +hover-focus()
-    color: get-color(secondary, dark)
+    color: get-color(primary, dark)
 
 em
   font-style: italic
@@ -67,4 +68,18 @@ code
   font-family: $font-family-monospace
   line-height: 1.3
   font-size: get-font-size(14)
+
+blockquote
+  border-left: 3px solid get-color(border)
+  transition: border-color .2s linear
+  margin: 0
+  padding: 10px 10px 10px 30px
+  font-size: get-font-size(22px)
+
+  &:hover,
+  &:focus
+    border-left-color: get-color(primary, light)
+
+  p:last-child
+    margin-bottom: 0
 

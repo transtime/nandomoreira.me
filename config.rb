@@ -31,6 +31,18 @@ activate :blog do |blog|
   blog.page_link = "page/{num}"
 end
 
+activate :disqus do |d|
+  d.shortname = 'fernandomoreira'
+end
+
+set :site_url, 'http://nandomoreira.me'
+set :site_title, 'Fernando Moreira | Front-end developer'
+set :site_author, 'Fernando Moreira'
+set :site_author_image, 'avatar.jpg'
+set :social_twitter, 'https://twitter.com/Pia_Frontend'
+set :social_github, 'https://github.com/nandomoreirame'
+set :social_linkedin, 'https://br.linkedin.com/in/nandomoreirame'
+
 # i18n
 activate :i18n do |l|
   l.path = "/:locale/"
@@ -125,7 +137,11 @@ activate :automatic_image_sizes
 activate :automatic_alt_tags
 
 # syntax
-activate :syntax, :line_numbers => true
+activate :syntax
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true,
+               :autolink => true,
+               :smartypants => true
 
 # Build-specific configuration
 configure :build do
@@ -135,6 +151,8 @@ configure :build do
   activate :gzip
   activate :asset_hash
   activate :cache_buster
+
+  set :google_analytics_account, 'UA-52446115-1'
 end
 
 activate :deploy do |deploy|

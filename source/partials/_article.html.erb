@@ -2,11 +2,11 @@
 <article class="article">
   <header class="article-header">
     <span class="article-meta">
-      Posted on the <%= article.date.strftime('%d') %> of <%= article.date.strftime('%b') %> <%= article.date.strftime('%Y') %>
+      Posted on the <%= article.date.strftime('%d') %> of <%= article.date.strftime('%b') %> <%= article.date.strftime('%Y') %> <span class="divider"></span> <a href='<%= article.url %>#disqus_thread'>0 comments</a>
     </span>
     <h1 class="article-title"><%= link_to article.title, article %></h1>
   </header>
-  <div class="article-summary">
-    <%= article.summary 200, "..." %>
-  </div>
+  <p class="article-summary">
+    <%= strip_tags(article.summary(200)) %>
+  </p>
 </article>

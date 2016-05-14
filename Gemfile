@@ -11,8 +11,11 @@ gem 'middleman-title'
 gem 'middleman-meta-tags'
 gem 'middleman-search_engine_sitemap' # for sitemap
 gem 'middleman-minify-html'
+gem "middleman-disqus" # for comments
 
 gem 'nokogiri' # for article.summary
+
+gem 'redcarpet'
 
 ###
 # Front-end assets

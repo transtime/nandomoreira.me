@@ -56,12 +56,11 @@ body.home-hero
     margin: get-spacing(small) 0
 
   a
-    color: get-color(white)
-    opacity: .7
-    transition: opacity .2s ease-in-out
+    color: rgba(get-color(white), .75)
+    transition: color .2s ease-in-out
 
     +attention(false)
-      opacity: 1
+      color: get-color(white)
 
   &-actions
     opacity: 0
@@ -74,7 +73,7 @@ body.home-hero
   &-button
     @extend .button
     border-radius: 150px
-    margin: 0 (get-spacing(small) / 3)
+    margin: 0 (get-spacing(mini) / 2)
     text-transform: uppercase
     border: 1px solid get-color(white)
 
