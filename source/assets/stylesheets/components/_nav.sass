@@ -41,11 +41,14 @@ $nav-width: 22em
     font-size: get-font-size(20px)
 
     path
-      fill: get-color(text)
+      fill: get-color(white)
 
     +media($screen-large-phone)
       right: auto
       left: -50px
+
+      path
+        fill: get-color(text)
 
 .navbar
   list-style: none
