@@ -130,6 +130,7 @@ activate :syntax, :line_numbers => true
 # Build-specific configuration
 configure :build do
   activate :minify_css
+  activate :minify_html
   activate :minify_javascript
   activate :gzip
   activate :asset_hash
