@@ -131,6 +131,7 @@ set :images_dir, 'assets/images'
 
 activate :directory_indexes
 set :index_file, "index.html"
+page "/404.html", :directory_index => false
 
 # Automatic image dimensions on image_tag helper
 activate :automatic_image_sizes
