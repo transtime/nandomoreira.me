@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <%= partial "partials/head" %>
-  <body<% if current_page.data.body_class %> class="<%= current_page.data.body_class %>"<% end %>>
+  <body class="<%= page_classes %> <% if current_page.data.body_class %><%= current_page.data.body_class %><% end %>">
     <%= yield %>
   </body>
 </html>

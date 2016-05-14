@@ -1,13 +1,23 @@
 <!doctype html>
 <html>
   <%= partial "partials/head" %>
-  <body<% if current_page.data.body_class %> class="<%= current_page.data.body_class %>"<% end %>>
+  <body class="<%= page_classes %> single">
     <%= partial "partials/nav" %>
     <main role="main" class="site-main">
       <%= partial "partials/header" %>
 
-      <article role="article" class="container-inn">
-        <%= yield %>
+      <article role="article" class="container-inn article">
+
+        <header class="article-header">
+          <span class="article-meta">
+            Posted on the <%= current_page.date.strftime('%d') %> of <%= current_page.date.strftime('%b') %> <%= current_page.date.strftime('%Y') %>
+          </span>
+          <h1 class="article-title"><%= current_page.data.title %></h1>
+        </header>
+
+        <div class="article-content">
+          <%= yield %>
+        </div>
       </article>
 
       <%= partial "partials/footer" %>
