@@ -1,23 +1,25 @@
 
 .header
   padding: 0
-  background: darken(get-color(background), 3%)
+  background: darken(get-color(background), 3%) url("/assets/images/header-background.jpg") 50%
+  background-size: cover
   margin-bottom: get-spacing(big)
   +clearfix()
 
   .avatar
     +size(100px)
-    border-color: darken(get-color(background), 10%)
-    padding: 3px
     +position(absolute, null null -50px 50%)
+    border: 1px solid rgba(get-color(white), .7)
     margin-left: -50px
+    padding: 3px
 
   &-inn
     position: relative
-    padding: get-spacing(base) 0 get-spacing(big)
+    background-color: rgba(get-color(black), .7)
+    padding: get-spacing(base) 0 get-spacing(large)
 
     +media($screen-large-phone)
-      padding-bottom: get-spacing(large)
+      padding: get-spacing(large) 0
 
   .social-nav
     padding: 5px 0 0
@@ -28,10 +30,7 @@
       +size(38px)
 
     a
-      color: get-color(text)
-
-    path
-      fill: lighten(get-color(black), 60%)
+      color: get-color(white)
 
   +media($screen-large-phone)
     .social-nav
@@ -48,7 +47,7 @@
   margin: 0
 
   a
-    color: get-color(text)
+    color: get-color(white)
 
   span
     letter-spacing: $heading-letter-spacing
@@ -56,6 +55,7 @@
 
   small
     display: block
+    color: rgba(get-color(white), .7)
     font-weight: $font-weight-light
     letter-spacing: $medium-letter-spacing
     text-transform: none
@@ -74,9 +74,6 @@
   transition: opacity .2s ease-in-out
   +position(absolute, 25px 35px null null)
   z-index: 100
-
-  path
-    fill: get-color(text)
 
   &:hover,
   &:focus
