@@ -56,6 +56,7 @@ E no CSS eu apliquei o seguinte código:
 .brasil-flag .losangue:after {
   position: absolute;
 }
+
 .brasil-flag .losangue {
   width: 100%;
   height: 100%;
@@ -64,19 +65,23 @@ E no CSS eu apliquei o seguinte código:
   left: 0;
   right: 0;
 }
-.brasil-flag .losangue:before, .brasil-flag .losangue:after {
+
+.brasil-flag .losangue:before,
+.brasil-flag .losangue:after {
   content: '';
   width: 0;
   height: 0;
   left: 20px;
   right: 20px;
 }
+
 .brasil-flag .losangue:before {
   border-left: 105px solid transparent;
   border-right: 105px solid transparent;
   border-bottom: 65px solid #ffe11f;
   top: 10px;
 }
+
 .brasil-flag .losangue:after {
   border-left: 105px solid transparent;
   border-right: 105px solid transparent;
@@ -135,6 +140,7 @@ Ainda utilizando a classe `.circle` vamos criar a faixa branca da bandeira.
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
 }
+
 .brasil-flag .circle:before,
 .brasil-flag .circle:after {
   width: 90px;
@@ -143,6 +149,7 @@ Ainda utilizando a classe `.circle` vamos criar a faixa branca da bandeira.
   -webkit-transform: rotate(14deg);
   transform: rotate(14deg);
 }
+
 .brasil-flag .circle:before {
   z-index: 3;
   content: '';
@@ -150,6 +157,7 @@ Ainda utilizando a classe `.circle` vamos criar a faixa branca da bandeira.
   margin-left: -45px;
   background: #fff;
 }
+
 .brasil-flag .circle:after {
   z-index: 4;
   content: '';
