@@ -2,11 +2,8 @@
 <header class="header">
   <div class="header-inn">
     <h1 class="logo">
-      <% link_to local_path("") do %>
-        <%= image_tag 'avatar.jpg', :class => 'avatar' %>
-      <% end %>
       <span>
-        Fernando Moreira
+        <%= link_to 'Fernando Moreira', local_path('') %>
         <small><%= t(:front_dev) %></small>
       </span>
     </h1>
@@ -15,9 +12,8 @@
       <%= partial "partials/social" %>
     </nav>
 
-    <a href="#" role="button" class="toggle-navbar" data-toggle="nav">
-      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 512 512"><path d="M80 96a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h352a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H80zm0 128a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h352a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H80zm0 128a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h352a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H80z" fill="#fff" class="menu-path"/></svg>
-    </a>
+    <% link_to local_path('') do %>
+      <%= image_tag 'avatar.jpg', :class => 'avatar' %>
+    <% end %>
   </div>
 </header>
-

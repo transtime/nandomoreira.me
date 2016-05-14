@@ -1,11 +1,21 @@
 
 .header
   padding: 0
-  background: darken(get-color(background), 5%)
+  background: darken(get-color(background), 3%)
+  margin-bottom: get-spacing(base)
   +clearfix()
 
+  .avatar
+    +size(100px)
+    border-color: darken(get-color(background), 10%)
+    margin-bottom: get-spacing(mini)
+    padding: 3px
+    +position(absolute, null null -50px 50%)
+    margin-left: -50px
+
   &-inn
-    padding: get-spacing(base) 0
+    position: relative
+    padding: get-spacing(base) 0 get-spacing(large)
 
   .social-nav
     padding: get-spacing(base) 0 0
@@ -25,12 +35,16 @@
 .logo
   text-align: center
   border-bottom: 0
-  font-size: get-font-size(24)
+  font-size: get-font-size(26)
   text-transform: uppercase
   margin: 0
 
+  a
+    color: get-color(text)
+
   span
     letter-spacing: $heading-letter-spacing
+    line-height: 1.6
 
   small
     display: block
@@ -38,25 +52,20 @@
     letter-spacing: $medium-letter-spacing
     text-transform: none
 
-  .avatar
-    +size(100px)
-    border-color: rgba(get-color(text), .3)
-    margin-bottom: get-spacing(mini)
-    padding: 3px
-
   span,
   small
     display: block
     +media(max-width $screen-large-phone)
       display: none
 
-.toggle-navbar
+.toggle-nav
   float: right
   display: block
   padding: 15px 10px 10px
   opacity: .8
   transition: opacity .2s ease-in-out
   +position(absolute, 25px 35px null null)
+  z-index: 100
 
   path
     fill: get-color(text)

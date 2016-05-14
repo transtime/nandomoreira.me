@@ -22,6 +22,10 @@ layout: layout
 
     <%= partial "partials/social" %>
 
+    <% other_langs.each do |lang| %>
+      <small class="translate"><%= link_to(t("#{lang}"), local_path('', { :language => lang.to_s })) %></small>
+    <% end %>
+
   </div>
 
 </section>
