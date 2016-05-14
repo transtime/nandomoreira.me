@@ -1,17 +1,27 @@
 
+@mixin button-color-variant($bg-color: get-color(primary, base), $font-color: get-color(white))
+  color: $font-color
+  background-color: $bg-color
+
+  &:hover,
+  &:focus
+    color: darken($font-color, 5%)
+    background-color: lighten($bg-color, 6%)
+
+  &:active
+    box-shadow: 0 0 2px 2px rgba(get-color(secondary, base), .2)
+
 %button
   @extend .text-truncate
   font-weight: $font-weight-light
   font-size: get-font-size()
   line-height: $line-height-base
   border-radius: $base-border-radius
-  line-height: 3em
+  line-height: 2.6em
   text-transform: none
   border: 0
-  box-shadow: none
-  color: get-color(text)
+  box-shadow: 0 0 1px 1px rgba(get-color(secondary, base), .2)
   display: inline-block
-  background-color: get-color(primary, base)
   overflow: hidden
   padding: 0 1.35em
   text-align: center
@@ -19,5 +29,30 @@
   +appearance(none)
   +transition(background-color $base-duration $base-timing, color $base-duration $base-timing, box-shadow $base-duration $base-timing)
 
-.button
+  &:disabled,
+  &.disabled
+    pointer-events: none
+    cursor: not-allowed
+    opacity: .6
+
+.button,
+.button-primary
   @extend %button
+  +button-color-variant()
+
+.button-secondary
+  @extend %button
+  +button-color-variant(get-color(secondary, base))
+
+.button-white
+  @extend %button
+  +button-color-variant(get-color(white), get-color(text))
+
+.button-ghost
+  @extend %button
+  +button-color-variant(transparent, get-color(text))
+
+.button-small
+  line-height: 2.4em
+  padding: 0 1em
+  font-size: get-font-size(14px)

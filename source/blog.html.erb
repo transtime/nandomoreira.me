@@ -12,12 +12,18 @@ per_page: 6
 
 <% if paginate && num_pages > 1 %>
   <nav class="paginate">
-    <p>Page <%= page_number %> of <%= num_pages %></p>
     <% if prev_page %>
-      <%= link_to 'Previous page', prev_page %>
+      <%= link_to 'Previous page', prev_page, class: 'previous-page button-white button-small' %>
+    <% else %>
+      <%= link_to 'Previous page', '#', class: 'previous-page button-white button-small disabled' %>
     <% end %>
+
+    <p><small>Page <%= page_number %> of <%= num_pages %></small></p>
+
     <% if next_page %>
-      <%= link_to 'Next page', next_page %>
+      <%= link_to 'Next page', next_page, class: 'next-page button-white button-small' %>
+    <% else %>
+      <%= link_to 'Next page', '#', class: 'next-page button-white button-small disabled' %>
     <% end %>
   </nav>
 <% end %>

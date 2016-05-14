@@ -14,22 +14,31 @@
 
   &-inn
     position: relative
-    padding: get-spacing(base) 0 get-spacing(large)
+    padding: get-spacing(base) 0 get-spacing(big)
+
+    +media($screen-large-phone)
+      padding-bottom: get-spacing(large)
 
   .social-nav
-    padding: get-spacing(base) 0 0
+    padding: 5px 0 0
     text-align: center
     +clearfix()
 
     svg
-      +size(26px)
+      +size(38px)
 
     a
       color: get-color(text)
 
     path
-      fill: get-color(text)
-      opacity: .5
+      fill: lighten(get-color(black), 60%)
+
+  +media($screen-large-phone)
+    .social-nav
+      padding: get-spacing(base) 0 0
+
+      svg
+        +size(26px)
 
 .logo
   text-align: center
