@@ -1,5 +1,6 @@
 
 @import url("//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,600")
+@import url("//fonts.googleapis.com/css?family=Pontano+Sans")
 
 html
   font-size: $font-size-inuit
@@ -50,9 +51,9 @@ h6
 a
   text-decoration: none
   color: get-color(secondary, base)
-  @include transition(color $base-duration $base-timing)
+  +transition(color $base-duration $base-timing)
 
-  @include hover-focus()
+  +hover-focus()
     color: get-color(secondary, dark)
 
 em

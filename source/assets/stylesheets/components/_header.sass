@@ -1,42 +1,53 @@
 
 .header
   padding: 0
-  background: get-color(primary, base)
-  @include clearfix()
+  background: darken(get-color(background), 5%)
+  +clearfix()
+
+  &-inn
+    padding: get-spacing(base) 0
+
+  .social-nav
+    padding: get-spacing(base) 0 0
+    text-align: center
+    +clearfix()
+
+    svg
+      +size(26px)
+
+    a
+      color: get-color(text)
+
+    path
+      fill: get-color(text)
+      opacity: .5
 
 .logo
-  display: block
+  text-align: center
   border-bottom: 0
-  color: get-color(white)
-  font-size: get-font-size(22)
+  font-size: get-font-size(24)
   text-transform: uppercase
-  float: left
   margin: 0
 
   span
     letter-spacing: $heading-letter-spacing
 
-  span,
-  .avatar
-    display: inline-block
-    vertical-align: middle
-
   small
     display: block
-    color: rgba(get-color(white), .7)
     font-weight: $font-weight-light
     letter-spacing: $medium-letter-spacing
     text-transform: none
 
   .avatar
-    @include size(64px)
-    border-color: rgba(get-color(white), .5)
-    margin-right: 10px
+    +size(100px)
+    border-color: rgba(get-color(text), .3)
+    margin-bottom: get-spacing(mini)
     padding: 3px
 
   span,
   small
-    @include media(max-width $screen-large-phone)
+    display: block
+    +media(max-width $screen-large-phone)
       display: none
 
 .toggle-navbar
@@ -45,6 +56,10 @@
   padding: 15px 10px 10px
   opacity: .8
   transition: opacity .2s ease-in-out
+  +position(absolute, 25px 35px null null)
+
+  path
+    fill: get-color(text)
 
   &:hover,
   &:focus

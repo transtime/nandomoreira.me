@@ -2,7 +2,7 @@
 // Typography
 //
 $font-family-base: "Source Sans Pro", Helvetica, Arial, sans-serif;
-$font-family-heading: $font-family-base;
+$font-family-heading: "Pontano Sans", $font-family-base;
 $font-family-monospace: "courier new", monospace;
 
 // Font Sizes
@@ -31,8 +31,8 @@ $palette: (
   black: #000,
   text: #5e5650,
   silver: #f9f2e7,
-  background: #f4f5f7,
-  border: #eaeaea,
+  background: #fff,
+  border: #dedede,
   code: #ededed,
   primary: (
     base: #1588bf,

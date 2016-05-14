@@ -7,7 +7,7 @@ $nav-width: 22em
 .nav
   transform: translateX(100%)
   transition: transform .3s $base-timing, visibility .3s $base-timing
-  @include position(fixed, 0 0 0 null)
+  +position(fixed, 0 0 0 null)
   width: 100%
   -webkit-overflow-scrolling: touch
   background-color: get-color(primary, base)
@@ -17,7 +17,7 @@ $nav-width: 22em
   visibility: hidden
   z-index: 100
 
-  @include media($screen-large-phone)
+  +media($screen-large-phone)
     width: $nav-width
 
   h2
@@ -30,8 +30,7 @@ $nav-width: 22em
     position: relative
 
   &-close
-    transition: opacity .5s ease, transform .5s ease
-    transform: scale(.2)
+    transition: opacity .5s ease
     -webkit-tap-highlight-color: transparent
     opacity: 0
     display: block
@@ -41,7 +40,10 @@ $nav-width: 22em
     border: none
     font-size: get-font-size(20px)
 
-    @include media($screen-large-phone)
+    path
+      fill: get-color(text)
+
+    +media($screen-large-phone)
       right: auto
       left: -50px
 
@@ -77,10 +79,13 @@ body.nav-opened
     visibility: visible
 
   .nav-close
-    transform: scale(1)
     opacity: 1
+
+    svg
+      +size(24px)
 
   .site-main
     opacity: .6
+    cursor: pointer
 
 
