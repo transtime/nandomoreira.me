@@ -52,16 +52,17 @@
     <main role="main" class="site-main">
       <%= partial "partials/header" %>
 
-      <article role="article" class="article">
+      <article role="article" class="article" itemscope itemtype="http://schema.org/NewsArticle">
         <div class="container-inn">
           <header class="article-header">
+            <meta itemprop="datePublished" content="<%= current_page.date.strftime('%Y-%m-%d') %>">
             <span class="article-meta">
               Posted on the <%= current_page.date.strftime('%d') %> of <%= current_page.date.strftime('%b') %> <%= current_page.date.strftime('%Y') %>
             </span>
-            <h1 class="article-title"><%= current_page.data.title %></h1>
+            <h1 class="article-title" itemprop="headline"><%= current_page.data.title %></h1>
           </header>
 
-          <div class="article-content">
+          <div class="article-content" itemprop="articleBody">
             <%= yield %>
           </div>
         </div>

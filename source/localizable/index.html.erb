@@ -5,14 +5,14 @@ layout: layout
 
 <section class="hero">
 
-  <div class="hero-inner">
+  <div class="hero-inner" itemscope itemtype="http://schema.org/Person">
 
     <%= image_tag site_author_image, :class => 'hero-avatar' %>
 
     <h1>
       <small><%= t(:hello_iam) %></small>
-      <strong>Fernando Moreira</strong>
-      <small><%= t(:front_dev) %> <%= t(:like_coffee) %>.</small>
+      <strong itemprop="name">Fernando Moreira</strong>
+      <small><span itemprop="jobTitle"><%= t(:front_dev) %></span> <%= t(:like_coffee) %>.</small>
     </h1>
 
     <nav class="hero-actions">

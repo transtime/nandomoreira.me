@@ -5,10 +5,14 @@ layout: pages
 
 <h3>Who am I?</h3>
 
-<p>Hello! I'm <strong>Fernando Moreira</strong> (as you can see the name of my site). I live in Curitiba, I'm Front-end developer in <a href="http://pipefy.com">@pipefy</a> and love everything related to web, I'm obsessed with <em>performance</em> and agile development, I like readable coding, semantic and reusable.</p>
+<div itemscope itemtype="http://schema.org/Person">
 
-<p>Today I'm specializing in web development using <a href="http://br.wordpress.org/">Wordpress</a> with focus in front-end I always take care of usability and performance of a website.</p>
+  <p>I'm <strong itemprop="name">Fernando Moreira</strong> (as you can see the name of my site). <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">I live in <span itemprop="addressLocality">Curitiba</span>/
+  <span itemprop="addressRegion">Paraná</span> I'm <span itemprop="jobTitle">Front-end developer</span> in <a href="http://pipefy.com">@pipefy</a> and love everything related to web, I'm obsessed with <em>performance</em> and agile development, I like readable coding, semantic and reusable.</p>
 
-<%= partial "partials/skills-en" %>
+  <p>Today I'm specializing in web development using <a href="http://br.wordpress.org/">Wordpress</a> with focus in front-end I always take care of usability and performance of a website.</p>
 
-<p>For contact me, please send an email to <em itemprop="email"><a href="mailto:nandomoreira.me@gmail.com">nandomoreira.me[at]gmail.com</a></em> or search me in my social networks.</p>
+  <%= partial "partials/skills-en" %>
+
+  <p>For contact me, please send an email to <em itemprop="email"><a href="mailto:nandomoreira.me@gmail.com">nandomoreira.me[at]gmail.com</a></em> or search me in my social networks.</p>
+</div>
