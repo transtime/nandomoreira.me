@@ -1,12 +1,15 @@
-<head>
-  <meta charset="utf-8">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-  <title><%= page_title %></title>
+<meta charset="utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-  <%= stylesheet_link_tag 'main' %>
+<title><%= page_title %></title>
+
+<%= stylesheet_link_tag 'main' %>
+
+<!-- only build site -->
+<% if build? %>
   <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
 
   <!-- Favicons -->
@@ -28,17 +31,25 @@
   <meta name="msapplication-TileImage" content="<%= image_path('favicon/ms-icon-144x144.png') %>">
   <meta name="theme-color" content="#f7f7f7">
 
-  <% if build? %>
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', '<%= google_analytics_account %>']);
-      _gaq.push(['_trackPageview']);
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', '<%= google_analytics_account %>']);
+    _gaq.push(['_trackPageview']);
 
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
-  <% end %>
-</head>
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+  <meta property="og:title" content="<%= page_title %>">
+  <meta property="article:author" content="<%= site_author %>">
+  <meta property="article:publisher" content="<%= site_author %>">
+
+  <meta property="og:site_name" content="<%= site_title %>">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="<%= twitter %>">
+  <meta name="twitter:title" content="<%= page_title %>">
+<% end %><!-- /only build site -->

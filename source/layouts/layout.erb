@@ -1,6 +1,9 @@
 <!doctype html>
 <html>
-  <%= partial "partials/head" %>
+  <head>
+    <%= partial "partials/head" %>
+    <%= partial "partials/social-opengraph" %>
+  </head>
   <body class="<%= page_classes %> <% if current_page.data.body_class %><%= current_page.data.body_class %><% end %>">
     <%= yield %>
   </body>

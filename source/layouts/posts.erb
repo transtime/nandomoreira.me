@@ -1,6 +1,52 @@
 <!doctype html>
 <html>
-  <%= partial "partials/head" %>
+  <head>
+    <%= partial "partials/head" %>
+    <%= partial "partials/social-opengraph" %>
+
+    <!-- only build site -->
+    <% if build? %>
+      <% page_articles.index do |article, i| %>
+        <% if current_article.data.summary %>
+          <meta property="og:description" content="<%= current_article.data.summary %>">
+        <% elsif current_article.data.link %>
+          <meta property="og:description" content="<%= page_title + "→" %>">
+        <% else %>
+          <meta property="og:description" content="<%= site_description %>">
+        <% end %>
+
+        <% if current_article.data.link %>
+          <!-- Link post -->
+          <meta property="og:type" content="link">
+        <% else %>
+          <!-- Non link post -->
+          <meta property="og:type" content="article">
+        <% end %>
+
+        <% if current_article.data.image %>
+          <meta property="og:image" content="<%= current_article.data.image %>">
+        <% else %>
+          <meta property="og:image" content="<%= site_url %><%= image_path('social.png') %>">
+        <% end %>
+
+        <meta property="og:url" content="<%= site_url + current_article.url %>">
+      <% end %>
+
+      <% if current_article.data.summary %>
+        <meta property="twitter:description" content="<%= current_article.data.summary %>">
+      <% elsif current_article.data.link%>
+        <meta property="twitter:description" content="<%= page_title + "→" %>">
+      <% else %>
+        <meta property="twitter:description" content="<%= site_description %>">
+      <% end %>
+
+      <% if current_article.data.image %>
+        <meta property="twitter:image" content="<%= current_article.data.image %>">
+      <% else %>
+        <meta property="twitter:image" content="<%= site_url %><%= image_path('social.png') %>">
+      <% end %>
+    <% end %><!-- /only build site -->
+  </head>
   <body class="<%= page_classes %> single">
     <%= partial "partials/nav" %>
     <main role="main" class="site-main">

@@ -38,6 +38,8 @@ end
 set :site_url, 'http://nandomoreira.me'
 set :site_title, 'Fernando Moreira | Front-end developer'
 set :site_author, 'Fernando Moreira'
+set :site_description, 'Front-end developer'
+set :twitter, '@Pia_Frontend'
 set :site_author_image, 'avatar.jpg'
 set :social_twitter, 'https://twitter.com/Pia_Frontend'
 set :social_github, 'https://github.com/nandomoreirame'
