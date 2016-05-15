@@ -152,7 +152,6 @@ configure :build do
   activate :gzip
   activate :asset_hash
   activate :cache_buster
-
   set :google_analytics_account, 'UA-52446115-1'
 end
 

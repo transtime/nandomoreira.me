@@ -15,6 +15,8 @@ gem "middleman-disqus" # for comments
 
 gem 'nokogiri' # for article.summary
 
+gem 'sass-media_query_combiner' # for combine media query
+
 gem 'redcarpet'
 
 ###
