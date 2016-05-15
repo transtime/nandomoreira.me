@@ -40,6 +40,9 @@ body.home-hero
     max-width: $screen-large-tablet
 
     +media(max-width $screen-large-tablet)
+      margin-left: auto
+      margin-right: auto
+      max-width: 80%
       padding: get-spacing(small)
 
   &-avatar
@@ -108,25 +111,18 @@ body.home-hero
       +media($screen-tablet)
         font-size: get-font-size(20px)
 
-
       +media($screen-large-tablet)
         font-size: get-font-size(32px)
 
     strong
-      display: block
       margin: get-spacing(small) 0
       text-transform: uppercase
       letter-spacing: .1em
-      font-size: get-font-size(22px)
-
-      +media($screen-large-phone)
-        letter-spacing: .2em
-        font-size: get-font-size(38px)
-
+      font-size: get-font-size(38px)
 
       +media($screen-tablet)
+        letter-spacing: .2em
         font-size: get-font-size(50px)
-
 
       +media($screen-large-tablet)
         font-size: get-font-size(75px)
