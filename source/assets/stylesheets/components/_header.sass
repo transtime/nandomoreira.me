@@ -1,7 +1,7 @@
 
 .header
   padding: 0
-  background: darken(get-color(background), 3%) url("/assets/images/header-background.jpg") 50%
+  background: get-color(primary, base)
   background-size: cover
   margin-bottom: get-spacing(big)
   +clearfix()
@@ -9,14 +9,12 @@
   .avatar
     +size(100px)
     +position(absolute, null null -50px 50%)
-    border: none
     margin-left: -50px
-    padding: 3px
 
   &-inn
     position: relative
     background-color: rgba(get-color(black), .4)
-    padding: get-spacing(base) 0 get-spacing(large)
+    padding: get-spacing(base) 0 get-spacing(big)
 
     +media($screen-large-phone)
       padding: get-spacing(large) 0
@@ -25,6 +23,9 @@
     padding: 5px 0 0
     text-align: center
     +clearfix()
+
+    li:last-child
+      display: none
 
     svg
       +size(38px)
@@ -35,6 +36,9 @@
   +media($screen-large-phone)
     .social-nav
       padding: get-spacing(base) 0 0
+
+      li:last-child
+        display: inline-block
 
       svg
         +size(26px)
@@ -48,6 +52,16 @@
 
   a
     color: get-color(white)
+    margin-bottom: 5px
+    display: inline-block
+
+    &::before,
+    &::after
+      content: ""
+      height: 1px
+      width: 100%
+      display: block
+      background: get-color(white)
 
   span
     letter-spacing: $heading-letter-spacing
@@ -58,6 +72,7 @@
     color: rgba(get-color(white), .7)
     font-weight: $font-weight-light
     letter-spacing: $medium-letter-spacing
+    font-size: get-font-size(18px)
     text-transform: none
 
   span,
@@ -72,8 +87,12 @@
   padding: 15px 10px 10px
   opacity: .8
   transition: opacity .2s ease-in-out
-  +position(absolute, 25px 35px null null)
+  +position(absolute, 10px 10px null null)
   z-index: 100
+
+  +media($screen-large-phone)
+    top: 25px
+    right: 35px
 
   &:hover,
   &:focus
