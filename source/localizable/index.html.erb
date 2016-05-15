@@ -7,7 +7,7 @@ layout: layout
 
   <div class="hero-inner" itemscope itemtype="http://schema.org/Person">
 
-    <%= image_tag site_author_image, :class => 'hero-avatar' %>
+    <img src="<%= image_path('avatar.png') %>" srcset="<%= image_path('avatar@2x.png') %> 2x" class="hero-avatar" width="250px" height="250px">
 
     <h1>
       <small><%= t(:hello_iam) %>...</small>

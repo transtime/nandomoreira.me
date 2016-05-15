@@ -13,7 +13,7 @@
     </nav>
 
     <% link_to local_path('') do %>
-      <%= image_tag site_author_image, :class => 'avatar' %>
+      <img src="<%= image_path('avatar.png') %>" srcset="<%= image_path('avatar@2x.png') %> 2x" class="avatar" width="250px" height="250px">
     <% end %>
   </div>
 </header>
