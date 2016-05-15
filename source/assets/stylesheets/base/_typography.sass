@@ -50,11 +50,11 @@ h6
 
 a
   text-decoration: none
-  color: get-color(primary, base)
+  color: get-color(primary, light)
   +transition(color $base-duration $base-timing)
 
   +hover-focus()
-    color: get-color(primary, dark)
+    color: lighten(get-color(primary, light), 10%)
 
 em
   font-style: italic
