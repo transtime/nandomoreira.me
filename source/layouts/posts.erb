@@ -2,6 +2,21 @@
 <html>
   <head>
     <%= partial "partials/head" %>
+
+    <% if current_article.data.summary %>
+      <meta name="description" content="<%= current_article.data.summary %>">
+    <% elsif current_article.data.link %>
+      <meta name="description" content="<%= page_title + "→" %>">
+    <% else %>
+      <meta name="description" content="<%= site_description %>">
+    <% end %>
+
+    <% if current_article.data.keywords %>
+      <meta name="keywords" content="<%= current_article.data.keywords %>">
+    <% else %>
+      <meta name="keywords" content="<%= site_keywords %>">
+    <% end %>
+
     <%= partial "partials/social-opengraph" %>
 
     <!-- only build site -->
