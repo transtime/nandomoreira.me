@@ -1,7 +1,18 @@
 
 .footer
   padding: get-spacing(base) 0
+  background-color: get-color(primary, base)
+  text-align: center
   +clearfix()
 
-  nav
-    text-align: center
+  small
+    color: get-color(white)
+    font-size: get-font-size(12px)
+
+    a
+      color: rgba(get-color(white), .7)
+
+      &:hover,
+      &:focus
+        text-decoration: underline
+        color: get-color(white)

@@ -51,8 +51,7 @@ body.home-hero
     opacity: 0
     transform: translateY(-100%) rotate(-15deg)
     animation-name: translateTopInRotate
-    animation-duration: .9s
-    animation-delay: .15s
+    animation-duration: .8s
 
   &-actions,
   &-avatar
@@ -69,8 +68,8 @@ body.home-hero
     opacity: 0
     transform: translateY(100%)
     animation-name: translateBottomIn
-    animation-duration: 600ms
-    animation-delay: 1.2s
+    animation-duration: .6s
+    animation-delay: .8s
     margin-top: get-spacing(base)
 
   &-button
@@ -87,13 +86,14 @@ body.home-hero
     transform: translateY(10%)
     animation-name: animateFadeIn
 
+  .social,
   .translate
-    animation-duration: 900ms
-    animation-delay: 2s
+    animation-duration: .8s
+    animation-delay: 1.2s
 
   h1
-    animation-duration: 900ms
-    animation-delay: .5s
+    animation-duration: .8s
+    animation-delay: .4s
     color: get-color(white)
     letter-spacing: .035rem
     line-height: 1
@@ -113,10 +113,11 @@ body.home-hero
         font-size: get-font-size(20px)
 
       +media($screen-large-tablet)
-        font-size: get-font-size(32px)
+        font-size: get-font-size(26px)
 
     strong
-      margin: get-spacing(small) 0
+      display: block
+      margin: get-spacing(mini) 0
       text-transform: uppercase
       letter-spacing: .1em
       font-size: get-font-size(38px)
@@ -146,47 +147,11 @@ body.home-hero
           opacity: .75
 
   .social
-    animation-duration: 800ms
-    animation-delay: 1.8s
     margin: get-spacing(base) 0 0
 
     li
       padding-top: 0
       padding-bottom: 0
-
-
-.translate
-  display: block
-  margin-top: get-spacing(mini)
-
-  a
-    color: get-color(white)
-    display: inline-block
-    padding: 0 5px
-    position: relative
-
-    &::before,
-    &::after
-      position: absolute
-      transition: margin .2s ease-in-out
-      margin: 0
-
-    &::before
-      content: "["
-      margin-left: 0
-      left: 0
-
-    &::after
-      content: "]"
-      margin-right: 0
-      right: 0
-
-    &:hover::before
-      margin-left: -7px
-
-    &:hover::after
-      margin-right: -7px
-
 
 .error404
   small
