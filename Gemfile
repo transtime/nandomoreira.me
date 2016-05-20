@@ -2,6 +2,8 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
+ruby "2.2.4"
+
 gem 'middleman', '~> 3.3.12'
 gem 'middleman-blog', '~> 3.5.3'
 gem 'middleman-gh-pages'
@@ -13,6 +15,9 @@ gem 'middleman-meta-tags'
 gem 'middleman-search_engine_sitemap' # for sitemap
 gem 'middleman-minify-html'
 gem "middleman-disqus" # for comments
+
+gem "rack-contrib"
+gem "puma"
 
 gem 'nokogiri' # for article.summary
 
