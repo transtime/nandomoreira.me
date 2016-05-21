@@ -1,0 +1,17 @@
+---
+title: Whoops! Error 404
+body_class: home-hero
+layout: layout
+---
+
+section.hero.error404
+  .hero-inner
+    h1
+      | Error 404
+    h2
+      | Whoops!
+      br
+      small
+        | We couldn't find the page you were looking for.
+    nav.hero-actions
+      = link_to('back to home', local_path(''), :class => "hero-button")
