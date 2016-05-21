@@ -80,35 +80,8 @@ compass_config do |config|
 end
 
 ###
-# Page options, layouts, aliases and proxies
-###
-
-# Per-page layout changes:
-#
-# With no layout
-# page "/path/to/file.html", layout: false
-#
-# With alternative layout
-# page "/path/to/file.html", layout: :otherlayout
-#
-# A path which all have the same layout
-# with_layout :admin do
-#   page "/admin/*"
-# end
-
-# Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
-#  which_fake_page: "Rendering a fake page with a local variable" }
-
-###
 # Helpers
 ###
-
-# Reload the browser automatically whenever files change
-configure :development do
-  set :debug_assets, true
-  activate :livereload
-end
 
 # Methods defined in the helpers block are available in templates
 helpers do
@@ -130,7 +103,6 @@ end
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
-# set :build_dir, 'tmp'
 
 activate :directory_indexes
 set :index_file, "index.html"
@@ -147,6 +119,12 @@ set :markdown, :fenced_code_blocks => true,
                :autolink => true,
                :smartypants => true
 
+# Reload the browser automatically whenever files change
+configure :development do
+  set :debug_assets, true
+  activate :livereload
+end
+
 # Build-specific configuration
 configure :build do
   activate :minify_css
@@ -156,18 +134,4 @@ configure :build do
   activate :asset_hash
   activate :cache_buster
   set :google_analytics_account, 'UA-52446115-1'
-end
-
-activate :deploy do |deploy|
-  deploy.method = :git
-  deploy.branch = 'master' # or gh-pages
-
-  committer_app = "#{Middleman::Deploy::PACKAGE} v#{Middleman::Deploy::VERSION}"
-  commit_message = "Deployed using #{committer_app}"
-
-  if ENV["TRAVIS_BUILD_NUMBER"] then
-    commit_message += " (Travis Build \##{ENV["TRAVIS_BUILD_NUMBER"]})"
-  end
-
-  deploy.commit_message = commit_message
 end
