@@ -8,6 +8,7 @@ $nav-width: 18em
   width: 100%
   -webkit-overflow-scrolling: touch
   background-color: get-color(primary, base)
+  overflow-y: auto
   cursor: default
   color: get-color(white)
   visibility: hidden
@@ -82,11 +83,5 @@ body.nav-opened
       +size(24px)
 
   .site-main
-    transform: translateX(-100%)
     cursor: pointer
     opacity: .5
-
-    +media($screen-large-phone)
-      transform: translateX(-($nav-width))
-
-
