@@ -39,15 +39,6 @@ bundle install
 middleman server
 ```
 
-### Create a posts and page using Rake tasks ###
-
-```
-rake post title="TITLE OF THE POST"
-rake page name="about.md"
-rake category title="Programing"
-rake tag title="Jekyll"
-```
-
 ## License ##
 
 It is free under the [open-source MIT license](/LICENSE).
