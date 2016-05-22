@@ -21,6 +21,7 @@ gem "puma"
 
 gem 'nokogiri' # for article.summary
 
+gem 'middleman-autoprefixer'
 gem 'sass-media_query_combiner' # for combine media query
 
 gem 'redcarpet'

@@ -125,6 +125,13 @@ configure :development do
   activate :livereload
 end
 
+require 'sass-media_query_combiner'
+
+activate :autoprefixer do |config|
+  config.browsers = ['last 2 versions', 'Explorer >= 9']
+  config.ignore   = ['source/assets/stylesheets/vendors/']
+end
+
 # Build-specific configuration
 configure :build do
   activate :minify_css
