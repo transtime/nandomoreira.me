@@ -23,4 +23,4 @@ section.hero
     = partial "partials/social"
     - other_langs.each do |lang|
       small.translate
-        = link_to(t("#{lang}"), local_path('', { :language => lang.to_s }))
+        = link_to(t(lang.to_s), local_path('', { :language => lang.to_s }))

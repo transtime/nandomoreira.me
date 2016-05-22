@@ -7,8 +7,6 @@ $nav-width: 18em
   +position(fixed, 0 0 0 null)
   width: 100%
   -webkit-overflow-scrolling: touch
-  background-color: get-color(primary, base)
-  overflow-y: auto
   cursor: default
   color: get-color(white)
   visibility: hidden
@@ -18,14 +16,22 @@ $nav-width: 18em
     width: $nav-width
 
   h2
+    padding: get-spacing(base) get-spacing(base) 0
+    margin: 0
     color: get-color(white)
     text-transform: uppercase
     letter-spacing: $heading-letter-spacing
     font-size: get-font-size(24px)
 
+  .navbar
+    padding: get-spacing(small) get-spacing(base) 0
+
   &-inner
-    padding: 2.75em
-    position: relative
+    background-color: get-color(primary, base)
+    width: 100%
+    height: 100%
+    overflow-y: auto
+    padding: 0
 
   &-close
     transition: opacity .5s ease
