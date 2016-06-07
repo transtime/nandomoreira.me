@@ -2,12 +2,14 @@
 // Typography
 //
 $font-family-base: "Source Sans Pro", Helvetica, Arial, sans-serif;
-$font-family-heading: $font-family-base;
+$font-family-serif: "Merriweather", "PT Serif", Georgia, "Times New Roman", serif;
+// $font-family-heading: $font-family-base;
+$font-family-heading: $font-family-serif;
 $font-family-monospace: "courier new", monospace;
 
 // Font Sizes
 //
-$font-size-inuit: 18px;
+$font-size-inuit: 22px;
 
 // font weight
 $font-weight-light: 300;
@@ -29,7 +31,7 @@ $heading-letter-spacing: .18em;
 $palette: (
   white: #fff,
   black: #000,
-  text: #5e5650,
+  text: #333,
   silver: #f9f2e7,
   background: #fff,
   border: #dedede,
@@ -85,5 +87,5 @@ $screen-large-tablet: 1024px;
 $screen-desktop: 1280px;
 $screen-large-desktop: 1440px;
 
-$max-width: 760px;
+$max-width: 860px;
 $default-feature: min-width;
