@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type"
+    = partial "partials/head"
+    meta content="#{t(:hello_iam)} #{site_author}, #{t(:front_dev)} #{t(:like_coffee)}" name="description"
+    meta content=site_keywords name="keywords"
+    = partial "partials/social-opengraph"
+  body class=("#{page_classes}  if current_page.data.body_class #{current_page.data.body_class}")
+    = partial "partials/nav"
+    main.site-main role="main"
+      = partial "partials/header"
+      section.container-inn
+        = yield
+      = partial "partials/footer"
