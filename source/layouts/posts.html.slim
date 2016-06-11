@@ -40,7 +40,11 @@ html.no-js
         meta content="#{current_article.data.image}" property="twitter:image"
       - else
         meta content="#{site_url}#{image_path('social.png')}" property="twitter:image"
-  body class=("#{page_classes} single")
+    - body_class = page_classes
+    - if current_page.data.body_class
+      body_class += current_page.data.body_class
+    - body_class = body_class.sub(/[_]/, '-')
+  body class="#{body_class} single"
     = partial "partials/nav"
     main.site-main role="main"
       = partial "partials/header"
