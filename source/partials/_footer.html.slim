@@ -1,6 +1,8 @@
 footer.footer
+  nav.social-nav
+    = partial "partials/social"
   small
-    | Made with ❤ by #{link_to(site_author, site_url)}
-    | using #{link_to("middlemanapp.com", "http://middlemanapp.com" , :target => 'blank')}
+    = "Made with ❤ by #{link_to(site_author, site_url)} "
+    = "using #{link_to("middlemanapp.com", "http://middlemanapp.com" , :target => 'blank')}"
 
 = javascript_include_tag  "main"

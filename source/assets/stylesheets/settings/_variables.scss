@@ -31,22 +31,22 @@ $heading-letter-spacing: .18em;
 $palette: (
   white: #fff,
   black: #000,
-  text: #333,
+  text: #272727,
   silver: #f9f2e7,
   background: #fff,
   border: #dedede,
   code: #ededed,
   primary: (
-    base: #0057c2,
-    light: lighten(#0057c2, 15%),
-    dark: darken(#0057c2, 15%),
-    transp: transparentize(#0057c2, .5)
+    base: #1a81ff,
+    light: lighten(#1a81ff, 15%),
+    dark: darken(#1a81ff, 15%),
+    transp: transparentize(#1a81ff, .5)
   ),
   secondary: (
-    base: #424242,
-    light: lighten(#424242, 15%),
-    dark: darken(#424242, 15%),
-    transp: transparentize(#424242, .5)
+    base: #272727,
+    light: lighten(#272727, 15%),
+    dark: darken(#272727, 15%),
+    transp: transparentize(#272727, .5)
   ),
   gray: (
     base: #3a3a3b,

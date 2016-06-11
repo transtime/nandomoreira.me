@@ -38,13 +38,16 @@ body.home-hero
     +backface-visibility(hidden)
 
   &-inner
-    max-width: $screen-large-tablet
+    margin-left: auto
+    margin-right: auto
+    max-width: 80%
+    padding: get-spacing(small)
 
-    +media(max-width $screen-large-tablet)
-      margin-left: auto
-      margin-right: auto
-      max-width: 80%
-      padding: get-spacing(small)
+    +media($screen-large-tablet)
+      max-width: $screen-large-tablet
+
+    +media($screen-desktop)
+      max-width: $screen-desktop
 
   &-avatar
     @extend .avatar
@@ -77,7 +80,7 @@ body.home-hero
     @extend .button-ghost
     border-radius: 150px
     margin: 0 (get-spacing(mini) / 2)
-    text-transform: uppercase
+    text-transform: lowercase
     border: 1px solid get-color(white)
 
   h1,
@@ -112,7 +115,7 @@ body.home-hero
     font-family: $font-family-base
     font-weight: $font-weight-light
     font-size: get-font-size(24px)
-    color: rgba(get-color(silver), .75)
+    color: rgba(get-color(white), .7)
 
     +media($screen-tablet)
       font-size: get-font-size(24px)
@@ -133,7 +136,14 @@ body.home-hero
       font-size: get-font-size(50px)
 
     +media($screen-large-tablet)
-      font-size: get-font-size(75px)
+      letter-spacing: .2em
+      font-size: get-font-size(64px)
+
+    +media($screen-desktop)
+      font-size: get-font-size(80px)
+
+    +media($screen-large-desktop)
+      font-size: get-font-size(90px)
 
     &::before,
     &::after

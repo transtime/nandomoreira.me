@@ -5,6 +5,18 @@
 # Time.zone = "UTC"
 Time.zone = "America/Sao_Paulo"
 
+set :site_url, 'http://nandomoreira.me'
+set :site_title, 'Fernando Moreira | Front-end developer'
+set :site_author, 'Fernando Moreira'
+set :site_description, 'Front-end developer'
+set :site_keywords, 'html, css, css3, html5, javascript, js, front-end, developer, middleman, jekyll, wordpress, php, ruby'
+set :twitter, '@Pia_Frontend'
+set :site_author_image, 'avatar.png'
+set :social_twitter, 'https://twitter.com/Pia_Frontend'
+set :social_github, 'https://github.com/nandomoreirame'
+set :social_linkedin, 'https://br.linkedin.com/in/nandomoreirame'
+set :disqus_shortname, 'fernandomoreira'
+
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
@@ -30,21 +42,6 @@ activate :blog do |blog|
   blog.per_page = 10
   blog.page_link = "page/{num}"
 end
-
-activate :disqus do |d|
-  d.shortname = 'fernandomoreira'
-end
-
-set :site_url, 'http://nandomoreira.me'
-set :site_title, 'Fernando Moreira | Front-end developer'
-set :site_author, 'Fernando Moreira'
-set :site_description, 'Front-end developer'
-set :site_keywords, 'html, css, css3, html5, javascript, js, front-end, developer, middleman, jekyll, wordpress, php, ruby'
-set :twitter, '@Pia_Frontend'
-set :site_author_image, 'avatar.png'
-set :social_twitter, 'https://twitter.com/Pia_Frontend'
-set :social_github, 'https://github.com/nandomoreirame'
-set :social_linkedin, 'https://br.linkedin.com/in/nandomoreirame'
 
 # i18n
 activate :i18n do |l|

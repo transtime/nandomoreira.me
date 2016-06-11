@@ -1,7 +1,6 @@
 doctype html
-html
+html.no-js
   head
-    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type"
     = partial "partials/head"
     - if current_article.data.summary
       meta content="#{current_article.data.summary}" name="description"
@@ -54,7 +53,8 @@ html
             h1.article-title itemprop="headline" = current_page.data.title
           .article-content itemprop="articleBody"
             = yield
-      .comments
-        .container-inn
-          = disqus
+
+      - unless current_article.nil?
+        = partial "partials/comments"
+
       = partial "partials/footer"
