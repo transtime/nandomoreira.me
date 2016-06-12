@@ -12,6 +12,9 @@ html.no-js
       meta content="#{current_article.data.keywords}" name="keywords"
     - else
       meta content=site_keywords name="keywords"
+
+    meta rel="canonical" href="#{site_url}#{current_page.url}"
+
     = partial "partials/social-opengraph"
     - if build?
       - page_articles.index do |article, i|

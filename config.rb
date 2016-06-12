@@ -5,7 +5,7 @@
 # Time.zone = "UTC"
 Time.zone = "America/Sao_Paulo"
 
-set :site_url, 'http://nandomoreira.me'
+set :site_url, 'https://nandomoreira.me'
 set :site_title, 'Fernando Moreira | Front-end developer'
 set :site_author, 'Fernando Moreira'
 set :site_description, 'Front-end developer'
@@ -62,7 +62,7 @@ activate :title, site: 'Fernando Moreira | Front-end developer', separator: ' â€
 activate :meta_tags
 
 # Sitemap
-set :url_root, 'http://nandomoreira.me/'
+set :url_root, 'https://nandomoreira.me/'
 activate :search_engine_sitemap, default_priority: 0.5,
                                  default_change_frequency: "always"
 
