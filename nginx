@@ -1,9 +1,0 @@
-server {
-  server_name www.nandomoreira.me;
-  return 301 $scheme://nandomoreira.me$request_uri;
-}
-
-server {
-  server_name nandomoreira.herokuapp.com www.nandomoreira.herokuapp.com;
-  rewrite ^ $scheme://nandomoreira.me$request_uri permanent;
-}
