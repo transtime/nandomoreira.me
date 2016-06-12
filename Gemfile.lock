@@ -144,6 +144,7 @@ GEM
       rack (~> 1.4)
     rack-livereload (0.3.16)
       rack
+    rack-rewrite (1.5.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rake (11.1.2)
@@ -204,6 +205,7 @@ DEPENDENCIES
   nokogiri
   puma
   rack-contrib
+  rack-rewrite
   redcarpet
   sass (~> 3.4)
   sass-media_query_combiner

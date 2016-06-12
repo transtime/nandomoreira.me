@@ -15,8 +15,9 @@ gem 'middleman-meta-tags'
 gem 'middleman-search_engine_sitemap' # for sitemap
 gem 'middleman-minify-html'
 
-gem "rack-contrib"
-gem "puma"
+gem 'rack-contrib'
+gem 'rack-rewrite'
+gem 'puma'
 
 gem 'nokogiri' # for article.summary
 
