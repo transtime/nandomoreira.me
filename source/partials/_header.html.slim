@@ -1,11 +1,12 @@
 header.header
   .header-inn
-    h1.logo
-      span
-        = link_to 'Fernando Moreira', local_path('')
-        small= t(:front_dev)
-    nav.social-nav
-      = partial "partials/social"
+    .text-parallax
+      h1.logo
+        span
+          = link_to 'Fernando Moreira', local_path('')
+          small= t(:front_dev)
+      nav.social-nav
+        = partial "partials/social"
 
     = link_to local_path('') do
       img.avatar height="250px" src="#{image_path('avatar.png')}" srcset=("#{image_path('avatar@2x.png')} 2x") width="250px" /
