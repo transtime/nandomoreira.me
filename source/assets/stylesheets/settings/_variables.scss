@@ -37,15 +37,15 @@ $palette: (
   border: #dedede,
   code: #ededed,
   primary: (
-    base: #069,
-    light: lighten(#069, 15%),
-    dark: darken(#069, 15%),
-    transp: transparentize(#069, .5)
+    base: #059,
+    light: lighten(#059, 10%),
+    dark: darken(#059, 10%),
+    transp: transparentize(#059, .5)
   ),
   secondary: (
     base: #272727,
-    light: lighten(#272727, 15%),
-    dark: darken(#272727, 15%),
+    light: lighten(#272727, 10%),
+    dark: darken(#272727, 10%),
     transp: transparentize(#272727, .5)
   ),
   gray: (
