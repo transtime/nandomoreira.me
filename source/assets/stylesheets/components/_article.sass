@@ -8,8 +8,14 @@
     padding: get-spacing(medium) 0 get-spacing(base)
 
   &-title
-    font-size: get-font-size(42px)
+    font-size: get-font-size(30px)
     line-height: 1.2
+
+    +media($screen-tablet)
+      font-size: get-font-size(38px)
+
+    +media($screen-large-tablet)
+      font-size: get-font-size(42px)
 
   &-meta,
   &-meta a
