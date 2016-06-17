@@ -1,4 +1,6 @@
+//= require vendor/particles.min.js
 //= require vendor/jquery.min.js
+//= require particles.js
 
 (function($) {
   'use strict';

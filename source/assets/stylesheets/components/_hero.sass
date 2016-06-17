@@ -36,6 +36,8 @@ body.home-hero
     animation-timing-function: cubic-bezier(.25, .1, .25, 1)
     +transform(translateZ(0))
     +backface-visibility(hidden)
+    position: relative
+    z-index: 10
 
   &-inner
     margin-left: auto
@@ -179,3 +181,45 @@ body.home-hero
 
   .hero-button
     text-transform: none
+
+canvas
+  display: block
+  vertical-align: bottom
+
+#particles-js
+  z-index: 1
+  background-color: transparent
+
+.hero-particles-js
+  +position(fixed, 0)
+  +size(100%)
+
+.count-particles
+  background: #000022
+  position: absolute
+  top: 48px
+  left: 0
+  width: 80px
+  color: #13E8E9
+  font-size: .8em
+  text-align: left
+  text-indent: 4px
+  line-height: 14px
+  padding-bottom: 2px
+  font-family: Helvetica, Arial, sans-serif
+  font-weight: bold
+
+.js-count-particles
+  font-size: 1.1em
+
+#stats, .count-particles
+  -webkit-user-select: none
+  margin-top: 5px
+  margin-left: 5px
+
+#stats
+  border-radius: 3px 3px 0 0
+  overflow: hidden
+
+.count-particles
+  border-radius: 0 0 3px 3px

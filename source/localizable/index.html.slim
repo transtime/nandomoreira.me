@@ -24,3 +24,7 @@ section.hero
     - other_langs.each do |lang|
       small.translate
         = link_to(t(lang.to_s), local_path('', { :language => lang.to_s }))
+
+#particles-js.hero-particles-js
+= javascript_include_tag "vendor/particles.min.js"
+= javascript_include_tag "particles.js"
