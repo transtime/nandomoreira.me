@@ -24,3 +24,14 @@ section.hero
     - other_langs.each do |lang|
       small.translate
         = link_to(t(lang.to_s), local_path('', { :language => lang.to_s }))
+
+= javascript_include_tag "vendor/pace.min.js"
+javascript:
+  paceOptions = {
+    // Disable the 'elements' source
+    elements: false,
+
+    // Only show the progress on regular and ajax-y page navigation,
+    // not every request
+    restartOnRequestAfter: false
+  }
