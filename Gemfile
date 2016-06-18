@@ -36,7 +36,6 @@ gem 'sass', '~> 3.4', :require => false
 ###
 # Development environment
 ###
-gem 'middleman-livereload'
 group :development do
   gem 'foreman'
 end
