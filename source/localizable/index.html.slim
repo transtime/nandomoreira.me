@@ -18,8 +18,8 @@ section.hero
       = t(:like_coffee) + "."
 
     nav.hero__actions
-      = link_to t(:about_me), local_path(t('paths.about')), :class => 'hero__button'
       = link_to t(:blog), '/blog', :class => 'hero__button'
+      = link_to t(:about_me), local_path(t('paths.about')), :class => 'hero__button'
 
     = partial 'partials/social'
     - other_langs.each do |lang|

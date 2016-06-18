@@ -1,13 +1,16 @@
-a.toggle-nav[href="#" role="button" data-toggle="nav"]
-  svg[xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewbox="0 0 512 512"]
-    path.menu-path[d="M80 96a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h352a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H80zm0 128a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h352a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H80zm0 128a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h352a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H80z" fill="#fff"]
+= link_to '#', class: 'toggle-nav', role: :button, :data => { :toggle => 'nav' } do
+  svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewbox="0 0 512 512"
+    path.menu-path d="M80 96a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h352a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H80zm0 128a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h352a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H80zm0 128a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h352a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16H80z" fill="#fff"
 
-nav#nav.nav[role="nav"]
-  a.nav-close[href="#" role="button" data-toggle="nav"]
-    svg[width="30" height="30" viewbox="0 0 304 305" xmlns="http://www.w3.org/2000/svg"]
+/= link_to '#', class: 'toggle-search', role: :button, :data => { :toggle => 'search' } do
+  | search
+
+nav#nav.nav role="nav"
+  = link_to '#', class: 'nav-close', role: :button, :data => { :toggle => 'nav' } do
+    svg width="30" height="30" viewbox="0 0 304 305" xmlns="http://www.w3.org/2000/svg"
       title
         | close
-      path[d="M106.745 152.68L4.922 50.855c-6.25-6.25-6.25-16.38 0-22.628L27.55 5.6c6.248-6.247 16.378-6.247 22.627 0L152 107.425 253.823 5.6c6.25-6.247 16.38-6.247 22.628 0L299.08 28.23c6.25 6.25 6.25 16.38 0 22.628L197.255 152.68 299.078 254.5c6.25 6.25 6.25 16.38 0 22.628l-22.627 22.627c-6.248 6.25-16.378 6.25-22.627 0L152 197.934 50.177 299.757c-6.25 6.25-16.38 6.25-22.628 0L4.92 277.13c-6.25-6.248-6.25-16.38 0-22.628L106.745 152.68z" fill="#fff" fill-rule="evenodd"]
+      path d="M106.745 152.68L4.922 50.855c-6.25-6.25-6.25-16.38 0-22.628L27.55 5.6c6.248-6.247 16.378-6.247 22.627 0L152 107.425 253.823 5.6c6.25-6.247 16.38-6.247 22.628 0L299.08 28.23c6.25 6.25 6.25 16.38 0 22.628L197.255 152.68 299.078 254.5c6.25 6.25 6.25 16.38 0 22.628l-22.627 22.627c-6.248 6.25-16.378 6.25-22.627 0L152 197.934 50.177 299.757c-6.25 6.25-16.38 6.25-22.628 0L4.92 277.13c-6.25-6.248-6.25-16.38 0-22.628L106.745 152.68z" fill="#fff" fill-rule="evenodd"
   .nav-inner
     h2
       | Menu
