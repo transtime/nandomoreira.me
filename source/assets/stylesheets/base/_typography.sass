@@ -23,11 +23,11 @@ h3,
 h4,
 h5,
 h6
-  color: get-color(primary, dark)
+  color: get-color(secondary, light)
   font-family: $font-family-heading
   line-height: $line-height-heading
   font-weight: $font-weight-bold
-  margin: get-spacing(medium) 0
+  margin: get-spacing(base) 0 get-spacing(medium)
 
 p
   margin: 0 0 get-spacing(medium) 0
@@ -37,32 +37,32 @@ h1
   letter-spacing: -0.035em
 
   +media($screen-large-tablet)
-    font-size: get-font-size(40px)
+    font-size: get-font-size(38px)
 
 h2
   font-size: get-font-size(28px)
 
   +media($screen-large-tablet)
-    font-size: get-font-size(36px)
+    font-size: get-font-size(30px)
 
 h3
   font-size: get-font-size(22px)
 
   +media($screen-large-tablet)
-    font-size: get-font-size(30px)
+    font-size: get-font-size(28px)
 
 h4
   font-size: get-font-size(20px)
 
   +media($screen-large-tablet)
-    font-size: get-font-size(28px)
+    font-size: get-font-size(24px)
 
 h5,
 h6
   font-size: get-font-size(18px)
 
   +media($screen-large-tablet)
-    font-size: get-font-size(24px)
+    font-size: get-font-size(22px)
 
 a
   text-decoration: none
