@@ -15,7 +15,7 @@
   });
 
   var titleParallax = {
-    textParallax : document.querySelector('.text-parallax'),
+    textParallax : document.querySelector('.js-text-parallax'),
 
     init: function() {
       window.addEventListener("scroll", function(event) {
