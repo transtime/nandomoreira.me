@@ -6,12 +6,12 @@ layout: layout
 
 section.hero.error404
   .hero-inner
-    h1
+    h1.hero__name
       | Error 404
-    h2
+    h2.hero__desc
       | Whoops!
-      br
+      br/
       small
         | We couldn't find the page you were looking for.
-    nav.hero-actions
-      = link_to('back to home', local_path(''), :class => "hero-button")
+    nav.hero__actions
+      = link_to 'back to home', local_path(''), :class => 'hero__button'

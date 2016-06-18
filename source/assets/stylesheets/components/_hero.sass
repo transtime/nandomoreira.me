@@ -1,14 +1,3 @@
-body.home-hero
-  background-color: get-color(primary, base)
-  padding: get-spacing(mini)
-
-  +media($screen-tablet)
-    padding: get-spacing(small)
-
-  +media($screen-large-tablet)
-    overflow: hidden
-    padding: get-spacing(medium)
-
 .hero
   width: 100%
   text-align: center
@@ -25,12 +14,12 @@ body.home-hero
     justify-content: center
     margin-bottom: get-spacing(base)
 
-  h1,
-  h2,
-  h1::before,
-  h1::after,
-  &-actions,
-  &-avatar,
+  &__name,
+  &__desc,
+  &__name::before,
+  &__name::after,
+  &__actions,
+  &__avatar,
   .social,
   .translate
     animation-fill-mode: forwards
@@ -40,10 +29,10 @@ body.home-hero
     position: relative
     z-index: 10
 
-  &-inner
+  &__inner
     margin-left: auto
     margin-right: auto
-    max-width: 80%
+    max-width: 90%
     padding: get-spacing(small)
 
     +media($screen-large-tablet)
@@ -52,7 +41,7 @@ body.home-hero
     +media($screen-desktop)
       max-width: $screen-desktop
 
-  &-avatar
+  &__avatar
     @extend .avatar
     +size(120px)
     opacity: 0
@@ -60,8 +49,8 @@ body.home-hero
     animation-name: translateTopInRotate
     animation-duration: .8s
 
-  &-actions,
-  &-avatar
+  &__actions,
+  &__avatar
     margin: get-spacing(small) 0
 
   a
@@ -71,7 +60,7 @@ body.home-hero
     +attention(false)
       color: get-color(white)
 
-  &-actions
+  &__actions
     opacity: 0
     transform: translateY(100%)
     animation-name: translateBottomIn
@@ -79,19 +68,24 @@ body.home-hero
     animation-delay: .8s
     margin-top: get-spacing(base)
 
-  &-button
+  &__button
     @extend .button-ghost
-    border-radius: 150px
-    margin: 0 (get-spacing(mini) / 2)
     text-transform: lowercase
+    margin: 0 0 get-spacing(mini)
+    display: block
     border: 1px solid get-color(white)
+    border-radius: 150px
 
     &:hover,
     &:focus
       background-color: rgba(get-color(white), .2)
 
-  h1,
-  h2,
+    +media($screen-large-phone)
+      display: inline-block
+      margin: 0 (get-spacing(mini) / 2)
+
+  &__name,
+  &__desc,
   .social,
   .translate
     opacity: 0
@@ -103,26 +97,23 @@ body.home-hero
     animation-duration: .8s
     animation-delay: 1.2s
 
-  h1,
-  h2
+  &__name,
+  &__desc
     font-family: $font-family-base
     animation-duration: .8s
     animation-delay: .4s
-    line-height: 1
-    margin: 0
     padding: 0
+    margin: 0
 
-    +media($screen-tablet)
-      line-height: 1.6
-
-  h2
+  &__desc
     opacity: 0
     display: block
     letter-spacing: .035rem
     font-family: $font-family-base
     font-weight: $font-weight-light
-    font-size: get-font-size(24px)
+    font-size: get-font-size(20px)
     color: rgba(get-color(white), .7)
+    line-height: 1.5
 
     +media($screen-tablet)
       font-size: get-font-size(24px)
@@ -130,24 +121,26 @@ body.home-hero
     +media($screen-large-tablet)
       font-size: get-font-size(28px)
 
-  h1
+  &__name
     display: block
     color: get-color(white)
-    margin: get-spacing(mini) 0
+    margin: get-spacing(small) 0
     text-transform: uppercase
     letter-spacing: .1em
-    font-size: get-font-size(38px)
+    font-size: get-font-size(30px)
+    padding: 15px 0
+    line-height: 1
+
+    +media($screen-large-phone)
+      letter-spacing: .2em
+      font-size: get-font-size(54px)
 
     +media($screen-tablet)
-      letter-spacing: .2em
-      font-size: get-font-size(50px)
-
-    +media($screen-large-tablet)
-      letter-spacing: .2em
-      font-size: get-font-size(64px)
+      font-size: get-font-size(60px)
 
     +media($screen-desktop)
       font-size: get-font-size(80px)
+      padding: 10px 0
 
     +media($screen-large-desktop)
       font-size: get-font-size(90px)
@@ -187,56 +180,3 @@ body.home-hero
     li
       padding-top: 0
       padding-bottom: 0
-
-.error404
-  h2
-    opacity: .9
-
-    small
-      font-size: get-font-size(20px)
-      opacity: .6
-
-  .hero-button
-    text-transform: none
-
-canvas
-  display: block
-  vertical-align: bottom
-
-#particles-js
-  z-index: 1
-  background-color: transparent
-
-.hero-particles-js
-  +position(fixed, 0)
-  +size(100%)
-
-.count-particles
-  background: #000022
-  position: absolute
-  top: 48px
-  left: 0
-  width: 80px
-  color: #13E8E9
-  font-size: .8em
-  text-align: left
-  text-indent: 4px
-  line-height: 14px
-  padding-bottom: 2px
-  font-family: Helvetica, Arial, sans-serif
-  font-weight: bold
-
-.js-count-particles
-  font-size: 1.1em
-
-#stats, .count-particles
-  -webkit-user-select: none
-  margin-top: 5px
-  margin-left: 5px
-
-#stats
-  border-radius: 3px 3px 0 0
-  overflow: hidden
-
-.count-particles
-  border-radius: 0 0 3px 3px
