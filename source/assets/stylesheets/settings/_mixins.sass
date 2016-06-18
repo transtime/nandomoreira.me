@@ -1,4 +1,3 @@
-
 =media($query: $feature $value)
   @if length($query) == 1
     @media screen and ($default-feature: nth($query, 1))
@@ -22,6 +21,18 @@
     @media #{$media-query}
       @content
 
+
+=button-color-variant($bg-color: get-color(primary, base), $font-color: get-color(white))
+  color: $font-color
+  background-color: $bg-color
+
+  &:hover,
+  &:focus
+    color: darken($font-color, 5%)
+    background-color: darken($bg-color, 5%)
+
+  &:active
+    box-shadow: 0 0 4px 4px rgba(get-color(secondary, base), .2)
 
 =attribute($attr: class, $class: button)
   [#{$attr}^="#{$class}"]
