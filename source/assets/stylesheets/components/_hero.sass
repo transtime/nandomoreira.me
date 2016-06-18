@@ -76,8 +76,8 @@
     border: 1px solid get-color(white)
     border-radius: 150px
 
-    &:hover,
-    &:focus
+    +hover-focus()
+      text-decoration: none
       background-color: rgba(get-color(white), .2)
 
     +media($screen-large-phone)

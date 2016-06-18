@@ -71,6 +71,7 @@ a
 
   +hover-focus()
     color: get-color(primary, dark)
+    text-decoration: underline
 
 em
   font-style: italic
@@ -86,15 +87,27 @@ code
   font-size: get-font-size(14)
 
 blockquote
-  border-left: 3px solid get-color(border)
+  position: relative
   transition: border-color .2s linear
-  margin: 0 0 15px
-  padding: 10px 10px 10px 30px
+  margin: get-spacing(base) 0 get-spacing(medium)
+  padding: get-spacing(small)
   font-size: get-font-size(22px)
+
+  &:before
+    content: ""
+    display: block
+    background: url("/assets/images/quote.svg") no-repeat
+    background-size: 80px
+    opacity: .07
+    z-index: 1
+    +position(absolute, 0 null null 0)
+    +size(80px)
 
   &:hover,
   &:focus
     border-left-color: get-color(primary, light)
 
   p:last-child
+    position: relative
+    z-index: 2
     margin-bottom: 0

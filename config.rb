@@ -105,10 +105,6 @@ activate :directory_indexes
 set :index_file, "index.html"
 page "/404.html", :directory_index => false
 
-# Automatic image dimensions on image_tag helper
-activate :automatic_image_sizes
-activate :automatic_alt_tags
-
 # syntax
 activate :syntax
 set :markdown_engine, :redcarpet
@@ -138,4 +134,8 @@ configure :build do
   activate :cache_buster
   activate :asset_host, :host => '//d2pcfnwkh4jlye.cloudfront.net'
   set :google_analytics_account, 'UA-52446115-1'
+
+  # Automatic image dimensions on image_tag helper
+  activate :automatic_image_sizes
+  activate :automatic_alt_tags
 end
