@@ -2,8 +2,8 @@ doctype html
 html.no-js
   head
     = partial "partials/head"
-    - if current_article.data.summary
-      meta content="#{current_article.data.summary}" name="description"
+    - if current_article.data.description
+      meta content="#{current_article.data.description}" name="description"
     - elsif current_article.data.link
       meta content=("#{page_title + "→"}") name="description"
     - else
