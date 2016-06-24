@@ -16,18 +16,22 @@ nav#nav.nav role="nav"
       | Menu
     ul.navbar
       li
-        = link_to t(:about_me), local_path(t("paths.about"))
+        = link_to t(:about_me), local_path(t("paths.about")), title: t(:about_me)
       li
         = link_to t(:blog), "/blog"
       li
-        = link_to 'http://github.com/nandomoreirame', :target => :blank do
+        = link_to 'https://codepen.io/nandomoreirame/', :target => :blank, title: t(:experiments) do
+          i.icon.icon-github
+          = t(:experiments)
+      li
+        = link_to 'https://github.com/nandomoreirame', :target => :blank, title: 'Github' do
           i.icon.icon-github
           | Github
       li
-        = link_to 'http://twitter.com/Pia_Frontend', :target => :blank do
+        = link_to 'https://twitter.com/Pia_Frontend', :target => :blank, title: 'Twitter' do
           i.icon.icon-twitter
           | Twitter
       li
-        = link_to '/feed.xml', :target => :blank do
+        = link_to '/feed.xml', :target => :blank, title: 'Feed' do
           i.icon.icon-feed
           | Feed
